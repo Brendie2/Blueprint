@@ -9,13 +9,5 @@
     "binding": "ASSETS",
     "run_worker_first": ["/api/*"]
 
-  // ...
-  "vars": {
-    "BREVO_LIST_ID": "2",
-    "NOTIFY_EMAIL": "unapologeticquenn@gmail.com",
-    "RESEND_FROM": "Brenda Blanche <notifications@mail.brendablanche.site>"
-  },
-  // ...
-
-  }
+  
 }
