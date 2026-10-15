@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Welcome to The Market Perception Blueprint</title>
+<meta name="description" content="Welcome to The Market Perception Blueprint. Your onboarding starts here.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14100F;
+  --bone:#F5EDE4;
+  --stone:#E7DCD3;
+  --paper:#FFFBF6;
+  --fuchsia:#E4007C;
+  --hot:#F0108A;            /* fuchsia tuned for large type on ink */
+  --body:#4a413c;
+  --muted:#6f655f;
+  --display:"Fraunces",Georgia,serif;
+  --text:"Space Grotesk",system-ui,sans-serif;
+  --r:16px;
+  --chip-bg:var(--ink);--chip-fg:var(--bone);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;counter-reset:sec}
+h1,h2,h3{font-family:var(--display);font-weight:900;line-height:1.02;letter-spacing:-.03em;margin:0}
+h2{font-size:clamp(2.1rem,4.6vw,3.9rem)}
+h3{font-size:1.3rem;line-height:1.2;letter-spacing:-.02em}
+p{margin:0 0 18px;color:var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.dark :focus-visible,.on-dark:focus-visible{outline-color:var(--bone)}
+.container{max-width:1440px;margin:0 auto;padding:0 clamp(22px,4.5vw,72px)}
+section{padding:clamp(64px,8vw,112px) 0;position:relative}
+.measure{max-width:44rem}
+.lede{font-size:1.15rem}
+.mt{margin-top:24px}
+
+/* dark sections: ink foundation */
+.dark{background:var(--ink);color:var(--bone);--chip-bg:var(--bone);--chip-fg:var(--ink)}
+.dark h2,.dark h3{color:var(--bone)}
+.dark p{color:rgba(245,237,228,.78)}
+.dark .tag{color:rgba(245,237,228,.86)}
+.stone{background:var(--stone)}
+
+/* section label: restrained uppercase + index chip */
+.tag{display:flex;align-items:center;gap:12px;font:700 .78rem/1.2 var(--text);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-bottom:24px}
+section .tag::before,.start-box .tag::before{counter-increment:sec;content:counter(sec,decimal-leading-zero);flex:none;background:var(--chip-bg);color:var(--chip-fg);font:700 .74rem/1 var(--text);letter-spacing:.06em;padding:6px 8px;border-radius:6px}
+.price-wrap .tag::before,.guarantee .tag::before{display:none}
+
+/* buttons: pill, fuchsia, white text */
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--fuchsia);color:#fff;border:0;border-radius:999px;padding:17px 32px;font:700 1.05rem/1.2 var(--text);text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{background:#c70070;transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn.sm{padding:10px 20px;font-size:.9rem}
+.btn.big{padding:21px 38px;font-size:1.15rem}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bone);transform:none}
+
+/* header */
+header{background:var(--ink);color:var(--bone)}
+.container.nav{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+.logo{display:flex;align-items:center;gap:10px;font:900 1.1rem var(--display);letter-spacing:-.01em}
+.mark{width:10px;height:24px;background:var(--fuchsia);border-radius:3px}
+
+/* hero base */
+.hero{background:var(--ink);color:var(--bone);padding:clamp(36px,5vw,72px) 0 0;overflow:hidden}
+.hero .container{container-type:inline-size}
+.pill,.pilot{display:inline-flex;align-items:center;gap:10px;background:var(--fuchsia);color:#fff;font:700 .78rem/1.2 var(--text);letter-spacing:.12em;text-transform:uppercase;padding:9px 16px 9px 12px;border-radius:999px;margin-bottom:clamp(24px,3vw,40px)}
+.pilot i{width:8px;height:8px;border-radius:50%;background:#fff}
+.pill svg{width:15px;height:15px}
+.hero h1{line-height:.93;letter-spacing:-.045em;color:var(--bone)}
+.hero h1 span{display:block;white-space:nowrap}
+.hero .sub{font-size:clamp(1.15rem,1.8vw,1.4rem);line-height:1.45;font-weight:500;color:rgba(245,237,228,.86);max-width:34rem}
+.cta-note{font:700 .85rem/1.2 var(--text);letter-spacing:.1em;text-transform:uppercase;color:var(--bone);margin:0}
+.hero-facts{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:16px 32px;margin-top:clamp(44px,6vw,80px);padding:0 0 clamp(44px,5vw,72px)}
+.hero-facts p{margin:0;color:rgba(245,237,228,.7);font:600 .78rem/1.4 var(--text);letter-spacing:.12em;text-transform:uppercase}
+.hero-facts b{display:block;font:900 clamp(1.5rem,2.6vw,2.3rem)/1 var(--display);letter-spacing:-.025em;text-transform:none;margin-bottom:8px;color:var(--bone)}
+
+/* shared lists */
+.deliverable{display:inline-flex;align-items:center;gap:10px;font:600 .88rem/1.3 var(--text);color:var(--ink);background:var(--paper);padding:8px 14px;border-radius:999px}
+.deliverable::before{content:"";width:8px;height:8px;background:var(--fuchsia);flex:none}
+.dark .deliverable{color:var(--bone);background:rgba(245,237,228,.1)}
+
+footer{background:#0d0a09;padding:44px 0 56px;color:rgba(245,237,228,.7);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+html{scroll-padding-top:24px}
+.nav-note{font:600 .78rem/1 var(--text);letter-spacing:.12em;text-transform:uppercase;color:rgba(245,237,228,.78)}
+
+/* HERO: the gap closes ("You're in." -> "Let's build your offer.") */
+.hero h1{font-size:8.9cqw}
+.hero h1 .first{color:rgba(245,237,228,.36)}
+.hero h1 .second{padding-left:5cqw;color:var(--hot)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,5vw,72px);align-items:start;margin-top:clamp(32px,4.5vw,60px)}
+.hero .sub{max-width:36rem;margin:0}
+.cta-block{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+
+/* NEXT STEPS */
+.next h2{max-width:18ch}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.card{background:var(--paper);border-radius:var(--r);padding:30px}
+.card h3{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;font-size:1.3rem}
+.card h3 svg{flex:none;width:26px;height:26px;color:var(--fuchsia);margin-top:1px}
+.card p{margin:0;font-size:1rem}
+
+/* WHAT TO EXPECT */
+.expect{background:var(--stone)}
+.expect h2,.mostof h2{max-width:20ch}
+.phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.phase{background:var(--paper);border-radius:var(--r);padding:28px}
+.phase .num{font:900 2.6rem/.9 var(--display);color:var(--fuchsia);letter-spacing:-.04em;margin-bottom:16px}
+.phase h3{margin-bottom:8px}
+.phase p{font-size:1rem;margin:0 0 16px}
+.phase .deliverable{background:var(--bone)}
+.expect .after{margin-top:36px;max-width:46rem;font-size:1.1rem;color:var(--ink)}
+
+/* START HERE */
+.start{padding-top:0}
+.start-box{background:var(--ink);color:var(--bone);border-radius:26px;padding:clamp(28px,5vw,60px);box-shadow:inset 0 8px 0 var(--fuchsia)}
+.start-box h2{color:var(--bone);margin-bottom:20px}
+.start-box p{color:rgba(245,237,228,.82);max-width:44rem;font-size:1.1rem}
+.start-box .help{margin-top:28px;font-size:1rem}
+.help{margin:0;color:rgba(245,237,228,.82)}
+.help a{color:var(--bone);font-weight:700}
+.mostof .mt,.next .mt,.expect .mt{margin-top:24px}
+.start.dark{background:var(--bone)}
+
+@media (max-width:1000px){.hero-grid{grid-template-columns:1fr}.card-grid,.phase-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){
+  body{font-size:16px}
+  .nav-note{display:none}
+  .hero h1{font-size:15.5cqw;line-height:.95}
+  .hero h1 span{white-space:normal}
+  .hero h1 .second{padding-left:0}
+  .card-grid,.phase-grid{grid-template-columns:1fr}
+  .btn.big{width:100%}
+  .hero-facts{grid-auto-flow:row;grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo"><span class="mark"></span> Brenda Blanche</div>
+    <div class="nav-note">The Market Perception Blueprint</div>
+  </div>
+</header>
+
+<!-- THANK YOU -->
+<section class="hero dark">
+  <div class="container">
+    <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="square" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg> Payment received</div>
+    <h1>
+      <span class="first">You’re in.</span>
+      <span class="second">Let’s build your offer.</span>
+    </h1>
+
+    <div class="hero-grid">
+      <p class="sub">Welcome to The Market Perception Blueprint. Over the next eight weeks, we will turn your skills and experience into one clear, hireable service, and a practical path to the buyers who need it.</p>
+      <div class="cta-block">
+        <a class="btn on-dark big" data-link="dashboard" href="#start">Start here</a>
+        <p class="cta-note">Your dashboard shows every task, in order.</p>
+      </div>
+    </div>
+
+    <div class="hero-facts">
+      <p><b>8 weeks</b>One-on-one</p>
+      <p><b>6 phases</b>Each ends with a deliverable</p>
+      <p><b>1 clear offer</b>Buyer-ready direction</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT HAPPENS NEXT -->
+<section class="next" id="next">
+  <div class="container">
+    <div class="tag">What happens next</div>
+    <h2>Three things to do today</h2>
+    <p class="measure mt">You do not need to prepare anything complicated before we begin. Start with these three steps.</p>
+
+    <div class="card-grid">
+      <div class="card"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>Check your email</h3><p>Your payment confirmation and welcome email are on their way. If you cannot find them in a few minutes, check your spam or promotions folder.</p></div>
+      <div class="card"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>Open your dashboard</h3><p>Your client dashboard is where everything lives: your tasks in order, the process, and your work as it builds up.</p></div>
+      <div class="card"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>Complete your first task</h3><p>Your first task is the short intake form. It helps me understand your skills, experience, and situation before we start working together.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO EXPECT -->
+<section class="expect">
+  <div class="container">
+    <div class="tag">What to expect</div>
+    <h2>Six phases, one clear offer</h2>
+    <p class="measure mt">We work through six phases over eight weeks. Each phase answers one question and ends with something you can use.</p>
+
+    <div class="phase-grid">
+      <div class="phase"><div class="num">01</div><h3>Reality Check</h3><p>What can I genuinely sell? We inventory your skills, experience, and evidence.</p><span class="deliverable">Skills, Experience &amp; Market Evidence Inventory</span></div>
+      <div class="phase"><div class="num">02</div><h3>Buyer &amp; Opportunity Research</h3><p>Who needs this? We research buyers, problems, alternatives, and indicative pricing.</p><span class="deliverable">Skills-to-Market Opportunity Matrix</span></div>
+      <div class="phase"><div class="num">03</div><h3>Commercial Fit</h3><p>Which opportunity should I choose? We compare capability, buyer need, and ability to pay.</p><span class="deliverable">Prioritized Commercial Opportunity</span></div>
+      <div class="phase"><div class="num">04</div><h3>Hireable Offer</h3><p>How do I package this? We define scope, process, boundaries, and pricing logic.</p><span class="deliverable">Offer One-Pager</span></div>
+      <div class="phase"><div class="num">05</div><h3>Trust Signals</h3><p>Why should they choose me? We align your messaging with authentic evidence.</p><span class="deliverable">Minimum Viable Signal Set</span></div>
+      <div class="phase"><div class="num">06</div><h3>Buyer Path</h3><p>What do I do next? We map the route from discovery to enquiry, conversation, and decision.</p><span class="deliverable">Buyer Path Map</span></div>
+    </div>
+
+    <p class="after">You finish with your assets, your decisions, and a 30-day action plan, not another folder of unused notes.</p>
+  </div>
+</section>
+
+<!-- HOW TO GET THE MOST -->
+<section class="mostof">
+  <div class="container">
+    <div class="tag">Your part</div>
+    <h2>How to get the most from this</h2>
+    <p class="measure mt">The Blueprint is guided, but you do the work. This is what makes the difference.</p>
+
+    <div class="card-grid">
+      <div class="card"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>Set aside the time</h3><p>Plan for roughly 2 to 4 hours per week between sessions, plus your scheduled one-on-one time.</p></div>
+      <div class="card"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>Do the work and show up</h3><p>Complete each task, attend your sessions, and submit your work for feedback. That is how the process moves forward.</p></div>
+      <div class="card"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>Bring real material</h3><p>You do not need perfect wording, a polished CV, or a finished offer. We organise and evaluate it together.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- START HERE -->
+<section class="start dark" id="start">
+  <div class="container">
+    <div class="start-box">
+      <div class="tag">Start here</div>
+      <h2>Your client dashboard is ready</h2>
+      <p>Open it, and you will see your tasks laid out in order. First the intake form, then your first assignment, and every step after that. Everything you need for the next eight weeks is in one place.</p>
+      <a class="btn on-dark big" data-link="dashboard" href="#start">Open my dashboard</a>
+      <p class="help">Questions or cannot get in? <a href="#" data-help>Message me on WhatsApp</a>.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">© <span id="year">2026</span> Brenda Blanche · Market Perception Strategist. The Market Perception Blueprint helps you build a clear, commercially relevant service. It does not guarantee clients, revenue, or financial results.</div>
+</footer>
+
+<script>
+/* ===== Your dashboard link =====
+   Paste the full web address of the client dashboard between the quotes.
+   Until you do, the buttons open a WhatsApp message to you instead. */
+var LINKS = {
+  dashboard: ""   // example: "https://app.yourdomain.com"
+};
+var WA = "https://wa.me/237672411155";
+var WA_DASHBOARD = WA + "?text=" + encodeURIComponent("Hi Brenda, I just joined The Market Perception Blueprint. Please send me my dashboard link.");
+
+document.querySelectorAll('[data-link]').forEach(function(a){
+  var url = LINKS[a.getAttribute('data-link')];
+  a.href = url || WA_DASHBOARD;
+  a.target = '_blank';
+  a.rel = 'noopener';
+});
+document.querySelectorAll('[data-help]').forEach(function(a){
+  a.href = WA; a.target = '_blank'; a.rel = 'noopener';
+});
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
