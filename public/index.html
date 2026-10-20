@@ -1,726 +1,388 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Market Perception Blueprint: Turn Your Skills Into a Service People Hire</title>
-<meta name="description" content="A guided, one-on-one eight-week program for skilled freelancers, consultants, and independent professionals who are tired of guessing what to sell.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#14100F;
-  --bone:#F5EDE4;
-  --stone:#E7DCD3;
-  --paper:#FFFBF6;
-  --fuchsia:#E4007C;
-  --hot:#F0108A;            /* fuchsia tuned for large type on ink */
-  --body:#4a413c;
-  --muted:#6f655f;
-  --display:"Fraunces",Georgia,serif;
-  --text:"Space Grotesk",system-ui,sans-serif;
-  --r:16px;
-  --chip-bg:var(--ink);--chip-fg:var(--bone);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;counter-reset:sec}
-h1,h2,h3{font-family:var(--display);font-weight:900;line-height:1.02;letter-spacing:-.03em;margin:0}
-h2{font-size:clamp(2.1rem,4.6vw,3.9rem)}
-h3{font-size:1.3rem;line-height:1.2;letter-spacing:-.02em}
-p{margin:0 0 18px;color:var(--body)}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.dark :focus-visible,.on-dark:focus-visible{outline-color:var(--bone)}
-.container{max-width:1440px;margin:0 auto;padding:0 clamp(22px,4.5vw,72px)}
-section{padding:clamp(64px,8vw,112px) 0;position:relative}
-.measure{max-width:44rem}
-.lede{font-size:1.15rem}
-.mt{margin-top:24px}
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Market Perception Blueprint | Turn Your Skills Into a Service People Hire</title>
+<meta name="description" content="A guided, 1-on-1, 8-week program for skilled freelancers, consultants, and independent professionals who are tired of guessing what to sell.">
+<meta name="theme-color" content="#14100F">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,900;1,9..144,300;1,9..144,900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>:root{--ink:#14100F;--bone:#F5EDE4;--fu:#E4007C;--stone:#E7DCD3;--pad:clamp(1.2rem,4.5vw,3.5rem);--r:10px;--ln:rgba(245,237,228,.18);--lk:rgba(20,16,15,.14)}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bone);color:var(--ink);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:900;letter-spacing:-.03em;line-height:.98;text-wrap:balance}
+h2{font-size:clamp(2.1rem,5.6vw,4.2rem);margin-bottom:1.2rem}h3{font-size:1.35rem;line-height:1.1;letter-spacing:-.02em}
+.it{font-style:italic;font-weight:300;letter-spacing:-.035em}p,li{text-wrap:pretty}a{color:inherit}::selection{background:var(--fu);color:#fff}:focus-visible{outline:3px solid var(--fu);outline-offset:3px}
+.g{max-width:1240px;margin:0 auto;padding:0 var(--pad)}section{padding:clamp(4rem,9vw,7.5rem) 0;position:relative;overflow:hidden;overflow:clip}
+.dk{background:var(--ink);color:var(--bone)}.sn{background:var(--stone)}.m{color:rgba(20,16,15,.72)}.dk .m{color:rgba(245,237,228,.78)}.lede{font-size:1.15rem;max-width:40rem}
+.mono{font:700 .74rem/1.3 'Space Grotesk',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--fu);margin-bottom:1rem}
+.btn{display:inline-block;background:var(--fu);color:#fff;font:700 1.02rem 'Space Grotesk',sans-serif;text-decoration:none;padding:1rem 1.7rem;border-radius:var(--r);border:0;cursor:pointer;transition:transform .15s,box-shadow .15s,background .2s,translate .25s}
+.btn.go{box-shadow:0 7px 0 #9d0055,0 16px 36px rgba(228,0,124,.32)}.btn.go:hover{background:#f0188a;transform:translateY(2px);box-shadow:0 5px 0 #9d0055,0 12px 30px rgba(228,0,124,.4)}.btn.go:active{transform:translateY(7px);box-shadow:0 0 0 #9d0055}.btn.sm{padding:.6rem 1.1rem;font-size:.86rem;box-shadow:none}
+.pg{position:fixed;top:0;left:0;height:4px;width:100%;z-index:20;background:var(--fu);transform:scaleX(0);transform-origin:0 50%;pointer-events:none}
+nav{position:sticky;top:0;z-index:9;background:rgba(20,16,15,.86);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:var(--bone)}
+nav .g{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:62px}.logo{font:900 1.2rem Fraunces,serif;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
+nav ul{display:flex;gap:1.6rem;list-style:none;padding:0}nav ul a{text-decoration:none;font-size:.9rem;opacity:.8}nav ul a:hover{opacity:1}@media(max-width:860px){nav ul{display:none}}
+/* motion base */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}.js .rv.on{opacity:1;transform:none}
+.js .wd{display:inline-block;opacity:0}.on .wd{animation:wu .8s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*.06s + .1s)}h2.rv{transform:none!important}
+@keyframes wu{from{opacity:0;transform:translateY(.6em) rotate(2deg);filter:blur(7px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes gin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}@keyframes pop{from{opacity:0;transform:scale(.3)}to{opacity:1;transform:none}}
+@keyframes rng{0%{opacity:0}1%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(2.6)}}@keyframes m-cp{to{box-shadow:0 0 0 14px rgba(228,0,124,0)}}@keyframes dr{to{stroke-dashoffset:0}}
+@keyframes m-sw{0%{transform:scaleX(0);transform-origin:left}49%{transform:scaleX(1);transform-origin:left}50%{transform:scaleX(1);transform-origin:right}100%{transform:scaleX(0);transform-origin:right}}
+section::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:var(--fu);transform:scaleX(0);z-index:2;pointer-events:none}section.mgin::before{animation:m-sw 1.3s cubic-bezier(.6,0,.2,1) forwards}
+.mg-dust{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}.g{position:relative;z-index:1}
+.mg-sp{position:fixed;width:var(--s,7px);height:var(--s,7px);border-radius:50%;background:var(--c);pointer-events:none;z-index:70;animation:m-spk .85s cubic-bezier(.1,.7,.3,1) forwards}@keyframes m-spk{to{transform:translate(var(--dx),var(--dy)) scale(.2);opacity:0}}
+.mg-glow{position:fixed;left:0;top:0;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;pointer-events:none;z-index:7;background:radial-gradient(circle,rgba(228,0,124,.15),transparent 65%);opacity:0;transition:opacity .4s}.mg-glow.on{opacity:1}
+.ib{display:grid;place-items:center;flex:none;width:2.9rem;height:2.9rem;border-radius:50%;background:var(--fu);color:#fff;position:relative}.ib svg{width:1.3rem;height:1.3rem;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.on>.ib,.on .ib{animation:pop .6s .2s cubic-bezier(.3,1.6,.5,1) backwards}
+/* hero: the scene */
+.hero{padding:clamp(1rem,2.5vw,2rem) 0 clamp(2.5rem,5vw,4rem);min-height:calc(100svh - 62px);display:flex;align-items:center}.hero>.g{width:100%}
+.hg{display:grid;grid-template-columns:0fr 1fr;column-gap:0;align-items:center;transition:grid-template-columns 1.6s cubic-bezier(.6,0,.2,1),column-gap 1.6s cubic-bezier(.6,0,.2,1)}.hero.rev .hg{grid-template-columns:.9fr 1.1fr;column-gap:clamp(1.6rem,4vw,3.4rem)}
+.tx{min-width:0;overflow:hidden;opacity:0;visibility:hidden;transform:translateX(-30px);transition:opacity .9s,transform 1.2s cubic-bezier(.2,.8,.2,1),visibility 0s 1.6s}.hero.rev .tx{opacity:1;visibility:visible;transform:none;transition:opacity 1s .7s,transform 1.2s .7s cubic-bezier(.2,.8,.2,1),visibility 0s}.tx>div{width:clamp(18rem,100%,34rem)}
+.pill{display:inline-block;padding:.5rem .9rem;border-radius:99px;background:rgba(245,237,228,.1);box-shadow:inset 0 0 0 1px var(--ln);color:var(--bone)!important;margin-bottom:1.4rem}.pill i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--fu);margin-right:.55rem;animation:m-cp 2s infinite}
+h1{font-size:clamp(2.7rem,5.6vw,5rem);line-height:.93;letter-spacing:-.045em}h1 .it{color:var(--fu)}.sub{margin-top:1.4rem;max-width:34rem;font-size:1.15rem}.cta{margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:1rem 1.4rem;align-items:center}.note{font-size:.9rem;opacity:.8}
+@media(max-width:900px){.hero{min-height:0;display:block}.hg{display:block}.tx{max-height:0;transform:translateY(20px);transition:opacity .9s,transform 1s,max-height 1.4s cubic-bezier(.6,0,.2,1),visibility 0s 1.4s}.hero.rev .tx{max-height:44rem;transition:opacity 1s .5s,transform 1s .5s,max-height 1.4s cubic-bezier(.6,0,.2,1),visibility 0s}.tx>div{width:auto;padding-top:2rem}}
+.stw{min-width:0}.st{position:relative;border-radius:24px;background:#14100F;box-shadow:inset 0 0 0 1px var(--ln),0 30px 80px rgba(0,0,0,.4);overflow:hidden;height:clamp(25rem,calc(100svh - 8.5rem),44rem);display:grid;place-items:center;padding:3.2rem .8rem .8rem}
+.st::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 85% 115%,rgba(228,0,124,calc(.1 + var(--gl,0)*.5)),transparent 70%);transition:background 1.2s;pointer-events:none}
+.bars{position:absolute;z-index:4;top:1rem;left:1.1rem;right:5.4rem;display:flex;gap:5px}.bars i{flex:1;height:3px;border-radius:3px;background:rgba(245,237,228,.2);overflow:hidden;position:relative;cursor:pointer}.bars i::after{content:"";position:absolute;inset:0;background:#fff;transform:scaleX(0);transform-origin:left}.bars i.d::after{transform:none}.bars i.c::after{animation:bfl var(--bd,3s) linear forwards}@keyframes bfl{to{transform:none}}
+.skp,.rp{background:rgba(245,237,228,.14);color:#fff;border:0;border-radius:99px;padding:.45rem .9rem;font:700 .7rem 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}.skp{position:absolute;z-index:5;top:.6rem;right:.8rem}.rp{margin-top:.9rem;background:none;color:rgba(245,237,228,.7);padding-left:0}.rp:hover{color:#fff}.skp[hidden],.rp[hidden]{display:none}
+.art{position:relative;width:min(100%,calc((clamp(25rem,calc(100svh - 8.5rem),44rem) - 4.2rem)*1.7778));aspect-ratio:16/9}.art svg{display:block;width:100%;height:100%;overflow:visible}
+.fam{position:absolute;z-index:3;left:.2rem;top:-1.9rem;font:700 .7rem 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,237,228,.7);opacity:0;transition:opacity .6s}.st[data-b="0"] .fam.a,.st.u .fam.b{opacity:1}.fam.b{color:var(--fu)}
+/* bubbles */
+.bub>div{position:absolute;opacity:0;transform:translateY(8px) scale(.96);transition:opacity .7s,transform .7s;pointer-events:none}.bub>div.on{opacity:1;transform:none}
+.tb,.sbb{background:var(--bone);color:var(--ink);border-radius:18px;padding:.8rem 1.1rem;font:italic 400 clamp(.95rem,1.9vw,1.5rem)/1.2 Fraunces,serif;letter-spacing:-.02em;box-shadow:0 14px 40px rgba(0,0,0,.4)}
+.tb{left:38%;top:2%;width:42%}.tb::before,.tb::after{content:"";position:absolute;border-radius:50%;background:var(--bone)}.tb::before{width:14px;height:14px;left:-6%;bottom:-18px}.tb::after{width:8px;height:8px;left:-11%;bottom:-34px}
+.tb.sp{border-radius:18px}.tb.sp::before{content:none}.tb.sp::after{content:"";width:0;height:0;border-radius:0;background:none;border:12px solid transparent;border-top-color:var(--bone);left:12%;bottom:-22px}
+.sbb{left:8%;top:6%;width:34%;background:var(--fu);color:#fff}.sbb::after{content:"";position:absolute;left:34%;bottom:-20px;border:11px solid transparent;border-top-color:var(--fu)}
+.cap{left:12%;top:4%;width:76%;text-align:center;font:italic 300 clamp(1.2rem,3vw,2.4rem)/1.12 Fraunces,serif;letter-spacing:-.03em;color:#fff;text-shadow:0 4px 30px rgba(0,0,0,.6)}.cap b{font-weight:900;font-style:normal;color:var(--fu)}
+.cur{display:inline-block;width:2px;height:1em;background:currentColor;vertical-align:-.15em;margin-left:2px;animation:cb 1s steps(1) infinite}@keyframes cb{50%{opacity:0}}
+@media(max-width:700px){.st{height:auto;min-height:0;padding:3.2rem .6rem .8rem;display:block}.art{width:100%;margin-top:9.4rem}.bub>div{left:0!important;right:0;width:auto!important;top:-9rem!important;bottom:auto}.tb,.sbb{font-size:1.02rem}.tb::before,.tb::after,.sbb::after,.tb.sp::after{display:none}.cap{font-size:1.2rem}.fam{top:-10.8rem}}
+/* the room and the figures */
+.sv *{stroke-linecap:round;stroke-linejoin:round}.sv .ln{fill:none;stroke:#F5EDE4;stroke-width:4}.sv .dim{fill:none;stroke:rgba(245,237,228,.3);stroke-width:3}.sv .pk{stroke:#E4007C}.sv text{font-family:'Space Grotesk',sans-serif;font-weight:600}
+.rg{rotate:var(--r,0deg);transition:rotate .9s cubic-bezier(.5,0,.2,1)}
+.st[data-b="0"]{--tor:0deg;--hd:14deg;--ua:-75deg;--fa:-88deg}.st[data-b="1"]{--tor:26deg;--hd:38deg;--ua:-70deg;--fa:-112deg}.st[data-b="2"]{--tor:-10deg;--hd:-16deg;--ua:-118deg;--fa:-138deg}.st[data-b="3"]{--tor:0deg;--hd:6deg;--ua:-25deg;--fa:-42deg}.st[data-b="4"]{--tor:-2deg;--hd:8deg;--ua:0deg;--fa:0deg}.st[data-b="5"]{--tor:0deg;--hd:0deg;--ua:0deg;--fa:0deg}
+.tor{rotate:var(--tor,0deg)}.hd{rotate:var(--hd,0deg)}.ua{rotate:var(--ua,0deg)}.fa{rotate:var(--fa,0deg)}.rg{transition:rotate .9s cubic-bezier(.5,0,.2,1)}
+.st[data-b="0"] .fa{animation:scr .7s ease-in-out infinite alternate .9s}@keyframes scr{to{rotate:-70deg}}.st[data-b="4"] .fa{animation:typ .22s ease-in-out infinite alternate .9s}@keyframes typ{to{rotate:-5deg}}.st[data-b="3"] .tor{animation:shr 1.2s ease-in-out infinite alternate}@keyframes shr{to{rotate:3deg}}
+.face .e{fill:#F5EDE4;stroke:none}.face .mf,.face .br2{opacity:1}.face .ms,.face .mn{opacity:0}.face .br2{stroke:#F5EDE4;stroke-width:3;fill:none}.face path{fill:none;stroke:#F5EDE4;stroke-width:3}
+.st[data-b="4"] .face .mf{opacity:0}.st[data-b="4"] .face .mn{opacity:1}.st[data-b="5"] .face .mf,.st[data-b="5"] .face .br2{opacity:0}.st[data-b="5"] .face .ms{opacity:1}
+.chips{opacity:0;transition:opacity .6s}.st[data-b="0"] .chips{opacity:1}.chips g{animation:flt 3s ease-in-out infinite;animation-delay:var(--dl)}@keyframes flt{50%{transform:translateY(-7px)}}.chips rect{fill:rgba(245,237,228,.1);stroke:rgba(245,237,228,.45)}.chips text{fill:#F5EDE4;font-size:13px}
+.post{opacity:0;transform:translateY(12px);transition:opacity .6s,transform .6s}.st[data-b="1"] .post{opacity:1;transform:none}.post rect.c{fill:rgba(245,237,228,.08);stroke:rgba(245,237,228,.4)}.post .hrt{fill:#E4007C;font-size:20px;opacity:0}.st[data-b="1"] .hrt{animation:hup 1.6s ease-out infinite;animation-delay:var(--dl)}@keyframes hup{0%{opacity:0;transform:translateY(0)}20%{opacity:1}100%{opacity:0;transform:translateY(-70px)}}.post .zr{fill:#E4007C;font-size:13px;letter-spacing:.1em}
+.env{opacity:0}.st[data-b="2"] .env{animation:fly 1.7s .3s ease-in forwards}@keyframes fly{0%{opacity:0;transform:translate(0,0)}15%{opacity:1}100%{opacity:1;transform:translate(150px,-92px)}}.seen{opacity:0}.st[data-b="2"] .seen{animation:pop .5s 2.1s both}.dots circle{fill:#F5EDE4;opacity:0}.st[data-b="2"] .dots circle{animation:dtt 1.1s 2.4s infinite}.dots circle:nth-child(2){animation-delay:2.55s!important}.dots circle:nth-child(3){animation-delay:2.7s!important}@keyframes dtt{50%{opacity:1;transform:translateY(-4px)}0%,100%{opacity:.3}}
+.mailbox rect{fill:rgba(245,237,228,.08);stroke:rgba(245,237,228,.4)}.mailbox{opacity:0;transition:opacity .5s}.st[data-b="2"] .mailbox{opacity:1}.mailbox text{fill:#F5EDE4;font-size:12px;letter-spacing:.08em}
+.mh{animation:ck 60s linear infinite}.hh{animation:ck 720s linear infinite}@keyframes ck{to{rotate:360deg}}.st[data-b="2"] .mh{animation:ck 1.1s linear infinite}.st[data-b="2"] .hh{animation:ck 12s linear infinite}
+.ball{fill:rgba(245,237,228,.85);stroke:none;opacity:0;transform:translateY(-60px)}.s1 .b1,.s2 .b2,.s2 .b3,.s3 .b4,.s3 .b5{opacity:1;transform:none;transition:opacity .2s,transform .7s cubic-bezier(.5,1.7,.5,1)}
+.buy{opacity:0;transform:translateX(-190px)}.s3 .buy{opacity:1;transform:none;transition:opacity .4s,transform 1.5s cubic-bezier(.3,.6,.3,1)}.buy .ln{stroke:#ff7aa8}.buy circle.h{fill:#14100F;stroke:#ff7aa8;stroke-width:4}.buy .face .e{fill:#ff7aa8}.buy .face path{stroke:#ff7aa8}
+.buy .lga,.buy .lgb{rotate:0deg}.st[data-b="3"] .buy .lga{animation:wk .5s ease-in-out 3 alternate}.st[data-b="3"] .buy .lgb{animation:wk .5s ease-in-out 3 alternate-reverse}@keyframes wk{from{rotate:-22deg}to{rotate:22deg}}
+.buy .arm2{rotate:0deg;transition:rotate .8s cubic-bezier(.3,1.6,.5,1)}.u .buy .arm2{rotate:-150deg}.buy .face .ms{opacity:0}.u .buy .face .mn{opacity:0}.u .buy .face .ms{opacity:1}
+.lampc{opacity:0;transition:opacity 1s}.s4 .lampc{opacity:1}.scrg{opacity:0;transition:opacity 1s}.s4 .scrg{opacity:1}.offer2{opacity:0;transform:scale(.8)}.s4 .offer2{opacity:1;transform:none;transition:opacity .7s .5s,transform .7s .5s cubic-bezier(.3,1.6,.5,1)}.offer2 rect{fill:#E4007C}.offer2 text{fill:#fff;font-size:14px}.offer2 .t1{font-weight:700;font-size:15px}
+.seat{transition:opacity .35s}.s5 .seat{opacity:0}.stand{opacity:0;transform:translateY(24px) scale(.94);transform-origin:330px 392px}.s5 .stand{opacity:1;transform:none;transition:opacity .4s .25s,transform .9s .25s cubic-bezier(.3,1.6,.5,1)}.stand .face .e{fill:#F5EDE4}
+.chk{opacity:0}.u .chk{animation:pop .6s .9s cubic-bezier(.3,1.6,.5,1) both}.chk circle{fill:#E4007C}.chk path{fill:none;stroke:#fff;stroke-width:3.5}
+.glowc{opacity:0;transition:opacity 1.2s}.s5 .glowc{opacity:1}
+.strip{background:var(--stone);padding:2.2rem 0}.strip .g{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}@media(max-width:700px){.strip .g{grid-template-columns:repeat(2,1fr)}}.strip b{display:block;font:900 clamp(2.2rem,5vw,3.4rem)/1 Fraunces,serif;letter-spacing:-.04em;color:var(--fu)}.strip span{font-size:.92rem}
+.five{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem;margin-top:2.2rem}@media(max-width:980px){.five{grid-template-columns:1fr 1fr}}@media(max-width:560px){.five{grid-template-columns:1fr}}
+.five>div{background:#fff;border-radius:var(--r);padding:1.2rem;position:relative}.five .nm{font:900 2.6rem/1 Fraunces,serif;color:var(--fu);letter-spacing:-.04em}.five h3{font-size:1.15rem;margin:.5rem 0 .4rem}.five p{font-size:.92rem}
+/* pain */
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem 3.4rem;align-items:start;margin-top:2.4rem}@media(max-width:900px){.pn{grid-template-columns:1fr}}
+.chat{background:var(--ink);color:var(--bone);border-radius:22px;padding:1.2rem;box-shadow:0 30px 70px rgba(20,16,15,.25);min-height:21rem}.chat .hd{display:flex;align-items:center;gap:.7rem;padding-bottom:.9rem;margin-bottom:1rem;border-bottom:1px solid var(--ln);font-weight:600}.chat .av{width:2.2rem;height:2.2rem;border-radius:50%;background:rgba(245,237,228,.14);display:grid;place-items:center;font:900 1rem Fraunces,serif}
+.bb{max-width:85%;padding:.8rem 1rem;border-radius:16px;margin-bottom:.7rem;opacity:0;transform:translateY(10px) scale(.96);transition:opacity .4s,transform .4s}.bb.on{opacity:1;transform:none}.bb.them{background:rgba(245,237,228,.12);border-bottom-left-radius:4px}.bb.me{background:var(--fu);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+.bb.ty i{display:inline-block;width:6px;height:6px;border-radius:50%;background:currentColor;margin:0 2px;opacity:.5;animation:tyd 1s infinite}.bb.ty i:nth-child(2){animation-delay:.15s}.bb.ty i:nth-child(3){animation-delay:.3s}@keyframes tyd{50%{transform:translateY(-4px);opacity:1}}
+.chat .ft{font-size:.78rem;opacity:0;transition:opacity .6s;text-align:right;color:rgba(245,237,228,.6)}.chat .ft.on{opacity:1}.chat .sil{margin-top:.8rem;font:900 1.7rem Fraunces,serif;letter-spacing:-.03em;opacity:0;transition:opacity 1s}.chat .sil.on{opacity:1;color:var(--fu)}
+.cur{display:inline-block;width:2px;height:1em;background:currentColor;vertical-align:-.15em;animation:cb 1s steps(1) infinite}@keyframes cb{50%{opacity:0}}
+.nt{display:grid;gap:.7rem}.nt>div{display:flex;gap:.9rem;align-items:flex-start;background:#fff;border-radius:14px;padding:1rem 1.1rem;box-shadow:0 10px 30px rgba(20,16,15,.08)}.nt b{display:block;font-size:.95rem}.nt span{font-size:.88rem;color:rgba(20,16,15,.65)}.nt .ib{width:2.3rem;height:2.3rem}
+.vc{margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.6rem}.vc span{font:italic 300 1.15rem Fraunces,serif;padding:.7rem 1.1rem;border-radius:99px;background:var(--ink);color:var(--bone)}
+.gap{margin-top:3rem;display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center}@media(max-width:700px){.gap{grid-template-columns:1fr}.gap .br{margin:.2rem auto}.gap .br i{display:none}}
+.gap .cf{padding:1.3rem;border-radius:var(--r);background:var(--ink);color:var(--bone)}.gap .cf b{display:block;font:900 1.35rem/1.1 Fraunces,serif;letter-spacing:-.02em;margin-bottom:.3rem}.gap .cf small{font-size:.88rem;opacity:.8}.gap .cf.r{background:var(--fu);color:#fff}
+.br{display:flex;gap:6px;align-items:center}.br i{width:20px;height:8px;border-radius:2px;background:var(--lk)}.br em{font:900 2rem Fraunces,serif;color:var(--fu);font-style:normal;animation:qm 1.6s infinite}@keyframes qm{50%{transform:scale(1.4) rotate(8deg)}}
+/* cost */
+.cost{display:grid;grid-template-columns:.8fr 1.2fr;gap:2.4rem 4rem;align-items:start}@media(max-width:900px){.cost{grid-template-columns:1fr}}
+.cm{position:sticky;top:6rem}.cm .bar{height:16px;border-radius:99px;background:rgba(245,237,228,.14);overflow:hidden;margin-top:1.4rem}.cm .bar i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--fu),#ff7aa8);transform:scaleX(var(--cf,.05));transform-origin:left;transition:transform .5s}.cm .lab{display:flex;justify-content:space-between;font:700 .72rem 'Space Grotesk';letter-spacing:.14em;text-transform:uppercase;margin-top:.7rem;color:rgba(245,237,228,.75)}
+.cr{display:grid;gap:.8rem}.cr>div{display:flex;gap:1rem;align-items:center;padding:1.1rem 1.2rem;border-radius:var(--r);background:rgba(245,237,228,.06);box-shadow:inset 0 0 0 1px var(--ln);opacity:.35;transition:opacity .5s,background .5s,transform .5s}.cr>div.lit{opacity:1;background:rgba(228,0,124,.16);transform:translateX(6px)}.cr .ib{background:rgba(245,237,228,.14)}.cr .lit .ib{background:var(--fu)}
+/* tower */
+.tw{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem 3.4rem;align-items:center}@media(max-width:900px){.tw{grid-template-columns:1fr}}
+.tried{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.4rem 0}.tried span{font-weight:600;padding:.6rem 1rem;border-radius:99px;background:#fff;position:relative;transition:color .4s}.tried span::after{content:"";position:absolute;left:.8rem;right:.8rem;top:50%;height:2px;background:var(--fu);transform:scaleX(0);transform-origin:left;transition:transform .5s calc(var(--i)*.35s + .4s)}.tried.on span::after{transform:none}.tried.on span{color:rgba(20,16,15,.5)}
+.tower{background:var(--ink);border-radius:22px;padding:1.6rem 1.4rem 1.4rem;color:var(--bone);position:relative;overflow:hidden}.tower::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 50% at 50% 120%,rgba(228,0,124,.4),transparent 70%)}.tower>*{position:relative}
+.tower .lb{font:700 .68rem 'Space Grotesk';letter-spacing:.16em;text-transform:uppercase;text-align:center;color:rgba(245,237,228,.75);transition:color .4s}.tower .top{display:grid;gap:.5rem;margin:.9rem 0;transform-origin:50% 100%}.tower.wob .top{animation:wob 1.1s ease-in-out infinite}@keyframes wob{25%{transform:rotate(-2.2deg) translateX(-6px)}75%{transform:rotate(2.2deg) translateX(6px)}}
+.blk{padding:.85rem 1rem;border-radius:10px;text-align:center;font-weight:700;background:rgba(245,237,228,.12);box-shadow:inset 0 0 0 1px rgba(245,237,228,.3)}.base .blk{background:transparent;border:2px dashed rgba(228,0,124,.7);color:rgba(245,237,228,.55);transition:all .6s cubic-bezier(.3,1.4,.5,1) var(--dl,0s)}.tower.fix .base .blk{background:var(--fu);border-color:var(--fu);color:#fff;box-shadow:0 0 24px rgba(228,0,124,.5)}.base{display:grid;gap:.5rem}
+.tower.fix .lb.b{color:#fff}.tower .top .blk{transition:opacity .5s}.tower:not(.fix) .top .blk{opacity:.8}.tower .tag{margin-top:1rem;text-align:center;font:900 1.35rem Fraunces,serif;letter-spacing:-.02em}
+/* method */
+.bridge{display:flex;align-items:flex-end;justify-content:center;gap:0;margin:2.2rem 0 3rem}.bridge .cl2{width:22%;max-width:9rem;padding:.8rem;border-radius:10px 10px 0 0;background:var(--ln);font-size:.8rem;text-align:center;align-self:flex-end;height:5.5rem;display:grid;place-items:center}.bridge .pl{display:flex;gap:4px;margin:0 6px 0}.bridge .pl i{width:clamp(1.4rem,5vw,2.6rem);height:.8rem;border-radius:3px;background:var(--fu);display:grid;place-items:center;transform:translateY(-1.5rem);opacity:0;transition:opacity .4s,transform .6s cubic-bezier(.3,1.5,.5,1) calc(var(--i)*.22s)}.bridge.on .pl i{transform:none;opacity:1}
+.phs{position:relative;margin-top:2.6rem;display:grid;gap:clamp(2rem,5vw,3.4rem)}.phs::before,.phs::after{content:"";position:absolute;left:1.6rem;top:1rem;bottom:1rem;width:3px;background:var(--ln)}@media(min-width:900px){.phs::before,.phs::after{left:2.4rem}}.phs::after{background:var(--fu);box-shadow:0 0 14px var(--fu);transform:scaleY(var(--pf,0));transform-origin:top}
+.ph{position:relative;display:grid;grid-template-columns:3.4rem 1fr;gap:1.2rem}@media(min-width:900px){.ph{grid-template-columns:5rem 1fr 1fr;gap:2rem}}
+.ph .nm{width:3.2rem;height:3.2rem;border-radius:50%;background:var(--ink);box-shadow:inset 0 0 0 2px var(--ln);display:grid;place-items:center;font:900 1.1rem Fraunces,serif;position:relative;z-index:1;transition:.4s}@media(min-width:900px){.ph .nm{width:4.8rem;height:4.8rem;font-size:1.5rem}}.ph.on .nm{background:var(--fu);box-shadow:0 0 0 7px rgba(228,0,124,.28)}
+.ph .q{font:italic 300 clamp(1.5rem,3vw,2.2rem)/1.05 Fraunces,serif;color:var(--fu);letter-spacing:-.03em;margin:.2rem 0 .8rem}.ph h3{font-size:clamp(1.5rem,3vw,2rem)}.ph p{color:rgba(245,237,228,.82);margin-top:.5rem}
+.ph .dl{display:inline-block;margin-top:1rem;padding:.55rem .9rem;border-radius:99px;background:var(--fu);color:#fff;font-weight:700;font-size:.85rem}.ph .ck{margin-top:.8rem;font-size:.9rem;color:rgba(245,237,228,.7)}.ph .ck b{color:#fff}
+.ph .mini{grid-column:2/-1;background:rgba(245,237,228,.06);border-radius:16px;padding:1.1rem;box-shadow:inset 0 0 0 1px var(--ln);align-self:start}@media(min-width:900px){.ph .mini{grid-column:auto}}
+.mini .row{display:flex;align-items:center;gap:.7rem;font-size:.9rem;padding:.38rem 0;opacity:0;transform:translateX(-10px)}.ph.on .mini .row{animation:gin .5s calc(.3s + var(--i)*.28s) both}
+.mini .bx{width:1.15rem;height:1.15rem;border-radius:5px;box-shadow:inset 0 0 0 2px var(--ln);position:relative;flex:none}.mini .bx::after{content:"";position:absolute;left:.3rem;top:.05rem;width:.32rem;height:.65rem;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) scale(0)}.ph.on .mini .bx{animation:bxf .3s calc(.6s + var(--i)*.28s) both}.ph.on .mini .bx::after{animation:bxc .3s calc(.7s + var(--i)*.28s) both}@keyframes bxf{to{background:var(--fu);box-shadow:none}}@keyframes bxc{to{transform:rotate(45deg) scale(1)}}
+.mini .cards{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}.mini .cd{padding:.7rem;border-radius:10px;background:rgba(245,237,228,.09);font-size:.85rem;font-weight:600;position:relative;overflow:hidden;opacity:0}.ph.on .mini .cd{animation:gin .5s calc(.3s + var(--i)*.2s) both}.mini .cd::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(228,0,124,.55),transparent 70%);transform:translateX(-120%)}.ph.on .mini .cd::after{animation:scn 1.1s calc(1s + var(--i)*.35s) both}@keyframes scn{to{transform:translateX(120%)}}
+.mini .cmp{display:grid;gap:.5rem}.mini .cmp .o{display:grid;grid-template-columns:7rem 1fr;gap:.7rem;align-items:center;font-size:.8rem}.mini .cmp i{display:block;height:8px;border-radius:99px;background:rgba(245,237,228,.14);overflow:hidden}.mini .cmp i::after{content:"";display:block;height:100%;width:var(--w);background:rgba(245,237,228,.6);transform:scaleX(0);transform-origin:left}.ph.on .mini .cmp i::after{animation:gr .9s calc(.4s + var(--i)*.18s) forwards}@keyframes gr{to{transform:none}}.mini .cmp .w i::after{background:var(--fu)}.mini .win{margin-top:.8rem;display:inline-block;padding:.35rem .8rem;border-radius:99px;background:var(--fu);font-weight:700;font-size:.8rem;opacity:0}.ph.on .mini .win{animation:pop .5s 2.4s both}
+.mini .doc{display:grid;gap:.45rem}.mini .doc .row{background:rgba(245,237,228,.07);border-radius:8px;padding:.5rem .7rem}.mini .doc b{color:var(--fu);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;width:6.2rem;flex:none}
+.mini .pth{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}.mini .pth span{padding:.45rem .7rem;border-radius:99px;background:rgba(245,237,228,.1);font-size:.8rem;font-weight:600;opacity:0}.ph.on .mini .pth span{animation:pop .4s calc(.3s + var(--i)*.4s) both,lit .5s calc(.5s + var(--i)*.4s) forwards}@keyframes lit{to{background:var(--fu)}}
+/* change */
+.ba{position:relative;margin-top:2.4rem;border-radius:22px;overflow:hidden;min-height:17rem;user-select:none;touch-action:pan-y;cursor:ew-resize;box-shadow:0 30px 70px rgba(20,16,15,.2)}.ba>div{position:absolute;inset:0;padding:clamp(1.4rem,4vw,2.6rem);display:flex;flex-direction:column;justify-content:center}.ba .bf{background:var(--ink);color:var(--bone)}.ba .af{background:var(--fu);color:#fff;clip-path:inset(0 0 0 var(--p,50%))}
+.ba .t{font:700 .72rem 'Space Grotesk';letter-spacing:.18em;text-transform:uppercase;opacity:.8;margin-bottom:.8rem}.ba .s{font:italic 300 clamp(1.4rem,3.4vw,2.4rem)/1.1 Fraunces,serif;letter-spacing:-.03em;max-width:24ch}.ba .af .s{font-style:normal;font-weight:900}.ba .af .s small{display:block;font:500 .95rem 'Space Grotesk';margin-top:.7rem;opacity:.9}
+.ba .hdl{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;background:#fff;z-index:2}.ba .hdl::after{content:"↔";position:absolute;top:50%;left:50%;width:2.8rem;height:2.8rem;margin:-1.4rem;border-radius:50%;background:#fff;color:var(--fu);display:grid;place-items:center;font-weight:900;box-shadow:0 8px 24px rgba(0,0,0,.3)}.ba small.il{position:absolute;bottom:.7rem;left:1rem;z-index:3;font-size:.72rem;opacity:.7;color:#fff}
+.six{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin-top:2.6rem}@media(max-width:900px){.six{grid-template-columns:1fr 1fr}}@media(max-width:560px){.six{grid-template-columns:1fr}}
+.six>div{background:#fff;border-radius:var(--r);padding:1.4rem;position:relative;overflow:hidden}.six h3{margin:.9rem 0 .4rem;font-size:1.3rem}.six p{font-size:.95rem}.six::after{display:none}.six>div::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:4px;background:var(--fu);transform:scaleX(0);transform-origin:left;transition:transform .9s .4s}.six>div.on::after{transform:none}.six .dtag{display:inline-block;margin-top:.8rem;font-size:.74rem;font-weight:700;letter-spacing:.06em;color:var(--fu)}
+.why{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;margin-top:2.4rem}@media(max-width:700px){.why{grid-template-columns:1fr}}.why>div{display:flex;gap:1rem;padding:1.4rem;border-radius:var(--r);background:var(--bone)}.why h3{font-size:1.25rem;margin-bottom:.3rem}.why p{font-size:.95rem}
+.pil{margin-top:1.6rem;padding:1.3rem 1.5rem;border-radius:var(--r);background:var(--ink);color:var(--bone);display:flex;gap:1rem;align-items:flex-start}.pil p{font-size:.98rem}
+/* kit */
+.kit{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin-top:2.6rem}@media(max-width:900px){.kit{grid-template-columns:1fr 1fr}}@media(max-width:560px){.kit{grid-template-columns:1fr}}
+.kit>div{padding:1.4rem;border-radius:var(--r);background:rgba(245,237,228,.06);box-shadow:inset 0 0 0 1px var(--ln);transition:background .3s,transform .3s}.kit>div:hover{background:rgba(228,0,124,.18);transform:translateY(-4px)}.kit h3{margin:.9rem 0 .4rem;font-size:1.25rem}.kit p{font-size:.93rem;color:rgba(245,237,228,.78)}
+.dls{margin-top:2.4rem;display:grid;grid-template-columns:1fr 1fr;gap:.5rem 2rem}@media(max-width:700px){.dls{grid-template-columns:1fr}}.dls div{display:flex;gap:.8rem;align-items:center;padding:.7rem 0;border-bottom:1px solid var(--ln);font-weight:600}.dls .bx{width:1.3rem;height:1.3rem;border-radius:6px;box-shadow:inset 0 0 0 2px var(--ln);position:relative;flex:none}.dls .bx::after{content:"";position:absolute;left:.38rem;top:.1rem;width:.35rem;height:.7rem;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) scale(0)}.dls.on .bx{animation:bxf .3s calc(var(--i)*.25s + .3s) both}.dls.on .bx::after{animation:bxc .3s calc(var(--i)*.25s + .4s) both}.dls .bx{--i:0}
+/* invest */
+.inv{display:grid;grid-template-columns:1.1fr .9fr;gap:1.4rem;margin-top:2.4rem;align-items:stretch}@media(max-width:900px){.inv{grid-template-columns:1fr}}
+.price{position:relative;background:var(--ink);color:var(--bone);border-radius:22px;padding:clamp(1.6rem,4vw,2.6rem);overflow:hidden}.price::before{content:"";position:absolute;inset:-2px;z-index:0;border-radius:24px;background:conic-gradient(from var(--a,0deg),var(--fu),transparent 30%,transparent 70%,var(--fu));animation:spin 6s linear infinite;opacity:.9}.price::after{content:"";position:absolute;inset:2px;border-radius:20px;background:var(--ink);z-index:0}.price>*{position:relative;z-index:1}
+@property --a{syntax:'<angle>';initial-value:0deg;inherits:false}@keyframes spin{to{--a:360deg}}.price .amt{font:900 clamp(4rem,10vw,6.4rem)/.9 Fraunces,serif;letter-spacing:-.05em;color:#fff}.price .amt small{font-size:1rem;font-family:'Space Grotesk';letter-spacing:0;font-weight:500;margin-left:.6rem;opacity:.8}
+.seats{display:flex;gap:.8rem;margin:1.2rem 0}.seats i{width:3rem;height:3rem;border-radius:50%;background:var(--fu);display:grid;place-items:center;box-shadow:0 0 0 0 rgba(228,0,124,.6);animation:m-cp 2s infinite}.seats svg{width:1.4rem;height:1.4rem;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cmt{border-radius:22px;padding:clamp(1.6rem,4vw,2.4rem);background:var(--stone);display:flex;flex-direction:column;justify-content:center}.cmt h3{font-size:1.7rem;margin:.8rem 0 .6rem}.cmt .fine{margin-top:1rem;font-size:.85rem;font-weight:700;color:var(--fu);letter-spacing:.05em}
+/* faq */
+.fq{margin-top:2.4rem;display:grid;gap:.6rem;max-width:52rem}.fq details{background:#fff;border-radius:var(--r);padding:0 1.3rem;transition:box-shadow .3s}.fq details[open]{box-shadow:0 14px 40px rgba(20,16,15,.1)}.fq summary{cursor:pointer;list-style:none;padding:1.15rem 0;font:900 1.2rem/1.15 Fraunces,serif;letter-spacing:-.02em;display:flex;justify-content:space-between;gap:1rem}.fq summary::-webkit-details-marker{display:none}.fq summary::after{content:"+";color:var(--fu);font-size:1.6rem;line-height:1;transition:transform .3s}.fq details[open] summary::after{transform:rotate(45deg)}.fq details p{padding:0 0 1.2rem;animation:gin .4s both}
+/* final + sticky + footer */
+.fin{text-align:center}.fin h2{max-width:16ch;margin-inline:auto}.fin .lede{margin:0 auto}.fin .cta{justify-content:center}
+.stk{position:fixed;left:0;right:0;bottom:0;z-index:15;padding:.7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom,0px));background:rgba(20,16,15,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);color:var(--bone);display:flex;align-items:center;justify-content:space-between;gap:1rem;transform:translateY(110%);transition:transform .5s cubic-bezier(.3,1.2,.5,1)}.stk.on{transform:none}.stk span{font-size:.88rem;line-height:1.25}.stk b{display:block;font:900 1.1rem Fraunces,serif}@media(min-width:900px){.stk{display:none}}
+footer{background:var(--ink);color:rgba(245,237,228,.7);padding:2.4rem 0 5.4rem;font-size:.9rem;border-top:1px solid var(--ln)}footer .g{text-align:center;max-width:46rem}
+/* apply modal */
+#ap{position:fixed;inset:0;z-index:60;background:#14100F;display:none;overflow-y:auto;color:var(--bone)}#ap.on{display:block}#ap::before{content:"";position:fixed;inset:0;background:radial-gradient(80% 60% at 100% 110%,rgba(228,0,124,.45),transparent 70%);pointer-events:none}
+.apw{position:relative;max-width:40rem;margin:0 auto;padding:clamp(1.2rem,4vw,2.4rem) var(--pad) 4rem}.apx{position:absolute;top:1rem;right:var(--pad);background:rgba(245,237,228,.14);color:#fff;border:0;border-radius:99px;padding:.5rem 1rem;font:700 .74rem 'Space Grotesk';letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.sb{display:flex;gap:5px;margin-top:2.6rem}.sb i{flex:1;height:4px;border-radius:4px;background:rgba(245,237,228,.2);position:relative;overflow:hidden}.sb i::after{content:"";position:absolute;inset:0;background:#fff;transform:scaleX(0);transform-origin:left;transition:transform .5s}.sb i.d::after{transform:none}.sb i.c::after{background:var(--fu);transform:none}
+.smr{display:flex;justify-content:space-between;margin:.9rem 0 1.2rem;font:700 .72rem 'Space Grotesk';letter-spacing:.14em;text-transform:uppercase;color:rgba(245,237,228,.75)}.smr button{background:none;border:0;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer}.smr button[hidden]{display:block;visibility:hidden}
+.qt{font:900 clamp(1.7rem,4.6vw,2.6rem)/1.02 Fraunces,serif;letter-spacing:-.035em}.qt .w{display:inline-block;opacity:0;animation:wu .75s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*.06s)}.qs{margin-top:.8rem;color:rgba(245,237,228,.78)}
+.fd{margin-top:1.3rem;display:grid;gap:1.1rem;animation:gin .6s .25s both}.fd label,.fd .lb{display:block;font-weight:600;font-size:.95rem;margin-bottom:.4rem}.fd small{font-weight:400;opacity:.7}
+.fd input[type=text],.fd input[type=email],.fd textarea{width:100%;font:inherit;color:var(--bone);background:rgba(245,237,228,.09);border:0;border-radius:10px;padding:.95rem 1.05rem;box-shadow:inset 0 0 0 1.5px transparent;transition:box-shadow .25s,background .25s}.fd textarea{min-height:7rem;resize:vertical;line-height:1.5}.fd ::placeholder{color:rgba(245,237,228,.45)}.fd input:focus,.fd textarea:focus{outline:0;background:rgba(245,237,228,.13);box-shadow:inset 0 0 0 1.5px var(--fu),0 0 0 4px rgba(228,0,124,.25)}
+.chs{display:flex;flex-wrap:wrap;gap:.55rem}.ch{font:600 .95rem/1.25 'Space Grotesk',sans-serif;color:var(--bone);background:rgba(245,237,228,.09);border:0;border-radius:14px;padding:.8rem 1.05rem;cursor:pointer;text-align:left;width:100%;transition:background .2s,transform .2s,box-shadow .2s}.ch:hover{background:rgba(245,237,228,.16);transform:translateY(-2px)}.ch[aria-pressed=true]{background:var(--fu);color:#fff;transform:none;box-shadow:0 0 0 4px rgba(228,0,124,.28)}
+.ck2{display:flex;gap:.8rem;align-items:flex-start;font-size:.92rem;color:rgba(245,237,228,.85);cursor:pointer}.ck2 input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:#E4007C;flex:none}.er{display:none;color:#ff8fba;font-weight:600;font-size:.92rem;margin-top:1rem}.er.on{display:block;animation:shk .4s}@keyframes shk{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.nv{display:flex;align-items:center;gap:1rem 1.4rem;flex-wrap:wrap;margin-top:1.6rem}.dn{text-align:center;padding:3rem 0}.dn svg{width:5.6rem;height:5.6rem}.dn .c1{fill:rgba(228,0,124,.2);stroke:var(--fu);stroke-width:3;stroke-dasharray:1;stroke-dashoffset:1;animation:dr 1s .1s ease-out forwards}.dn .c2{fill:none;stroke:#fff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:dr .6s .8s ease-out forwards}.dn h3{font-size:clamp(2rem,6vw,3rem);margin-top:1rem}.dn p{max-width:30rem;margin:1rem auto 0;color:rgba(245,237,228,.85)}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.js .wd{opacity:1}.on .wd,.chip span,.price::before{animation:none!important}.bb,.mini .row,.mini .cd,.mini .pth span,.mini .win{opacity:1;transform:none;animation:none!important}section::before,.mg-glow{display:none}.mini .cmp i::after,.six>div::after{transform:none!important}.mini .bx{background:var(--fu);box-shadow:none}.mini .bx::after{transform:rotate(45deg) scale(1)}.mini .cd::after{display:none}.mini .pth span{background:var(--fu)}.bridge .pl i{opacity:1;transform:none;transition:none}.tried span::after{transform:none;transition:none}.dls .bx{background:var(--fu);box-shadow:none}.dls .bx::after{transform:rotate(45deg) scale(1)}.cr>div{opacity:1}.hg{transition:none}.tx{transition:none}.ba .hdl{transition:none}}
 
-/* dark sections: ink foundation */
-.dark{background:var(--ink);color:var(--bone);--chip-bg:var(--bone);--chip-fg:var(--ink)}
-.dark h2,.dark h3{color:var(--bone)}
-.dark p{color:rgba(245,237,228,.78)}
-.dark .tag{color:rgba(245,237,228,.86)}
-.stone{background:var(--stone)}
+.nt>div{color:var(--ink)}@media(max-width:900px){.cm{position:static}}@media(max-width:560px){.chip span{font-size:.74rem;padding:.4rem .7rem}}
 
-/* section label: restrained uppercase + index chip */
-.tag{display:flex;align-items:center;gap:12px;font:700 .78rem/1.2 var(--text);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-bottom:24px}
-section .tag::before,.start-box .tag::before{counter-increment:sec;content:counter(sec,decimal-leading-zero);flex:none;background:var(--chip-bg);color:var(--chip-fg);font:700 .74rem/1 var(--text);letter-spacing:.06em;padding:6px 8px;border-radius:6px}
-.price-wrap .tag::before,.guarantee .tag::before{display:none}
+.face path,.face .e{transition:opacity .3s}.buy .face .mn{opacity:1}.st[data-b="5"] .stand .face .mf{opacity:0}.stand .face .br2{opacity:0}.stand .face .ms{opacity:1}
 
-/* buttons: pill, fuchsia, white text */
-.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--fuchsia);color:#fff;border:0;border-radius:999px;padding:17px 32px;font:700 1.05rem/1.2 var(--text);text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
-.btn:hover{background:#c70070;transform:translateY(-2px)}
-.btn:active{transform:translateY(0)}
-.btn.sm{padding:10px 20px;font-size:.9rem}
-.btn.big{padding:21px 38px;font-size:1.15rem}
-.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
-.btn.ghost:hover{background:var(--ink);color:var(--bone);transform:none}
+@media(max-width:700px){.art{clip-path:inset(-14rem 0 0 0);aspect-ratio:1.7778/1.7}.art svg{width:170%;max-width:none;height:auto;transform:translateX(var(--px,0));transition:transform 1.3s cubic-bezier(.6,0,.2,1)}
+.st[data-b="0"]{--px:0%}.st[data-b="1"]{--px:-36.9%}.st[data-b="2"]{--px:-36.9%}.st[data-b="3"]{--px:-5%}.st[data-b="4"]{--px:-36.9%}.st[data-b="5"]{--px:-15%}.fam{top:-10.8rem}.chips text{font-size:14px}}
 
-/* header */
-header{background:var(--ink);color:var(--bone)}
-.container.nav{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
-.logo{display:flex;align-items:center;gap:10px;font:900 1.1rem var(--display);letter-spacing:-.01em}
-.mark{width:10px;height:24px;background:var(--fuchsia);border-radius:3px}
-
-/* hero base */
-.hero{background:var(--ink);color:var(--bone);padding:clamp(36px,5vw,72px) 0 0;overflow:hidden}
-.hero .container{container-type:inline-size}
-.pill,.pilot{display:inline-flex;align-items:center;gap:10px;background:var(--fuchsia);color:#fff;font:700 .78rem/1.2 var(--text);letter-spacing:.12em;text-transform:uppercase;padding:9px 16px 9px 12px;border-radius:999px;margin-bottom:clamp(24px,3vw,40px)}
-.pilot i{width:8px;height:8px;border-radius:50%;background:#fff}
-.pill svg{width:15px;height:15px}
-.hero h1{line-height:.93;letter-spacing:-.045em;color:var(--bone)}
-.hero h1 span{display:block;white-space:nowrap}
-.hero .sub{font-size:clamp(1.15rem,1.8vw,1.4rem);line-height:1.45;font-weight:500;color:rgba(245,237,228,.86);max-width:34rem}
-.cta-note{font:700 .85rem/1.2 var(--text);letter-spacing:.1em;text-transform:uppercase;color:var(--bone);margin:0}
-.hero-facts{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:16px 32px;margin-top:clamp(44px,6vw,80px);padding:0 0 clamp(44px,5vw,72px)}
-.hero-facts p{margin:0;color:rgba(245,237,228,.7);font:600 .78rem/1.4 var(--text);letter-spacing:.12em;text-transform:uppercase}
-.hero-facts b{display:block;font:900 clamp(1.5rem,2.6vw,2.3rem)/1 var(--display);letter-spacing:-.025em;text-transform:none;margin-bottom:8px;color:var(--bone)}
-
-/* shared lists */
-.deliverable{display:inline-flex;align-items:center;gap:10px;font:600 .88rem/1.3 var(--text);color:var(--ink);background:var(--paper);padding:8px 14px;border-radius:999px}
-.deliverable::before{content:"";width:8px;height:8px;background:var(--fuchsia);flex:none}
-.dark .deliverable{color:var(--bone);background:rgba(245,237,228,.1)}
-
-footer{background:#0d0a09;padding:44px 0 56px;color:rgba(245,237,228,.7);font-size:.9rem}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-/* header nav */
-header{position:sticky;top:0;z-index:60}
-.navlinks{display:flex;gap:28px}
-.navlinks a{color:rgba(245,237,228,.78);text-decoration:none;font:600 .78rem/1 var(--text);letter-spacing:.12em;text-transform:uppercase}
-.navlinks a:hover{color:var(--bone)}
-
-/* HERO: the perception gap (staggered, outlined, resolving) */
-.hero h1{font-size:9cqw}
-.hero h1 .before{color:rgba(245,237,228,.36)}
-.hero h1 .mid{padding-left:4cqw}
-.hero h1 .end{padding-left:8cqw;color:var(--hot)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:start;margin-top:clamp(36px,5vw,64px)}
-.cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:30px}
-
-/* hero visual: scattered expertise resolving into one offer */
-.demo{background:var(--stone);border-radius:22px;padding:clamp(20px,2.4vw,30px);position:relative;color:var(--ink)}
-.demo-label{font:700 .74rem/1.2 var(--text);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
-.chips{display:flex;flex-wrap:wrap;gap:10px;padding:2px 0 6px}
-.chip{background:var(--paper);border-radius:10px;padding:8px 13px;font-weight:600;font-size:.92rem;color:var(--ink);line-height:1.3;animation:chip-in .7s cubic-bezier(.2,.8,.2,1) both}
-.chip:nth-child(1){transform:rotate(-3deg)}
-.chip:nth-child(2){transform:rotate(2deg) translate(10px,4px)}
-.chip:nth-child(3){transform:rotate(-1.5deg) translateX(-4px)}
-.chip:nth-child(4){transform:rotate(3deg) translate(14px,-2px)}
-.chip:nth-child(5){transform:rotate(-2.5deg) translateY(3px)}
-.chip:nth-child(1){animation-delay:.15s}.chip:nth-child(2){animation-delay:.22s}.chip:nth-child(3){animation-delay:.29s}
-.chip:nth-child(4){animation-delay:.36s}.chip:nth-child(5){animation-delay:.43s}
-@keyframes chip-in{from{opacity:0;translate:0 -22px;rotate:8deg}to{opacity:1;translate:0 0;rotate:0deg}}
-.demo-arrow{display:block;width:100%;height:64px;margin:0;color:var(--fuchsia);overflow:visible}
-.demo-arrow path{stroke-dasharray:1;stroke-dashoffset:1;animation:draw .8s .6s ease-out forwards}
-.demo-arrow path:nth-child(2){animation-delay:.68s}.demo-arrow path:nth-child(3){animation-delay:.76s}.demo-arrow path:nth-child(4){animation-delay:.84s}.demo-arrow path:nth-child(5){animation-delay:.92s}
-@keyframes draw{to{stroke-dashoffset:0}}
-.offer-card{background:var(--ink);color:var(--bone);border-radius:14px;padding:22px 24px 24px 28px;box-shadow:inset 6px 0 0 var(--fuchsia);animation:card-in .7s 1s cubic-bezier(.2,.8,.2,1) both}
-@keyframes card-in{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
-.offer-card .demo-label{color:rgba(245,237,228,.65)}
-.offer-card h3{font-size:clamp(1.4rem,2.2vw,1.8rem);color:var(--bone);margin-bottom:16px}
-.offer-card ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:.95rem}
-.offer-card li{display:flex;gap:14px;color:rgba(245,237,228,.88);line-height:1.4;align-items:baseline}
-.offer-card li b{color:var(--hot);min-width:3.6rem;font:700 .74rem/1.4 var(--text);letter-spacing:.14em;text-transform:uppercase}
-
-/* OUTCOMES */
-.outcomes{background:var(--stone);padding:clamp(56px,7vw,96px) 0}
-.outcomes h2{font-size:clamp(1.9rem,3.6vw,3rem);max-width:22ch}
-.outcomes .intro{color:var(--body);font-size:1.1rem;max-width:44rem;margin:20px 0 0}
-.oc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;counter-reset:oc}
-.oc .cell{background:var(--paper);border-radius:var(--r);padding:24px 22px;counter-increment:oc}
-.oc .cell::before{content:counter(oc,decimal-leading-zero);display:block;font:900 1.7rem/1 var(--display);letter-spacing:-.03em;color:var(--fuchsia);margin-bottom:14px}
-.oc b{display:block;font-size:1.05rem;color:var(--ink);margin-bottom:6px;line-height:1.3}
-.oc span{display:block;font-size:.95rem;line-height:1.5;color:var(--body)}
-
-/* PROBLEM: quotes slip out of alignment */
-.problem h2,.stakes h2,.reframe h2,.benefits h2,.proof h2,.stack h2{max-width:20ch}
-.problem .lede-p{margin-top:24px}
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:48px 0 44px}
-.quote{background:var(--paper);border-radius:var(--r);padding:26px 26px 30px;font:900 1.35rem/1.2 var(--display);letter-spacing:-.02em}
-.quote:nth-child(3n+2){transform:translateY(18px)}
-.quote:nth-child(3n){transform:translateY(-8px)}
-.quote:nth-child(1),.quote:nth-child(5){background:var(--stone)}
-.quote::before{content:"\201C";font-family:Georgia,serif;display:block;font-size:3.4rem;line-height:.6;color:var(--fuchsia);margin-bottom:12px}
-
-/* STAKES (ink) */
-.stakes h2{color:var(--bone)}
-.stake-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px}
-.stake{display:flex;gap:16px;align-items:baseline;padding:22px 24px;background:rgba(245,237,228,.06);border-radius:14px;font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:1.4;color:var(--bone)}
-.stake::before{content:"";flex:none;width:11px;height:11px;background:var(--fuchsia);transform:translateY(1px)}
-
-/* REFRAME: an offset layer shows the gap */
-.reframe-box{background:var(--ink);color:var(--bone);border-radius:22px;padding:clamp(28px,5vw,60px);margin-top:44px;box-shadow:14px 14px 0 var(--fuchsia)}
-.reframe-box h3{color:var(--bone);font-size:clamp(1.8rem,3.6vw,3rem);margin-bottom:22px}
-.reframe-box p{color:rgba(245,237,228,.8);max-width:46rem;font-size:1.1rem}
-.reframe-box p:last-child{margin:0}
-
-/* METHOD: connected strategic system */
-.method h2{color:var(--bone)}
-.phases{margin-top:44px;--numw:132px}
-.phase{display:grid;grid-template-columns:var(--numw) 1fr;gap:48px;padding:0 0 22px;position:relative}
-.phase::before{content:"";position:absolute;left:calc(var(--numw) + 23px);top:36px;bottom:-4px;width:2px;background:rgba(245,237,228,.2)}
-.phase:last-child::before{display:none}
-.phase::after{content:"";position:absolute;left:calc(var(--numw) + 16px);top:30px;width:16px;height:16px;background:var(--fuchsia);border-radius:4px}
-.phase .num{font:900 clamp(2.4rem,5vw,4.2rem)/.9 var(--display);color:var(--bone);letter-spacing:-.04em;padding-top:14px}
-.phase .num small{display:block;font:700 .74rem/1.2 var(--text);letter-spacing:.14em;text-transform:uppercase;color:rgba(245,237,228,.7);margin-bottom:10px}
-.phase>div:last-child{background:rgba(245,237,228,.06);border-radius:var(--r);padding:26px 28px}
-.phase h3{font-size:clamp(1.4rem,2.4vw,2rem);margin-bottom:10px}
-.phase p{margin-bottom:16px;max-width:42rem}
-.method .after{margin-top:20px;max-width:44rem}
-
-/* BENEFITS */
-.benefits{background:var(--stone)}
-.benefit-grid,.proof-grid,.stack-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px}
-.benefit,.proof-card{background:var(--paper);border-radius:var(--r);padding:30px}
-.benefit h3,.proof-card h3{font-size:1.3rem;margin-bottom:12px}
-.benefit h3{color:var(--ink)}
-.benefit::before{content:"";display:block;width:26px;height:6px;background:var(--fuchsia);border-radius:3px;margin-bottom:18px}
-.benefit p,.proof-card p{margin:0;font-size:1rem}
-
-/* PROOF */
-.proof-card{background:var(--stone)}
-.pilot-note{margin-top:36px;padding:24px 28px;background:var(--stone);border-radius:var(--r);max-width:46rem}
-.pilot-note p{margin:0;color:var(--ink)}
-
-/* STACK (ink) */
-.item{background:rgba(245,237,228,.06);border-radius:14px;padding:22px 24px;display:flex;gap:16px;align-items:flex-start}
-.stack-grid{gap:14px}
-.item svg{flex:none;width:26px;height:26px;color:var(--hot);margin-top:1px}
-.item b{display:block;font-size:1.05rem;line-height:1.35;color:var(--bone)}
-.item span{display:block;font-size:.95rem;color:rgba(245,237,228,.72);margin-top:3px}
-
-/* FIT */
-.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px}
-.fit-card{background:var(--paper);border-radius:var(--r);padding:32px}
-.fit-card h3{font-size:1.5rem;margin-bottom:20px}
-.fit-card ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-.fit-card li{display:flex;gap:14px;align-items:baseline;line-height:1.45}
-.fit-card li::before{content:"";flex:none;width:11px;height:11px;background:var(--fuchsia);transform:translateY(1px)}
-.fit-card.not{background:var(--ink);color:var(--bone)}
-.fit-card.not h3{color:var(--bone)}
-.fit-card.not li{color:rgba(245,237,228,.88)}
-.fit-card.not li::before{background:var(--bone);border-radius:50%}
-.fit-note{margin-top:28px;max-width:46rem;color:var(--ink)}
-
-/* HOW TO APPLY: a sequence */
-.how{background:var(--stone)}
-.apply-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:44px}
-.apply-step{background:var(--paper);border-radius:var(--r);padding:24px 22px}
-.apply-step .n{font:900 2.6rem/.9 var(--display);color:var(--fuchsia);letter-spacing:-.04em;margin-bottom:16px}
-.apply-step h3{font-size:1.25rem;margin-bottom:8px}
-.apply-step p{margin:0;font-size:.98rem}
-.apply-note{margin-top:28px;font-weight:700;color:var(--ink)}
-
-/* PRICE */
-.price-sec{padding-bottom:0}
-.price-wrap{max-width:720px;margin:0 auto;text-align:center;background:var(--ink);color:var(--bone);border-radius:26px;padding:clamp(36px,6vw,64px) clamp(24px,5vw,56px);box-shadow:inset 0 8px 0 var(--fuchsia)}
-.price-wrap .tag{justify-content:center;color:rgba(245,237,228,.86)}
-.price-wrap h2{font-size:clamp(1.7rem,3.2vw,2.4rem);color:var(--bone)}
-.price{font:900 clamp(5rem,13vw,8.5rem)/.9 var(--display);letter-spacing:-.05em;margin:22px 0 6px;color:var(--bone)}
-.price-split{font:700 .85rem/1.2 var(--text);letter-spacing:.12em;text-transform:uppercase;color:var(--bone)!important;margin-bottom:26px}
-.price-wrap p{color:rgba(245,237,228,.8)}
-.price-wrap .fine{font-size:.95rem;margin:20px 0 0}
-.price-wrap .desc{max-width:32rem;margin:0 auto 28px}
-.guarantee{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,5vw,64px);align-items:start;background:var(--stone);border-radius:26px;padding:clamp(28px,5vw,56px);margin-top:48px}
-.guarantee h2{font-size:clamp(1.7rem,3vw,2.5rem)}
-.guarantee p{margin-bottom:16px}
-.guarantee .fine{font-size:.95rem;font-weight:600;color:var(--ink);margin:0}
-
-/* FAQ */
-.faq-sec{padding-bottom:clamp(64px,8vw,112px)}
-.faq{max-width:960px;margin:0}
-.faq-list{margin-top:36px}
-details{background:var(--paper);border-radius:14px;margin-bottom:10px}
-summary{cursor:pointer;font-weight:700;font-size:1.08rem;padding:20px 24px;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";flex:none;font:700 1.6rem/1 var(--text);color:var(--fuchsia)}
-details[open] summary::after{content:"\2212"}
-details p{padding:0 24px;margin:0 0 22px;max-width:40rem}
-
-/* CLOSE */
-.final{padding:clamp(72px,10vw,140px) 0}
-.final h2{font-size:clamp(2.2rem,5.3vw,5.6rem);line-height:.96;letter-spacing:-.045em;color:var(--bone)}
-.final h2 .hot{color:var(--hot);display:inline-block;padding-left:clamp(0px,4vw,64px)}
-.final p{color:rgba(245,237,228,.86);font-size:clamp(1.15rem,1.8vw,1.4rem);font-weight:500;max-width:34rem;margin:30px 0 34px;line-height:1.45}
-
-.sticky-cta{display:none}
-
-/* MODAL */
-.modal{position:fixed;inset:0;background:rgba(20,16,15,.72);display:none;place-items:center;padding:20px;z-index:120}
-.modal.open{display:grid}
-.modal-card{background:var(--bone);border-radius:24px;max-width:640px;width:100%;max-height:92vh;overflow:auto;padding:36px;position:relative;animation:pop .28s cubic-bezier(.2,.8,.2,1)}
-@keyframes pop{from{transform:translateY(18px);opacity:0}to{transform:none;opacity:1}}
-.close{position:absolute;top:12px;right:16px;background:none;border:0;font-size:30px;line-height:1;cursor:pointer;color:var(--ink);padding:6px 10px}
-.modal-card .tag::before{display:none}
-.modal-card h2{font-size:2rem;margin-bottom:12px;padding-right:30px}
-.modal-card form{margin-top:24px}
-.field{margin-bottom:18px}
-.field label{display:block;font:700 .78rem/1.4 var(--text);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
-.field input,.field select,.field textarea{width:100%;padding:13px 15px;border:1.5px solid var(--ink);border-radius:10px;font-size:1rem;font-family:var(--text);background:var(--paper);color:var(--ink)}
-.field textarea{min-height:86px;resize:vertical}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;box-shadow:0 0 0 3px var(--fuchsia)}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.small-note{font-size:.88rem;color:var(--body)}
-.modal-card .btn.full{width:100%}
-.form-error{color:#b0005c;font-weight:600;display:none;margin-top:12px;font-size:.95rem}
-.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.success{display:none;text-align:center;padding:24px 6px}
-.success .big{font-size:48px;color:var(--fuchsia)}
-.success h2{padding:0;margin:14px 0}
-
-/* RESPONSIVE */
-@media (max-width:1000px){
-  .hero-grid{grid-template-columns:1fr}
-  .demo{max-width:600px}
-  .oc{grid-template-columns:1fr 1fr}
-  .apply-steps{grid-template-columns:1fr 1fr}
-  .stake-list{grid-template-columns:1fr}
-}
-@media (max-width:760px){
-  body{font-size:16px}
-  .navlinks{display:none}
-  .quotes,.benefit-grid,.proof-grid,.stack-grid{grid-template-columns:1fr}
-  .quote:nth-child(n){transform:none}
-  .guarantee{grid-template-columns:1fr}
-  .oc{grid-template-columns:1fr}
-  .fit-grid,.apply-steps{grid-template-columns:1fr}
-  .phases{--numw:56px}
-  .phase{gap:34px}
-  .phase::before{left:calc(var(--numw) + 16px)}
-  .phase::after{left:calc(var(--numw) + 9px)}
-  .phase>div:last-child{padding:20px}
-  .form-row{grid-template-columns:1fr}
-  .modal-card{padding:28px 20px}
-  .hero-facts{grid-auto-flow:row;grid-template-columns:1fr 1fr}
-  .btn.big,.cta-row .btn{width:100%}
-  .hero h1{font-size:15.5cqw;line-height:.95}
-  .hero h1 span{white-space:normal}
-  .hero h1 .mid,.hero h1 .end{padding-left:0}
-  .final h2 .hot{padding-left:0}
-  .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--ink);padding:10px 16px calc(10px + env(safe-area-inset-bottom));align-items:center;justify-content:space-between;gap:12px;transform:translateY(110%);transition:transform .25s}
-  .sticky-cta.show{transform:none}
-  .sticky-cta span{color:var(--bone);font-weight:700;font-size:.95rem;line-height:1.25}
-  .sticky-cta .btn{padding:12px 20px;font-size:.95rem;white-space:nowrap}
-  footer{padding-bottom:90px}
-}
-
-.fit h2{max-width:20ch}.how h2{max-width:28ch}.stack h2{max-width:24ch}
-.modal-card .small-note{margin-bottom:12px}
-</style>
-</head>
+/* guide character + her steps */
+.guide{opacity:0;transform:translateX(70px);transition:opacity .8s,transform 1.2s cubic-bezier(.2,.8,.2,1);pointer-events:none}.st.gd .guide{opacity:1;transform:none}
+.st.gd .garm{animation:gp 1.5s ease-in-out infinite alternate}@keyframes gp{to{rotate:-9deg}}
+.st.gd .fa{animation:none!important}.st.gd[data-b="4"]{--ua:-25deg;--fa:-42deg}
+.gb{left:30%;top:1%;width:50%;background:var(--bone);color:var(--ink);border-radius:18px;padding:.8rem 1.1rem .9rem;box-shadow:0 14px 40px rgba(0,0,0,.4);border-left:6px solid var(--fu)}
+.gb .gh{font:italic 400 clamp(.95rem,1.7vw,1.3rem)/1.2 Fraunces,serif;letter-spacing:-.02em}
+.gb ol{list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:.25rem}
+.gb li{font:600 clamp(.85rem,1.5vw,1.05rem)/1.25 'Space Grotesk',sans-serif;opacity:0;transform:translateX(-10px);transition:opacity .6s,transform .6s}.gb li.on{opacity:1;transform:none}.gb li b{color:var(--fu);margin-right:.5rem}
+.gb::after{content:"";position:absolute;left:44%;bottom:-20px;border:11px solid transparent;border-top-color:var(--bone)}
+@media(max-width:700px){.gb{font-size:.92rem;padding:.65rem .9rem .75rem}.gb::after{display:none}}
+@media(prefers-reduced-motion:reduce){.st.gd .garm{animation:none}}
+</style></head>
 <body>
+<nav><div class="g"><a class="logo" href="#top">Brenda Blanche</a><ul><li><a href="#problem">The problem</a></li><li><a href="#method">How it works</a></li><li><a href="#kit">What you get</a></li><li><a href="#invest">Investment</a></li><li><a href="#faq">FAQ</a></li></ul><button class="btn sm" data-apply>Apply now</button></div></nav>
+<main>
+<section class="hero dk" id="top"><div class="g"><div class="hg">
+<div class="tx"><div><span class="pill mono"><i></i>Founding-client pilot · 2 places</span>
+<h1>You have the skills. <span class="it">Now build the offer people hire.</span></h1>
+<p class="sub m">The Market Perception Blueprint helps skilled freelancers, consultants, and independent professionals turn real expertise into <strong>1 clear, hireable service</strong> in 8 weeks.</p>
+<div class="cta"><button class="btn go" data-apply>▶ Apply for a founding client place</button><span class="note">$347 · only 2 places · applications reviewed personally</span></div></div></div>
+<div class="stw"><div class="st" id="sc" data-b="0" aria-label="An animated story: a skilled freelancer who cannot explain their offer, a guide shows the simple steps, and then it becomes clear">
+<div class="bars" id="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><button class="skp" id="skp" type="button">Skip ›</button>
+<div class="art"><p class="fam a">Sound familiar?</p><p class="fam b">You’re understood.</p><svg class="sv" viewBox="0 0 800 450" aria-hidden="true"><defs><radialGradient id="pgl"><stop offset="0" stop-color="#E4007C" stop-opacity=".55"/><stop offset="1" stop-color="#E4007C" stop-opacity="0"/></radialGradient><linearGradient id="lcn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd9a8" stop-opacity=".38"/><stop offset="1" stop-color="#ffd9a8" stop-opacity="0"/></linearGradient></defs>
+<ellipse class="glowc" cx="300" cy="330" rx="260" ry="100" fill="url(#pgl)"/>
+<path class="dim" d="M0 392H800"/>
+<circle class="dim" cx="735" cy="62" r="34"/><path class="dim" d="M735 32v5M735 87v5M705 62h5M760 62h5"/><line class="mh ln" x1="735" y1="62" x2="735" y2="36" style="transform-origin:735px 62px;stroke-width:3"/><line class="hh ln" x1="735" y1="62" x2="735" y2="46" style="transform-origin:735px 62px;stroke-width:4"/>
+<path class="ln" d="M345 300H770M385 300V392M735 300V392"/><path class="ln" d="M430 296H562M550 296L584 222"/><path class="dim" d="M292 238L289 332H356M296 332V392M350 332V392"/>
+<ellipse class="scrg" cx="500" cy="262" rx="80" ry="34" fill="url(#pgl)"/>
+<path class="dim" d="M62 342L72 392H124L134 342ZM56 342H140"/><circle class="ball b1" cx="80" cy="330" r="10"/><circle class="ball b2" cx="104" cy="331" r="10"/><circle class="ball b3" cx="92" cy="316" r="10"/><circle class="ball b4" cx="116" cy="318" r="9"/><circle class="ball b5" cx="70" cy="320" r="9"/>
+<g class="lampc"><path d="M680 236L698 236L765 300L640 300Z" fill="url(#lcn)"/><circle cx="688" cy="226" r="26" fill="url(#lcn)"/></g><path class="dim" d="M706 300H730M718 300V250L690 224"/><circle cx="688" cy="224" r="8" fill="#14100F" stroke="rgba(245,237,228,.5)" stroke-width="3"/>
+<g class="chips"><g style="--dl:0s"><rect x="24" y="64" width="124" height="28" rx="14"/><text x="37" y="83">Data analysis</text></g><g style="--dl:0.4s"><rect x="150" y="28" width="109" height="28" rx="14"/><text x="163" y="47">Copywriting</text></g><g style="--dl:0.8s"><rect x="40" y="122" width="71" height="28" rx="14"/><text x="53" y="141">Design</text></g><g style="--dl:1.2s"><rect x="148" y="88" width="94" height="28" rx="14"/><text x="161" y="107">Marketing</text></g><g style="--dl:1.6s"><rect x="26" y="176" width="86" height="28" rx="14"/><text x="39" y="195">Coaching</text></g><g style="--dl:2.0s"><rect x="116" y="150" width="162" height="28" rx="14"/><text x="129" y="169">Virtual assistance</text></g></g>
+<g class="post"><rect class="c" x="600" y="118" width="160" height="96" rx="12"/><circle cx="622" cy="140" r="9" fill="rgba(245,237,228,.5)"/><rect x="640" y="134" width="70" height="6" rx="3" fill="rgba(245,237,228,.6)"/><rect x="640" y="146" width="48" height="5" rx="2.5" fill="rgba(245,237,228,.3)"/><rect x="616" y="168" width="128" height="5" rx="2.5" fill="rgba(245,237,228,.4)"/><rect x="616" y="182" width="100" height="5" rx="2.5" fill="rgba(245,237,228,.3)"/><text class="hrt" x="690" y="212" style="--dl:0s">♥</text><text class="hrt" x="716" y="212" style="--dl:.5s">♥</text><text class="hrt" x="664" y="212" style="--dl:1s">♥</text><text class="zr" x="616" y="236">ENQUIRIES: 0</text></g>
+<g class="mailbox"><rect x="620" y="130" width="150" height="100" rx="12"/><text x="695" y="154" text-anchor="middle">PROPOSAL SENT</text></g><text class="seen" x="695" y="190" text-anchor="middle" fill="#E4007C" font-size="15">Seen ✓</text><g class="dots"><circle cx="680" cy="214" r="3.5"/><circle cx="695" cy="214" r="3.5"/><circle cx="710" cy="214" r="3.5"/></g>
+<g class="env"><rect x="535" y="258" width="34" height="24" rx="3" fill="#14100F" stroke="#F5EDE4" stroke-width="3"/><path d="M535 258l17 13 17-13" fill="none" stroke="#F5EDE4" stroke-width="3"/></g>
+<g class="offer2"><rect x="600" y="118" width="166" height="104" rx="12"/><text class="t1" x="618" y="150">1 buyer</text><text class="t1" x="618" y="176">1 problem</text><text class="t1" x="618" y="202">1 clear service</text></g>
+<g class="seat"><path class="ln" d="M322 322H382L386 390H410"/><g class="tor rg" style="transform-origin:322px 322px"><line class="ln" x1="322" y1="322" x2="322" y2="248"/><g class="hd rg" style="transform-origin:322px 248px"><circle cx="322" cy="224" r="24" fill="#14100F" stroke="#F5EDE4" stroke-width="4"/><g class="face"><circle class="e" cx="333" cy="221" r="2.6"/><path class="br2" d="M326 213L339 216"/><path class="mf" d="M327 237q7-7 14 0"/><path class="mn" d="M327 235h14"/><path class="ms" d="M327 232q7 8 14 0"/></g></g><g class="ua rg" style="transform-origin:322px 262px"><line class="ln" x1="322" y1="262" x2="358" y2="298"/><g class="fa rg" style="transform-origin:358px 298px"><line class="ln" x1="358" y1="298" x2="426" y2="296"/><circle cx="428" cy="296" r="4.5" fill="#F5EDE4"/></g></g></g></g>
+<g class="stand"><path class="ln" d="M330 284L308 392M330 284L352 392M308 392h-14M352 392h14M330 284V208M330 222L292 248L314 274M330 222L368 248L346 274"/><circle cx="330" cy="182" r="24" fill="#14100F" stroke="#F5EDE4" stroke-width="4"/><g class="face"><circle class="e" cx="341" cy="179" r="2.6"/><path class="mf" d="M335 195q7-7 14 0"/><path class="mn" d="M335 193h14"/><path class="ms" d="M335 190q7 8 14 0"/></g></g>
+<g class="buy"><g class="lga" style="transform-origin:205px 322px"><path class="ln" d="M205 322L196 392"/></g><g class="lgb" style="transform-origin:205px 322px"><path class="ln" d="M205 322L214 392"/></g><path class="ln" d="M205 322V246M205 262L186 306"/><g class="arm2" style="transform-origin:205px 262px"><path class="ln" d="M205 262L228 304"/></g><circle class="h" cx="205" cy="222" r="22"/><g class="face"><circle class="e" cx="215" cy="219" r="2.5"/><path class="mn" style="opacity:1" d="M210 232h10"/><path class="ms" d="M209 229q6 7 12 0"/></g></g>
+<g class="guide"><defs><g id="gdl"><path d="M462 338L458 392M498 338L502 392M458 392h-12M502 392h12M480 206V236M472 238L452 274"/></g><g id="gda"><path d="M490 236L526 216L548 188"/></g></defs>
+<use href="#gdl" fill="none" stroke="#14100F" stroke-width="14"/><use href="#gdl" fill="none" stroke="#E4007C" stroke-width="4"/>
+<path d="M468 226H492L524 342H436Z" fill="#E4007C" stroke="#14100F" stroke-width="4"/>
+<g transform="rotate(-14 440 280)"><rect x="428" y="258" width="28" height="38" rx="4" fill="#F5EDE4"/><path d="M434 270h16M434 278h16M434 286h10" stroke="#E4007C" stroke-width="3"/></g>
+<g class="garm" style="transform-origin:490px 236px"><use href="#gda" fill="none" stroke="#14100F" stroke-width="14"/><use href="#gda" fill="none" stroke="#E4007C" stroke-width="4"/></g>
+<circle cx="462" cy="164" r="13" fill="#E4007C"/><circle cx="498" cy="164" r="13" fill="#E4007C"/><circle cx="480" cy="153" r="16" fill="#E4007C"/>
+<circle cx="480" cy="182" r="24" fill="#14100F" stroke="#E4007C" stroke-width="4"/><circle cx="491" cy="179" r="2.6" fill="#F5EDE4"/><path d="M474 193q7 8 14 0" fill="none" stroke="#F5EDE4" stroke-width="3"/><circle cx="460" cy="190" r="3" fill="#F5EDE4"/>
+<text x="480" y="418" text-anchor="middle" fill="#E4007C" font-size="12" letter-spacing="2">YOUR GUIDE</text></g>
+<g class="chk"><circle cx="268" cy="196" r="17"/><path d="M260 196l6 6 11-12"/></g></svg><div class="bub"><div class="tb" id="tb"></div><div class="sbb" id="sbb"></div><div class="cap" id="cap"></div><div class="gb" id="gb"></div></div></div>
+</div><button class="rp" id="rp" type="button" hidden>↻ Replay the scene</button></div>
+</div></div></section>
 
-<header>
-  <div class="container wide nav">
-    <div class="logo"><span class="mark"></span> Brenda Blanche</div>
-    <nav class="navlinks" aria-label="Page sections">
-      <a href="#problem">The problem</a>
-      <a href="#method">How it works</a>
-      <a href="#stack">What you get</a>
-      <a href="#price">Investment</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <button class="btn sm" data-apply>Apply now</button>
-  </div>
-</header>
+<div class="strip"><div class="g"><div><b data-n="8">8</b><span>weeks, guided</span></div><div><b>1-on-1</b><span>work on your real skills</span></div><div><b data-n="7">7</b><span>practical deliverables</span></div><div><b data-n="1">1</b><span>clear offer, buyer-ready</span></div></div></div>
 
-<!-- HERO -->
-<section class="hero" id="top">
-  <div class="container wide">
-    <div class="pilot"><i></i> Founding-client pilot: 2 places open</div>
-    <h1>
-      <span class="before">You have the skills.</span>
-      <span class="mid">Now build the offer</span>
-      <span class="end">people hire.</span>
-    </h1>
+<section id="outcomes"><div class="g"><p class="mono rv">By week 8 you will</p><h2 class="rv">Know exactly what to sell, to whom, and what to do next.</h2>
+<div class="five"><div class="rv"><div class="nm">01</div><h3>Know what to sell</h3><p class="m">Your strongest commercial opportunities, based on real capability and evidence.</p></div><div class="rv" style="--d:.08s"><div class="nm">02</div><h3>Know who needs it</h3><p class="m">A researched buyer and problem to build your service around.</p></div><div class="rv" style="--d:.16s"><div class="nm">03</div><h3>Have a hireable offer</h3><p class="m">Clear scope, boundaries, and pricing logic.</p></div><div class="rv" style="--d:.24s"><div class="nm">04</div><h3>Explain your value</h3><p class="m">Messaging and credible proof buyers can evaluate.</p></div><div class="rv" style="--d:.32s"><div class="nm">05</div><h3>Know your next step</h3><p class="m">A practical path from visibility to buyer conversations.</p></div></div></div></section>
 
-    <div class="hero-grid">
-      <div>
-        <p class="sub">The Market Perception Blueprint is an eight-week, one-on-one program for skilled freelancers, consultants, and independent professionals who are tired of guessing what to sell. In eight weeks you decide what to sell, who needs it, and how to explain it, and you leave with seven working assets you can use straight away.</p>
-        <div class="cta-row">
-          <button class="btn on-dark big" data-apply>Apply for a Founding-Client Place</button>
-          <span class="cta-note">$347 · 2 places</span>
-        </div>
-      </div>
+<section class="dk" id="problem"><div class="g"><p class="mono rv">The problem</p><h2 class="rv">You have valuable expertise. But what exactly should you sell?</h2>
+<p class="lede m rv">You can do good work. You have experience, knowledge, and capability. But when someone asks, “What do you sell?” the answer does not come easily.</p>
+<div class="pn"><div class="chat rv" id="chat"><div class="hd"><span class="av">?</span><div>A potential client<br><small style="opacity:.6;font-weight:400">Interested in working with you</small></div></div><div id="cb"></div><p class="ft" id="cft">Seen</p><p class="sil" id="csl">…and then, silence.</p></div>
+<div><div class="nt"><div class="rv"><i class="ib" data-i="chat"></i><p><b>Invitation to chat</b><span>A lovely conversation. No next step.</span></p></div><div class="rv" style="--d:.12s"><i class="ib" data-i="mail"></i><p><b>Proposal sent</b><span>No response.</span></p></div><div class="rv" style="--d:.24s"><i class="ib" data-i="trend"></i><p><b>Post published</b><span>Compliments. No enquiries.</span></p></div></div>
+<div class="vc rv"><span>“I have skills, but people don’t pay for them.”</span><span>“I’m not sure how to package it all.”</span><span>“I get invitations, send proposals, and nothing happens.”</span></div></div></div>
+<p class="lede m rv" style="margin-top:2.4rem">You may be trying to sell too many things at once. You may be leading with a skill buyers do not understand. Or you may be trying to create an offer before researching who actually needs it.</p>
+<div class="gap rv"><div class="cf"><b>Valuable experience</b><small>What you can genuinely do</small></div><div class="br"><i></i><i></i><em>?</em><i></i><i></i></div><div class="cf r"><b>Something a buyer can hire</b><small>Understand, trust, and pay for</small></div></div>
+<p class="lede rv" style="margin-top:1.4rem;color:#fff"><strong>You are not short on ability.</strong> You are stuck between having valuable experience and turning it into something a buyer can understand, trust, and hire.</p></div></section>
 
-      <aside class="demo" aria-label="Where most people start and where you are after eight weeks">
-        <p class="demo-label">Where most people start</p>
-        <div class="chips">
-          <span class="chip">I’m not sure how to package it all.</span>
-          <span class="chip">I have too many skills. Which one do I lead with?</span>
-          <span class="chip">I post on LinkedIn, but nobody enquires.</span>
-          <span class="chip">I send proposals and nothing happens.</span>
-          <span class="chip">How do I charge for what I do?</span>
-        </div>
-        <svg class="demo-arrow" viewBox="0 0 300 64" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path pathLength="1" vector-effect="non-scaling-stroke" d="M30 0C30 34 150 28 150 64"/><path pathLength="1" vector-effect="non-scaling-stroke" d="M90 0C90 30 150 32 150 64"/><path pathLength="1" vector-effect="non-scaling-stroke" d="M150 0V64"/><path pathLength="1" vector-effect="non-scaling-stroke" d="M210 0C210 30 150 32 150 64"/><path pathLength="1" vector-effect="non-scaling-stroke" d="M270 0C270 34 150 28 150 64"/></svg>
-        <div class="offer-card">
-          <p class="demo-label">Where you are after eight weeks</p>
-          <h3>One hireable offer, built from your real skills</h3>
-          <ul>
-            <li><b>Buyer</b> A researched buyer and problem to build around</li>
-            <li><b>Offer</b> Clear scope, process, and pricing logic</li>
-            <li><b>Proof</b> Authentic evidence, never invented results</li>
-            <li><b>Path</b> A route from enquiry to buying decision</li>
-          </ul>
-        </div>
-      </aside>
-    </div>
+<section class="dk" id="cost"><div class="g"><div class="cost"><div class="cm"><p class="mono rv">The cost of staying stuck</p><h2 class="rv">The longer this stays unclear, the more it costs you.</h2><p class="m rv">This is not only a branding problem. It affects where you spend your time, what you say yes to, and whether the right buyers can recognize your value.</p><div class="bar"><i id="cbar"></i></div><div class="lab"><span>Clear</span><span>What it costs</span></div></div>
+<div class="cr" id="cr" style="color:var(--bone)"><div><i class="ib" data-i="trend"></i><p>More months spent posting content without a clear offer behind it.</p></div><div><i class="ib" data-i="mail"></i><p>More proposals sent for services that are difficult for buyers to understand.</p></div><div><i class="ib" data-i="users"></i><p>More comparisons with people who seem clearer, more confident, or easier to hire.</p></div><div><i class="ib" data-i="clock"></i><p>More time doing work you can do, instead of building toward the work you want to be hired for.</p></div><div><i class="ib" data-i="coin"></i><p>More money spent on advice that gives you information but no usable decision.</p></div><div><i class="ib" data-i="chat"></i><p>More uncertainty about what to say when someone asks, “So, what do you do?”</p></div></div></div></div></section>
 
-    <div class="hero-facts">
-      <p><b>8 weeks</b>One-on-one</p>
-      <p><b>8 sessions</b>90 minutes each, weekly</p>
-      <p><b>7 assets</b>Practical deliverables</p>
-      <p><b>Feedback</b>Between sessions</p>
-    </div>
-  </div>
-</section>
+<section class="sn" id="why"><div class="g"><div class="tw"><div><p class="mono rv">Why it has not worked yet</p><h2 class="rv">You do not have a discipline problem.</h2><p class="m rv">You may have already tried:</p><div class="tried" id="tried"><span style="--i:0">Picking a niche</span><span style="--i:1">A personal-branding course</span><span style="--i:2">Posting more consistently</span><span style="--i:3">Asking AI for offer ideas</span><span style="--i:4">Waiting for referrals</span></div>
+<p class="lede rv"><strong>Most advice starts too late.</strong> It tells you to choose a niche, build a personal brand, or create content. But those steps assume you already know what you are selling, who needs it, and why they should hire you.</p><p class="m rv" style="margin-top:1rem">The real work happens earlier: connecting your actual capabilities to a buyer problem that is relevant, credible, and commercially viable. Until that connection is clear, content, branding, and proposals cannot do their job.</p></div>
+<div class="tower rv" id="tower"><p class="lb" id="tlb">Most advice starts here</p><div class="top"><div class="blk">Choose a niche</div><div class="blk">Build a personal brand</div><div class="blk">Create content</div></div><div class="base"><div class="blk" style="--dl:.0s">Reality check</div><div class="blk" style="--dl:.2s">Buyer research</div><div class="blk" style="--dl:.4s">Commercial fit</div></div><p class="tag" id="ttag">No foundation. Everything wobbles.</p></div></div></div></section>
 
-<!-- OUTCOMES -->
-<section class="outcomes">
-  <div class="container">
-    <h2>By the end of the program, you work toward having:</h2>
-    <p class="intro">A guided, one-on-one program for skilled freelancers, consultants, and independent professionals who are unsure what to sell, who to sell it to, or how to turn it into a clear offer.</p>
-    <div class="oc">
-      <div class="cell"><b>A clear picture of what you can sell</b><span>Your strongest skills and commercial opportunities, based on real capability and evidence.</span></div>
-      <div class="cell"><b>A buyer and problem worth building around</b><span>Researched, not guessed.</span></div>
-      <div class="cell"><b>A decision you can stand behind</b><span>A reasoned choice about which expertise to lead with.</span></div>
-      <div class="cell"><b>A hireable offer</b><span>Clear scope, boundaries, and pricing logic.</span></div>
-      <div class="cell"><b>Words and proof buyers believe</b><span>Messaging and authentic evidence that support your offer.</span></div>
-      <div class="cell"><b>A path to buyer conversations</b><span>Your next step, from first interest to a decision.</span></div>
-    </div>
-  </div>
-</section>
+<section class="dk" id="method"><div class="g"><p class="mono rv">The solution</p><h2 class="rv">The Market Perception Blueprint</h2>
+<p class="lede m rv">A guided, 1-on-1, 8-week program that helps you turn your expertise into 1 clear, commercially relevant service, and a practical path to the buyers who need it.</p>
+<p class="m rv" style="max-width:40rem;margin-top:1rem">We start with what you can genuinely deliver and what evidence already exists. Then we research where those capabilities meet buyer needs, help you choose the strongest opportunity, and turn it into a service you can explain, support, and take to market.</p>
+<div class="bridge rv" id="bridge"><div class="cl2">Your valuable experience</div><div class="pl"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i></div><div class="cl2" style="background:var(--fu);color:#fff">A service buyers hire</div></div>
+<div class="phs" id="phs">
+<div class="ph"><div class="nm">1</div><div><p class="mono">Phase 1 · Reality Check</p><p class="q">What can I genuinely sell?</p><p>We inventory your skills, experience, qualifications, previous work, enquiries, and market-facing materials.</p><span class="dl">You leave with: Skills, Experience &amp; Market Evidence Inventory</span><p class="ck"><b>Decision checkpoint:</b> you know what you can genuinely sell.</p></div><div class="mini"><div class="row" style="--i:0"><i class="bx" style="--i:0"></i>Skills</div><div class="row" style="--i:1"><i class="bx" style="--i:1"></i>Experience</div><div class="row" style="--i:2"><i class="bx" style="--i:2"></i>Qualifications</div><div class="row" style="--i:3"><i class="bx" style="--i:3"></i>Previous work</div><div class="row" style="--i:4"><i class="bx" style="--i:4"></i>Enquiries</div><div class="row" style="--i:5"><i class="bx" style="--i:5"></i>Market-facing materials</div></div></div>
+<div class="ph"><div class="nm">2</div><div><p class="mono">Phase 2 · Buyer &amp; Opportunity Research</p><p class="q">Who needs this?</p><p>We research buyers, problems, competing solutions, and indicative pricing.</p><span class="dl">You leave with: Skills-to-Market Opportunity Matrix</span><p class="ck"><b>Decision checkpoint:</b> you know who needs it.</p></div><div class="mini"><div class="cards"><div class="cd" style="--i:0">Buyers</div><div class="cd" style="--i:1">Problems</div><div class="cd" style="--i:2">Competing solutions</div><div class="cd" style="--i:3">Indicative pricing</div></div></div></div>
+<div class="ph"><div class="nm">3</div><div><p class="mono">Phase 3 · Commercial Fit</p><p class="q">Which opportunity should I choose?</p><p>We compare capability, buyer need, ability to pay, and credible market access.</p><span class="dl">You leave with: Prioritized Commercial Opportunity</span><p class="ck"><b>Decision checkpoint:</b> you choose 1 opportunity, with reasons.</p></div><div class="mini"><div class="cmp"><div class="o" style="--i:0"><span>Capability</span><i style="--w:90%;--i:0"></i></div><div class="o" style="--i:1"><span>Buyer need</span><i style="--w:80%;--i:1"></i></div><div class="o" style="--i:2"><span>Ability to pay</span><i style="--w:70%;--i:2"></i></div><div class="o" style="--i:3"><span>Market access</span><i style="--w:85%;--i:3"></i></div></div><span class="win">✓ Strongest opportunity chosen</span></div></div>
+<div class="ph"><div class="nm">4</div><div><p class="mono">Phase 4 · Hireable Offer</p><p class="q">How do I package this?</p><p>We define the buyer, problem, scope, deliverables, process, boundaries, pricing logic, and next step.</p><span class="dl">You leave with: Offer 1-Pager</span><p class="ck"><b>Decision checkpoint:</b> you know how to package it.</p></div><div class="mini"><div class="doc"><div class="row" style="--i:0"><b>Buyer</b></div><div class="row" style="--i:1"><b>Problem</b></div><div class="row" style="--i:2"><b>Scope</b></div><div class="row" style="--i:3"><b>Deliverables</b></div><div class="row" style="--i:4"><b>Process</b></div><div class="row" style="--i:5"><b>Boundaries</b></div><div class="row" style="--i:6"><b>Pricing logic</b></div><div class="row" style="--i:7"><b>Next step</b></div></div></div></div>
+<div class="ph"><div class="nm">5</div><div><p class="mono">Phase 5 · Trust Signals</p><p class="q">Why should they choose me?</p><p>We align your profile, messaging, authentic evidence, and calls to action.</p><span class="dl">You leave with: Minimum Viable Signal Set</span><p class="ck"><b>Decision checkpoint:</b> you know why a buyer should choose you.</p></div><div class="mini"><div class="row" style="--i:0"><i class="bx" style="--i:0"></i>Profile</div><div class="row" style="--i:1"><i class="bx" style="--i:1"></i>Messaging</div><div class="row" style="--i:2"><i class="bx" style="--i:2"></i>Authentic evidence</div><div class="row" style="--i:3"><i class="bx" style="--i:3"></i>Calls to action</div></div></div>
+<div class="ph"><div class="nm">6</div><div><p class="mono">Phase 6 · Buyer Path</p><p class="q">What do I do next?</p><p>We map the route from discovery to enquiry, conversation, proposal, decision, and follow-up.</p><span class="dl">You leave with: Buyer Path Map + 30-day action plan</span><p class="ck"><b>Decision checkpoint:</b> you know what to do next.</p></div><div class="mini"><div class="pth"><span style="--i:0">Discovery</span><span style="--i:1">Enquiry</span><span style="--i:2">Conversation</span><span style="--i:3">Proposal</span><span style="--i:4">Decision</span><span style="--i:5">Follow-up</span></div></div></div>
+</div></div></section>
 
-<!-- PROBLEM -->
-<section class="problem" id="problem">
-  <div class="container">
-    <div class="tag">The problem</div>
-    <h2>You have valuable expertise.<br>But what exactly should you sell?</h2>
-    <p class="measure lede-p">You know how to do the work. You have spent years learning, solving problems, and getting good at what you do. But when someone asks, “So, what do you sell?” the answer does not come easily.</p>
-    <div class="quotes">
-      <div class="quote">I’m not sure how to package it all.</div>
-      <div class="quote">I have too many skills. Which one do I lead with?</div>
-      <div class="quote">I post on LinkedIn, but nobody enquires.</div>
-      <div class="quote">I send proposals and nothing happens.</div>
-      <div class="quote">People with less experience keep getting the opportunities.</div>
-      <div class="quote">I’m afraid of picking the wrong service and wasting months on it.</div>
-    </div>
-    <p class="measure">You may be trying to sell too many things at once. You may be leading with a skill buyers do not understand. Or you may be building an offer before finding out who actually needs it.</p>
-    <p class="measure"><strong>You are not short on ability.</strong> You are stuck between having valuable experience and turning it into something a buyer can understand, trust, and hire.</p>
-  </div>
-</section>
+<section id="change"><div class="g"><p class="mono rv">What changes</p><h2 class="rv">You stop collecting ideas and start making decisions.</h2><p class="lede m rv">Drag to see the difference. (Illustration of the shift, not a real client result.)</p>
+<div class="ba rv" id="ba"><div class="bf"><p class="t">Before</p><p class="s">“I help with a few things… it really depends on the client.”</p></div><div class="af"><p class="t">After</p><p class="s">1 buyer. 1 problem. 1 clear service.<small>With scope, boundaries, and pricing logic you can explain.</small></p></div><div class="hdl"></div></div>
+<div class="six"><div class="rv"><i class="ib" data-i="target"></i><h3>Stop guessing what to sell</h3><p class="m">Your Opportunity Matrix turns scattered skills into researched, comparable service possibilities.</p></div><div class="rv" style="--d:.08s"><i class="ib" data-i="compass"></i><h3>Choose 1 direction with confidence</h3><p class="m">Your Prioritized Commercial Opportunity gives you a reasoned decision, not another idea to abandon.</p></div><div class="rv" style="--d:.16s"><i class="ib" data-i="doc"></i><h3>Explain your work clearly</h3><p class="m">Your Offer 1-Pager helps you say what you do, who it is for, and why it matters without rambling.</p></div><div class="rv" style="--d:.24s"><i class="ib" data-i="shield"></i><h3>Look credible without pretending</h3><p class="m">Your Minimum Viable Signal Set uses authentic evidence appropriate to your real experience.</p></div><div class="rv" style="--d:.32s"><i class="ib" data-i="flag"></i><h3>Know what to do next</h3><p class="m">Your Buyer Path Map turns “I need clients” into a practical sequence of next steps.</p></div><div class="rv" style="--d:.4s"><i class="ib" data-i="check"></i><h3>Leave with something usable</h3><p class="m">You finish with assets, decisions, and a 30-day action plan, not another folder of unused notes.</p></div></div></div></section>
 
-<!-- STAKES -->
-<section class="stakes dark">
-  <div class="container">
-    <div class="tag">What staying unclear can cost you</div>
-    <h2>The longer this stays unclear,<br>the more it can cost you.</h2>
-    <p class="measure mt">This is not only a branding problem. It affects where you spend your time, what you say yes to, and whether the right buyers can recognize your value. Left alone, it can mean:</p>
-    <div class="stake-list">
-      <div class="stake">Another few months posting content with no clear offer behind it.</div>
-      <div class="stake">More proposals for services buyers find hard to understand, and more silence after you send them.</div>
-      <div class="stake">More comparing yourself with people who look clearer, more confident, or better positioned.</div>
-      <div class="stake">More time doing the work you can do, instead of building toward the work you want to be hired for.</div>
-      <div class="stake">More money spent on advice that gives you information but no usable decision.</div>
-      <div class="stake">Another awkward pause when someone asks, “So, what do you do?”</div>
-    </div>
-  </div>
-</section>
+<section class="sn" id="works"><div class="g"><p class="mono rv">Why this can work</p><h2 class="rv">A structured process, not generic advice.</h2><p class="lede m rv">The Blueprint does not ask you to become someone else, invent a persona, or force yourself into a trendy niche. It starts with your real capability and tests its commercial relevance.</p>
+<div class="why"><div class="rv"><i class="ib" data-i="search"></i><div><h3>Diagnosis before direction</h3><p class="m">We establish what you can genuinely deliver and what the market has already responded to before recommending an offer.</p></div></div><div class="rv" style="--d:.08s"><i class="ib" data-i="layers"></i><div><h3>Research before packaging</h3><p class="m">We investigate buyers, problems, alternatives, and indicative pricing before turning an idea into a service.</p></div></div><div class="rv" style="--d:.16s"><i class="ib" data-i="check"></i><div><h3>Decisions, not just information</h3><p class="m">Each phase produces a concrete deliverable and a decision checkpoint, so progress is visible.</p></div></div><div class="rv" style="--d:.24s"><i class="ib" data-i="chat"></i><div><h3>Feedback on your actual work</h3><p class="m">You receive individualized guidance and feedback on your real skills, research, offer, messaging, and buyer path.</p></div></div></div>
+<div class="pil rv"><i class="ib" data-i="users"></i><p>This is a founding-client pilot. I am working closely with the first 2 clients to refine the program based on direct feedback. That is why the price is lower and the support is more hands-on.</p></div></div></section>
 
-<!-- REFRAME -->
-<section class="reframe">
-  <div class="container">
-    <div class="tag">Why it has not worked yet</div>
-    <h2>You do not have a<br>discipline problem.</h2>
-    <p class="measure mt">You may have picked a niche, taken a personal-branding course, posted more consistently, asked AI for offer ideas, or waited for referrals. And the more advice you collect, the more confusing it gets. One person says choose a niche. Another says build your personal brand. Someone else says post every day, build a lead magnet, or sell a high-ticket offer. But how do you market a service when you are not sure what the service is?</p>
-    <div class="reframe-box">
-      <h3>Most advice starts too late.</h3>
-      <p>It tells you to choose a niche, build a personal brand, or create content. But those steps assume you already know what you are selling, who needs it, and why they should hire you.</p>
-      <p>The real work happens earlier. It is the gap between what you know you can do and what a buyer can understand, value, and consider hiring you for. I call it the Market Translation Gap. Until you close it, content, branding, and proposals cannot do their job.</p>
-    </div>
-  </div>
-</section>
+<section class="dk" id="kit"><div class="g"><p class="mono rv">What you receive</p><h2 class="rv">Everything you need to go from “I have skills” to “I know what to sell.”</h2>
+<div class="kit"><div class="rv"><i class="ib" data-i="users"></i><h3>8 weeks of 1-on-1 guided implementation</h3><p>Personalized support through every phase.</p></div><div class="rv" style="--d:.08s"><i class="ib" data-i="doc"></i><h3>7 practical deliverables</h3><p>From your Opportunity Matrix to your Buyer Path Map.</p></div><div class="rv" style="--d:.16s"><i class="ib" data-i="layers"></i><h3>Skills-to-Offer Opportunity Workbook</h3><p>Turn a scattered skill set into clear service options.</p></div><div class="rv" style="--d:.24s"><i class="ib" data-i="search"></i><h3>Buyer &amp; Market Research Toolkit</h3><p>Research buyers, problems, alternatives, and indicative pricing.</p></div><div class="rv" style="--d:.32s"><i class="ib" data-i="chat"></i><h3>Offer-to-Market Messaging Kit</h3><p>Explain your service in plain, buyer-relevant language.</p></div><div class="rv" style="--d:.4s"><i class="ib" data-i="calendar"></i><h3>30-day post-program check-in</h3><p>Review early market feedback and refine your next steps.</p></div></div>
+<p class="mono rv" style="margin-top:3rem">The 7 deliverables</p><div class="dls" id="dls"><div><i class="bx"></i>Skills, Experience &amp; Market Evidence Inventory</div><div><i class="bx" style="--i:1"></i>Skills-to-Market Opportunity Matrix</div><div><i class="bx" style="--i:2"></i>Prioritized Commercial Opportunity</div><div><i class="bx" style="--i:3"></i>Offer 1-Pager</div><div><i class="bx" style="--i:4"></i>Minimum Viable Signal Set</div><div><i class="bx" style="--i:5"></i>Buyer Path Map</div><div><i class="bx" style="--i:6"></i>30-day action plan</div></div>
+<p class="m rv" style="margin-top:1.6rem;max-width:40rem">Plan for roughly 2–4 hours per week between sessions, plus your scheduled 1-on-1 time. Also included: research support and feedback on your work.</p></div></section>
 
-<!-- SOLUTION -->
-<section class="method dark" id="method">
-  <div class="container">
-    <div class="tag">The solution</div>
-    <h2>The Market Perception Blueprint</h2>
-    <p class="measure lede mt">An eight-week, one-on-one program that helps you turn your expertise into one clear, commercially relevant service, and a practical path to the buyers who need it.</p>
-    <p class="measure">This is not a course you watch alone. We work together: one 90-minute working session every week, guided work between sessions, and my feedback on your real work along the way. We start with what you can genuinely deliver, research where it meets real buyer needs, choose the strongest opportunity, and turn it into a service you can explain and take to market.</p>
-    <div class="phases">
-      <div class="phase"><div class="num"><small>Week</small>1</div><div><h3>Reality Check</h3><p>Answer: “What can I genuinely sell?” We go through your skills, experience, qualifications, past work, enquiries, and anything the market has already responded to. You may be overlooking strengths that feel ordinary to you.</p><span class="deliverable">Skills, Experience &amp; Market Evidence Inventory</span></div></div>
-      <div class="phase"><div class="num"><small>Week</small>2</div><div><h3>Buyer &amp; Opportunity Research</h3><p>Answer: “Who needs this?” We research buyers, the problems they want solved, what they already pay for, competing solutions, and indicative pricing. Being good at something does not mean there is a market for it, so we check.</p><span class="deliverable">Skills-to-Market Opportunity Matrix</span></div></div>
-      <div class="phase"><div class="num"><small>Week</small>3</div><div><h3>Commercial Fit</h3><p>Answer: “Which opportunity should I choose?” We compare your capability, buyer need, ability to pay, and your access to the people who need it. You decide what to lead with, and what to leave out.</p><span class="deliverable">Prioritized Commercial Opportunity</span></div></div>
-      <div class="phase"><div class="num"><small>Week</small>4</div><div><h3>Hireable Offer</h3><p>Answer: “How do I package this?” We define who it is for, the problem it solves, what is included, how the work happens, your boundaries, your pricing logic, and the next step for a buyer.</p><span class="deliverable">Offer One-Pager</span></div></div>
-      <div class="phase"><div class="num"><small>Week</small>5</div><div><h3>Trust Signals</h3><p>Answer: “Why should they choose me?” We align your profile, messaging, and authentic evidence. No testimonials yet? We do not invent proof. We find honest ways to make your experience easy to evaluate.</p><span class="deliverable">Minimum Viable Signal Set</span></div></div>
-      <div class="phase"><div class="num"><small>Week</small>6</div><div><h3>Buyer Path</h3><p>Answer: “What do I do next?” We map the route from discovery to enquiry, conversation, proposal, decision, and follow-up, including what to do when people go quiet.</p><span class="deliverable">Buyer Path Map</span></div></div>
-      <div class="phase"><div class="num"><small>Weeks</small>7-8</div><div><h3>Review, Refine and Plan</h3><p>Answer: “What did we learn, and what now?” We review early market feedback, refine your offer, and finish with a practical plan for your next 30 days.</p><span class="deliverable">Market Feedback Review &amp; 30-Day Action Plan</span></div></div>
-    </div>
-    <p class="after">The timing can adapt to your situation. Some people need longer on research, others on the path to buyers. Progress stays visible throughout.</p>
-  </div>
-</section>
+<section id="invest"><div class="g"><p class="mono rv">Investment</p><h2 class="rv">Founding-client pilot</h2>
+<div class="inv"><div class="price rv"><p class="mono" style="color:#fff">The Market Perception Blueprint</p><div class="amt">$347</div><p style="margin-top:.6rem;font-weight:600">Or 2 payments of $187</p><div class="seats" aria-label="2 places"><i><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></i><i><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></i></div><p class="m">8 weeks of 1-on-1 guided implementation, 7 deliverables, research support, feedback on your work, and a 30-day post-program check-in.</p><p style="margin:1.4rem 0 1rem"><button class="btn go" data-apply>Apply for 1 of 2 places</button></p><p class="note">Applications reviewed personally</p></div>
+<div class="cmt rv" style="--d:.12s"><i class="ib" data-i="shield"></i><h3>The Clear Direction Commitment</h3><p><strong>If you complete the work and are still unclear, we keep working.</strong></p><p class="m" style="margin-top:.7rem">Complete the agreed pre-work, attend the scheduled sessions, and submit your work for feedback. If, after completing the program, you still cannot clearly explain what you sell, who it is for, and why a buyer should care, you receive 1 additional 60-minute strategy session at no charge.</p><p class="fine">PROCESS COMMITMENT · NOT A GUARANTEE OF CLIENTS OR INCOME</p></div></div></div></section>
 
-<!-- OBSTACLES ANSWERED -->
-<section class="benefits" id="answers">
-  <div class="container">
-    <div class="tag">What changes</div>
-    <h2>Every reason you are stuck<br>gets a direct answer.</h2>
-    <div class="benefit-grid">
-      <div class="benefit"><h3>“I have too many skills and do not know which to lead with.”</h3><p>You get your Skills, Experience and Market Evidence Inventory, then a Commercial Fit decision that tells you what to lead with and what to leave out.</p></div>
-      <div class="benefit"><h3>“I do not know who would pay for this.”</h3><p>You get guided buyer and opportunity research, so you work from evidence about real problems, not guesses. You finish with your Opportunity Matrix.</p></div>
-      <div class="benefit"><h3>“What if nobody wants it?”</h3><p>We test commercial relevance early, before you spend months building and promoting an offer. I cannot guarantee demand, but you will decide with evidence.</p></div>
-      <div class="benefit"><h3>“I cannot explain what I do without rambling.”</h3><p>You get your Offer One-Pager: who it is for, the problem it solves, what is included, and the next step. One page you can say out loud.</p></div>
-      <div class="benefit"><h3>“I do not have testimonials or case studies.”</h3><p>You get your Minimum Viable Signal Set, built from authentic evidence that fits your real experience. We never invent proof.</p></div>
-      <div class="benefit"><h3>“I post and send proposals, and nothing happens.”</h3><p>You get your Buyer Path Map, from first interest to a decision, so you know your next step and what to do when people go quiet.</p></div>
-    </div>
-  </div>
-</section>
+<section class="sn" id="faq"><div class="g"><p class="mono rv">Objections</p><h2 class="rv">Before you apply</h2>
+<div class="fq rv"><details><summary>What if I do not know what to sell yet?</summary><p class="m">That is exactly why the program starts with a Reality Check and buyer/opportunity research. You do not need to arrive with a finished offer.</p></details><details><summary>What if nobody wants my service?</summary><p class="m">We test commercial relevance early through buyer, problem, and competing-solution research. We do not guarantee demand, enquiries, or sales.</p></details><details><summary>I do not have testimonials. Can I still join?</summary><p class="m">Yes. The Trust Signals phase helps you identify authentic evidence appropriate to your experience. We do not invent proof.</p></details><details><summary>I have bought courses before and did not implement them.</summary><p class="m">This is implementation-led. You make decisions, create deliverables, and receive feedback on your actual work throughout the program.</p></details><details><summary>How much time does this take?</summary><p class="m">Plan for roughly 2–4 hours per week between sessions, plus your scheduled 1-on-1 time.</p></details><details><summary>What if I choose the wrong direction?</summary><p class="m">The process is diagnosis-led. As evidence emerges, we revisit earlier decisions and refine the direction.</p></details><details><summary>Will I get clients?</summary><p class="m">No. The program helps you build a clear, commercially relevant service and buyer path. Sales depend on demand, buyer access, execution, and market conditions.</p></details><details><summary>Why is this a pilot?</summary><p class="m">This is the first structured cohort. Founding clients receive the $347 pilot price in exchange for honest feedback that helps refine the program.</p></details></div></div></section>
 
-<!-- PROOF -->
-<section class="proof">
-  <div class="container">
-    <div class="tag">Why this can work</div>
-    <h2>A structured process,<br>not generic advice.</h2>
-    <p class="measure mt">The Blueprint does not ask you to become someone else, invent a persona, or squeeze yourself into a trendy niche. It starts with your real capability and tests its commercial relevance.</p>
-    <div class="proof-grid">
-      <div class="proof-card"><h3>Diagnosis before direction</h3><p>We establish what you can genuinely deliver and what the market has already responded to before recommending an offer.</p></div>
-      <div class="proof-card"><h3>Research before packaging</h3><p>We investigate buyers, problems, alternatives, and indicative pricing before turning an idea into a service.</p></div>
-      <div class="proof-card"><h3>Decisions, not just information</h3><p>Each phase produces a concrete deliverable and a decision checkpoint, so progress is visible.</p></div>
-      <div class="proof-card"><h3>Feedback on your actual work</h3><p>You get my guidance and feedback on your real skills, research, offer, messaging, and buyer path, in your weekly session and between sessions.</p></div>
-    </div>
-    <div class="pilot-note"><p><strong>This is a founding-client pilot.</strong> I am working closely with my first clients to refine the program. That is why the price is lower and the support is more hands-on. In return, I ask you to take part fully and give honest feedback. If you are happy with the result, I may ask whether you would share a testimonial. That is entirely optional, and never a condition of joining.</p></div>
-  </div>
-</section>
-
-<!-- OFFER STACK -->
-<section class="stack dark" id="stack">
-  <div class="container">
-    <div class="tag">What you receive</div>
-    <h2>Everything you need to go from “I have skills” to “I know what to sell.”</h2>
-    <div class="stack-grid">
-      <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg><div><b>Eight weeks of one-on-one guided implementation</b><span>Eight weekly 90-minute working sessions with me, so you are never figuring it out alone.</span></div></div>
-      <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg><div><b>Feedback between sessions</b><span>I review your agreed work between sessions, so you keep moving instead of waiting for the next call.</span></div></div>
-      <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg><div><b>Seven practical deliverables</b><span>From your Evidence Inventory to your 30-Day Action Plan, each one built on the one before.</span></div></div>
-      <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg><div><b>Skills-to-Offer Opportunity Workbook</b><span>Turn a scattered skill set into clear service options.</span></div></div>
-      <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg><div><b>Buyer &amp; Market Research Toolkit</b><span>Research buyers, problems, alternatives, and indicative pricing without starting from a blank page.</span></div></div>
-      <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg><div><b>Offer-to-Market Messaging Kit</b><span>Explain your service in plain, buyer-relevant language.</span></div></div>
-      <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg><div><b>30-day post-program check-in</b><span>Review early market feedback and refine your next steps.</span></div></div>
-    </div>
-    <p class="measure mt">Your progress depends on your participation, the evidence available, and your willingness to do the work between sessions.</p>
-  </div>
-</section>
-
-<!-- WHO IT IS FOR -->
-<section class="fit" id="fit">
-  <div class="container">
-    <div class="tag">Is this for you?</div>
-    <h2>Who this is for,<br>and who it is not for.</h2>
-    <div class="fit-grid">
-      <div class="fit-card">
-        <h3>This is for you if</h3>
-        <ul>
-          <li>You have real skills, professional experience, or a record of delivering work.</li>
-          <li>You are not sure which skills to turn into a service.</li>
-          <li>You are unsure which buyers need what you do, or what they would hire you to solve.</li>
-          <li>You find it hard to explain your work in a way buyers understand.</li>
-          <li>You want to build your offer on your strengths and evidence of market demand.</li>
-          <li>You can attend a weekly session and do guided work between sessions.</li>
-        </ul>
-      </div>
-      <div class="fit-card not">
-        <h3>This is not for you if</h3>
-        <ul>
-          <li>You are starting from scratch, with no skills or experience to build on yet.</li>
-          <li>You already have a clear offer that buyers want, and you mainly need more leads or help closing sales.</li>
-          <li>You want someone to run your marketing or sales for you.</li>
-          <li>You want a guarantee of clients, revenue, or sales within eight weeks.</li>
-        </ul>
-      </div>
-    </div>
-    <p class="fit-note">You do not need a perfect niche, a finished offer, a polished personal brand, or a stack of testimonials. I would rather tell you this is not the right fit than sell you something that does not solve your problem.</p>
-  </div>
-</section>
-
-<!-- HOW TO APPLY -->
-<section class="how" id="how">
-  <div class="container">
-    <div class="tag">How to apply</div>
-    <h2>This starts with an application,<br>not a checkout.</h2>
-    <div class="apply-steps">
-      <div class="apply-step"><div class="n">1</div><h3>Apply</h3><p>Answer a short application. It takes about 4 to 6 minutes.</p></div>
-      <div class="apply-step"><div class="n">2</div><h3>I review it</h3><p>I read every application myself and reply within two business days.</p></div>
-      <div class="apply-step"><div class="n">3</div><h3>We talk</h3><p>If it looks like a fit, I invite you to a 30-minute call about your situation. It is a conversation, not a pitch.</p></div>
-      <div class="apply-step"><div class="n">4</div><h3>We decide together</h3><p>If we both want to go ahead, I send the enrollment details and payment instructions.</p></div>
-      <div class="apply-step"><div class="n">5</div><h3>We begin</h3><p>Within one business day of enrolling, you get your welcome message, session schedule, workspace, and first assignment.</p></div>
-    </div>
-    <p class="apply-note">Applying does not commit you to joining.</p>
-  </div>
-</section>
-
-<!-- PRICE -->
-<section id="price" class="price-sec">
-  <div class="container">
-    <div class="price-wrap">
-      <div class="tag">Founding-client pilot</div>
-      <h2>The Market Perception Blueprint</h2>
-      <div class="price">$347</div>
-      <p class="price-split">Or two payments of $187</p>
-      <p class="desc">Eight weekly 90-minute working sessions, feedback between sessions, seven deliverables, research support, and a 30-day post-program check-in. We agree the channel and feedback turnaround before we begin.</p>
-      <button class="btn on-dark big" data-apply>Apply for One of 2 Places</button>
-      <p class="fine">No payment at the application stage. You pay only if we both agree it is a fit.</p>
-    </div>
-    <div class="guarantee">
-      <div>
-        <div class="tag">The Clear Direction Commitment</div>
-        <h2>If you complete the work and are still unclear, we keep working.</h2>
-      </div>
-      <div>
-        <p>Complete the agreed pre-work, attend the scheduled sessions, and submit your work for feedback. If, after completing the program, you still cannot clearly explain what you sell, who it is for, and why a buyer should care, you receive one additional 60-minute strategy session at no charge.</p>
-        <p class="fine">Process commitment, not a guarantee of clients or income.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- OBJECTIONS -->
-<section id="faq" class="faq-sec">
-  <div class="container faq">
-    <div class="tag">Objections</div>
-    <h2>Before you apply</h2>
-    <div class="faq-list">
-      <details><summary>What if I do not know what to sell yet?</summary><p>That is exactly why the program starts with a Reality Check and buyer and opportunity research. You do not need to arrive with a finished offer.</p></details>
-      <details><summary>What if nobody wants my service?</summary><p>We test commercial relevance early through buyer, problem, and competing-solution research. We do not guarantee demand, enquiries, or sales.</p></details>
-      <details><summary>I do not have testimonials. Can I still join?</summary><p>Yes. The Trust Signals phase helps you identify authentic evidence appropriate to your experience. We do not invent proof.</p></details>
-      <details><summary>I have bought courses before and did not implement them.</summary><p>This is not a video course. You meet with me every week, make decisions, create deliverables, and get feedback on your actual work.</p></details>
-      <details><summary>How much time does this take?</summary><p>One 90-minute working session each week, plus roughly 2 to 4 hours of guided work between sessions.</p></details>
-      <details><summary>What if I choose the wrong direction?</summary><p>The process is diagnosis-led. As evidence emerges, we revisit earlier decisions and refine the direction.</p></details>
-      <details><summary>I already have an offer. Is this right for me?</summary><p>If buyers already understand and want your offer, and you mainly need more leads or help closing sales, this is probably not the right program. The Blueprint is for finding and shaping the offer.</p></details>
-      <details><summary>Do I pay when I apply?</summary><p>No. You apply first. Only if we both agree it is a fit do I send enrollment details and payment instructions. Applying does not commit you to anything.</p></details>
-      <details><summary>Will I get clients?</summary><p>No. The program helps you build a clear, commercially relevant service and buyer path. Sales depend on demand, buyer access, execution, and market conditions.</p></details>
-      <details><summary>Why is this a pilot?</summary><p>This is the first structured cohort. Founding clients receive the $347 pilot price in exchange for honest feedback that helps refine the program.</p></details>
-    </div>
-  </div>
-</section>
-
-<!-- CLOSE -->
-<section class="final dark">
-  <div class="container">
-    <h2>You do not need another course.<br><span class="hot">You need a clear<br>commercial direction.</span></h2>
-    <p>Apply for one of the two founding-client places in The Market Perception Blueprint.</p>
-    <button class="btn on-dark big" data-apply>Apply for a Founding-Client Place</button>
-  </div>
-</section>
-
-<footer>
-  <div class="container">© <span id="year">2026</span> Brenda Blanche · Market Perception Strategist. The Market Perception Blueprint helps you build a clear, commercially relevant service. It does not guarantee clients, revenue, or financial results.</div>
-</footer>
-
-<!-- MOBILE STICKY CTA -->
-<div class="sticky-cta" id="stickyCta">
-  <span>Founding-client pilot<br>$347 · 2 places</span>
-  <button class="btn" data-apply>Apply now</button>
-</div>
-
-<!-- APPLICATION MODAL -->
-<div class="modal" id="modal" aria-hidden="true">
-  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="close" aria-label="Close">×</button>
-    <div id="formView">
-      <div class="tag">Founding-client application</div>
-      <h2 id="modalTitle">Apply for The Market Perception Blueprint</h2>
-      <p class="small-note">This takes about 4 to 6 minutes. I personally review every application and reply within two business days. You pay nothing at this stage.</p>
-      <form id="applyForm">
-        <div class="form-row">
-          <div class="field"><label for="f-name">Full name *</label><input id="f-name" name="FIRSTNAME" required placeholder="Your name"></div>
-          <div class="field"><label for="f-email">Email *</label><input id="f-email" name="EMAIL" type="email" required placeholder="you@email.com"></div>
-        </div>
-        <div class="field"><label for="f-work">What kind of work do you do, or what skills and experience do you bring? *</label><textarea id="f-work" name="SKILLS" required placeholder="e.g. Operations consultant; process improvement; project management; former operations manager."></textarea></div>
-        <div class="field"><label for="f-challenge">What is your biggest challenge right now? *</label><select id="f-challenge" name="CHALLENGE" required>
-          <option value="">Choose the closest option</option>
-          <option>I do not know what service to sell</option>
-          <option>I have too many skills and do not know which to lead with</option>
-          <option>I do not know who would pay for my expertise</option>
-          <option>I struggle to explain what I do</option>
-          <option>I do not know how to package, scope, or price my service</option>
-          <option>I get interest but struggle to convert it into paid work</option>
-          <option>Something else</option>
-        </select></div>
-        <div class="field"><label for="f-tried">What have you already tried to solve this?</label><textarea id="f-tried" name="TRIED" placeholder="e.g. Picked a niche, took a branding course, posted on LinkedIn, asked AI, sent proposals."></textarea></div>
-        <div class="field"><label for="f-evidence">Do you have any clients, past work, samples, enquiries, testimonials, or market response?</label><textarea id="f-evidence" name="EVIDENCE" placeholder="Describe anything relevant, even if informal."></textarea></div>
-        <div class="field"><label for="f-buyer">Do you have any idea who might need your work, even broadly?</label><textarea id="f-buyer" name="BUYER" placeholder="e.g. Small business owners, HR teams, founders, nonprofits, even if unsure."></textarea></div>
-        <div class="field"><label for="f-time">Can you commit to one 90-minute session each week for eight weeks, plus 2 to 4 hours of work between sessions? *</label><select id="f-time" name="COMMITMENT" required><option value="">Choose one</option><option>Yes</option><option>Yes, with some flexibility needed</option><option>Not sure</option><option>No</option></select></div>
-        <div class="field"><label for="f-payment">Which investment option works best? *</label><select id="f-payment" name="PAYMENT" required><option value="">Choose one</option><option>$347 upfront</option><option>Two payments of $187</option><option>I have questions before deciding</option></select></div>
-        <div class="field"><label for="f-why">What would need to be true for this program to be worth it for you?</label><textarea id="f-why" name="WHY" placeholder="e.g. A clear service I can explain, a practical next step, confidence in my direction."></textarea></div>
-        <div class="field"><label for="f-extra">Anything else I should know?</label><textarea id="f-extra" name="NOTES"></textarea></div>
-        <p class="small-note">The program needs active participation. It does not guarantee clients or income.</p>
-        <p class="small-note">Your details will be added to my Brevo list for application updates only.</p>
-        <div aria-hidden="true" class="hp"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-        <button class="btn full" type="submit" id="submitBtn">Submit Application</button>
-        <p id="formError" role="alert" class="form-error"></p>
-      </form>
-    </div>
-    <div class="success" id="successView">
-      <div class="big">✓</div>
-      <h2>Application received</h2>
-      <p>Thank you for applying for a founding-client place in The Market Perception Blueprint.</p>
-      <p class="small-note">I personally review every application. You will hear from me within two business days, with either an invitation to a 30-minute fit call or an honest explanation if I do not think the program is the right fit at this time.</p>
-      <button class="btn ghost" id="successClose" type="button">Close</button>
-    </div>
-  </div>
-</div>
-
+<section class="dk fin" id="final"><div class="g"><h2 class="rv">You do not need another course. You need a clear commercial direction.</h2><p class="lede m rv">Apply for 1 of the 2 founding-client places in The Market Perception Blueprint.</p><div class="cta rv"><button class="btn go" data-apply>Apply now · $347</button></div></div></section>
+</main>
+<footer><div class="g">© 2026 Brenda Blanche · Market Perception Strategist.<br>The Market Perception Blueprint helps you build a clear, commercially relevant service. It does not guarantee clients, revenue, or financial results.</div></footer>
+<div class="stk" id="stk"><span><b>Blueprint · $347</b>Only 2 places</span><button class="btn sm go" data-apply>Apply now</button></div>
+<div id="ap" role="dialog" aria-modal="true" aria-label="Founding-client application"><div class="apw"><button class="apx" id="apx" type="button">Close ✕</button>
+<div id="apq"><p class="mono" style="margin-top:2.6rem;margin-bottom:0">Founding-client application</p><div class="sb" id="sb" style="margin-top:.8rem"></div><div class="smr"><button type="button" id="bk">← Back</button><span id="sl"></span></div><div id="qb"></div><p class="er" id="er" role="alert"></p><div class="nv"><button class="btn go" type="button" id="nx">Next →</button><span class="note">Takes about 4–6 minutes. I reply within 48 hours.</span></div></div>
+<div class="dn" id="apd" hidden><svg viewBox="0 0 60 60"><circle class="c1" pathLength="1" cx="30" cy="30" r="26"/><path class="c2" pathLength="1" d="M19 31l8 8 15-17"/></svg><h3>Application received</h3><p>Thank you for applying for a founding-client place in The Market Perception Blueprint.</p><p>I personally review every application. You will hear from me within 48 hours with either an invitation to book a short fit call or an honest explanation if I do not think the program is the right fit at this time.</p><p style="margin-top:1.6rem"><button class="btn go" id="apc" type="button">Close</button></p></div></div></div>
 <script>
-/* ===== Page behaviour (modal, sticky CTA). Safe to keep. ===== */
 (function(){
-  var modal=document.getElementById('modal');
-  var lastFocus=null;
-  function openModal(){lastFocus=document.activeElement;modal.classList.add('open');modal.setAttribute('aria-hidden','false');var f=document.getElementById('f-name');if(f)setTimeout(function(){f.focus()},60)}
-  function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');if(lastFocus)lastFocus.focus()}
-  document.querySelectorAll('[data-apply]').forEach(function(b){b.addEventListener('click',openModal)});
-  modal.querySelector('.close').addEventListener('click',closeModal);
-  document.getElementById('successClose').addEventListener('click',closeModal);
-  modal.addEventListener('click',function(e){if(e.target===modal)closeModal()});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))closeModal()});
-  document.getElementById('year').textContent=new Date().getFullYear();
-
-  /* sticky mobile CTA: show after the hero, hide while price or closing block is on screen */
-  var sticky=document.getElementById('stickyCta');
-  var hero=document.getElementById('top');
-  var hide=new Set(), pastHero=false;
-  function update(){sticky.classList.toggle('show',pastHero&&hide.size===0)}
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(en){pastHero=!en[0].isIntersecting;update()}).observe(hero);
-    var io=new IntersectionObserver(function(en){en.forEach(function(x){x.isIntersecting?hide.add(x.target):hide.delete(x.target)});update()});
-    document.querySelectorAll('#price,.final').forEach(function(el){io.observe(el)});
-  }
+var APPLY_ENDPOINT="/api/apply";
+var d=document,r=d.documentElement;r.classList.add('js');
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,hov=matchMedia('(hover:hover)').matches,CL=['#E4007C','#F5EDE4','#ff7aa8','#fff'];
+function $$(s,p){return [].slice.call((p||d).querySelectorAll(s))}function $(s){return d.querySelector(s)}
+var IC={target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/>',compass:'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',doc:'<path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h6M10 16h6"/>',shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6zM8.5 12l2.5 2.5 4.5-5"/>',flag:'<path d="M5 21V4M5 5h12l-2.5 4 2.5 4H5"/>',check:'<circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/>',search:'<circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/>',layers:'<path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5"/>',chat:'<path d="M4 5h16v11H9l-5 4z"/>',users:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.5-4 3-6 6.500-6s6 2 6.500 6M16 5a3.500 3.500 0 010 7M18 14c2 .8 3 2.800 3.500 6"/>',mail:'<path d="M3 6h18v12H3zM3 7l9 7 9-7"/>',trend:'<path d="M3 17l6-6 4 4 8-9M15 6h6v6"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',coin:'<circle cx="12" cy="12" r="9"/><path d="M14.500 9c-.5-1-1.500-1.500-2.500-1.500-1.500 0-2.500.8-2.500 2s1 1.700 2.500 2 2.500.8 2.500 2-1 2-2.500 2c-1 0-2-.5-2.500-1.500M12 6v1.500M12 16.500V18"/>',calendar:'<path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/>'};
+$$('[data-i]').forEach(function(e){e.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+IC[e.dataset.i]+'</svg>'});
+var pg=d.createElement('div');pg.className='pg';d.body.appendChild(pg);
+var ph=$('#phs'),stk=$('#stk'),crw=$$('#cr>div'),cbar=$('#cbar');
+function onS(){var h=r.scrollHeight-innerHeight;pg.style.transform='scaleX('+(h>0?scrollY/h:0)+')';
+ var b=ph.getBoundingClientRect();ph.style.setProperty('--pf',Math.max(0,Math.min(1,(innerHeight*.6-b.top)/b.height)));
+ $$('.ph').forEach(function(e){var on=e.getBoundingClientRect().top<innerHeight*.72;if(on)e.classList.add('on')});
+ var n=0;crw.forEach(function(e){var l=e.getBoundingClientRect().top<innerHeight*.68;e.classList.toggle('lit',l);if(l)n++});cbar.parentNode.style.setProperty('--cf',n/6);cbar.style.setProperty('--cf',Math.max(.04,n/6));
+ var hb=$('#top').getBoundingClientRect().bottom,fb=$('#final').getBoundingClientRect().top;stk.classList.toggle('on',hb<0&&fb>innerHeight*.6)}
+addEventListener('scroll',onS,{passive:true});addEventListener('resize',onS);
+function sw(el){var i=0;(function w(n){[].slice.call(n.childNodes).forEach(function(c){if(c.nodeType===3){var f=d.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(function(t){if(!t)return;if(/^\s+$/.test(t))f.appendChild(d.createTextNode(' '));else{var e=d.createElement('span');e.className='wd';e.style.setProperty('--i',i++);e.textContent=t;f.appendChild(e)}});n.replaceChild(f,c)}else if(c.nodeType===1&&c.tagName!=='BR')w(c)})})(el)}
+if(!rm)$$('section h2').forEach(sw);
+function burst(x,y,n,sp){if(rm)return;for(var k=0;k<n;k++){var e=d.createElement('i'),a=Math.random()*6.283,q=sp*(.4+Math.random()*.6);e.className='mg-sp';e.style.cssText='left:'+x+'px;top:'+y+'px;--dx:'+(Math.cos(a)*q).toFixed(0)+'px;--dy:'+(Math.sin(a)*q).toFixed(0)+'px;--c:'+CL[k%4]+';--s:'+(4+Math.random()*6).toFixed(0)+'px';d.body.appendChild(e);setTimeout(function(z){z.remove()}.bind(null,e),900)}}
+function cnt(e){var to=parseFloat(e.dataset.n),t0=null;(function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1300);e.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(performance.now())}
+var seen={};
+if('IntersectionObserver' in window&&!rm){
+ var io=new IntersectionObserver(function(a){a.forEach(function(x){if(x.isIntersecting){var t=x.target;t.classList.add('on');if(t.dataset.n)cnt(t);if(t.id&&seen[t.id])seen[t.id]();io.unobserve(t)}})},{threshold:.14,rootMargin:'0px 0px -6% 0px'});
+ $$('.rv,.ph,#bridge,#dls,#tried,[data-n],.six>div,#chat,#tower').forEach(function(e){io.observe(e)});
+ var so=new IntersectionObserver(function(a){a.forEach(function(x){if(x.isIntersecting){x.target.classList.add('mgin');so.unobserve(x.target)}})},{threshold:.06});$$('section').forEach(function(e){so.observe(e)})
+}else{$$('.rv,.ph,#bridge,#dls,#tried,.six>div').forEach(function(e){e.classList.add('on')})}
+/* ---- hero scene ---- */
+var hero=$('#top'),sc=$('#sc'),bars=$$('#bars i'),tb=$('#tb'),sbb=$('#sbb'),cap=$('#cap'),gb=$('#gb'),skp=$('#skp'),rp=$('#rp'),TT=[],cur=-1,fin=false,tok=0,DUR=[6400,7000,6600,10800,8400,8800,8600,6200],VIS=[0,1,2,3,4,4,5,5],GB='<p class="gh">Here’s how we get you there:</p><ol><li><b>1</b>See what you can really sell</li><li><b>2</b>Find who needs it</li><li><b>3</b>Choose 1 and package it</li><li><b>4</b>Say it so anyone gets it</li></ol>';
+function at(ms,f){TT.push(setTimeout(f,ms))}function clrT(){TT.forEach(clearTimeout);TT=[];tok++}
+function typ(el,txt,sp,done){var my=tok,i=0;el.innerHTML='<span class="cur"></span>';el.classList.add('on');(function t(){if(my!==tok)return;i++;el.innerHTML=txt.slice(0,i)+(i<txt.length?'<span class="cur"></span>':'');if(i<txt.length)TT.push(setTimeout(t,sp));else done&&done()})()}
+function say(el,txt,cls){el.className=cls;el.innerHTML=txt;void el.offsetWidth;el.classList.add('on')}
+function off(){[tb,sbb,cap,gb].forEach(function(e){e.classList.remove('on')})}
+function reveal(){hero.classList.add('rev')}
+function state(n){var v=VIS[n];sc.dataset.b=v;for(var k=0;k<6;k++)sc.classList.toggle('s'+k,k<=v);sc.classList.toggle('gd',n===5);sc.classList.toggle('u',n===7);sc.style.setProperty('--gl',v/5);bars.forEach(function(b,k){b.classList.remove('c');b.classList.toggle('d',k<n)})}
+function go(n){clrT();off();cur=n;state(n);var b=bars[n];b.style.setProperty('--bd',DUR[n]+'ms');void b.offsetWidth;b.classList.add('c');
+ if(n===0)at(800,function(){say(tb,'','tb');typ(tb,'I’m just not sure of how to package it all.',58)});
+ if(n===1)at(800,function(){say(tb,'','tb');typ(tb,'I have decent traction on LinkedIn but not much conversion.',52)});
+ if(n===2)at(800,function(){say(tb,'','tb');typ(tb,'I send my price, and then nothing.',62)});
+ if(n===3){at(500,function(){say(sbb,'','sbb');typ(sbb,'So… what do you do?',70)});at(3500,function(){sbb.classList.remove('on')});at(4000,function(){say(tb,'','tb sp');typ(tb,'I often struggle to explain what I do when family or strangers ask.',52)})}
+ if(n===4)at(900,function(){say(cap,'Your skills are what you bring. <b>Your offer is the specific problem you choose to solve for a buyer.</b>','cap')});
+ if(n===5){at(600,function(){say(gb,GB,'gb')});[1500,2900,4300,5700].forEach(function(t,k){at(t,function(){var li=gb.querySelectorAll('li')[k];if(li)li.classList.add('on')})});at(8000,function(){gb.classList.remove('on')})}
+ if(n===6){at(500,function(){say(sbb,'','sbb');typ(sbb,'So… what do you do?',60)});at(2600,function(){sbb.classList.remove('on')});at(3000,function(){say(tb,'','tb sp');typ(tb,'I help online shops find out why visitors don’t buy. 1 audit, 2 weeks, 1 price.',42)})}
+ if(n===7){at(600,function(){var q=$('.stand').getBoundingClientRect();burst(q.left+q.width/2,q.top+q.height*.5,40,260)});at(1200,function(){say(sbb,'','sbb');typ(sbb,'Oh. I get exactly what you do.',60)});at(2000,reveal)}
+ at(DUR[n],function(){if(n<7)go(n+1);else finish()})}
+function finish(){fin=true;clrT();bars.forEach(function(b){b.classList.remove('c');b.classList.add('d')});skp.hidden=true;rp.hidden=false;reveal();try{sessionStorage.setItem('bp_seen','1')}catch(e){}}
+function jump(){clrT();off();cur=7;state(7);say(sbb,'Oh. I get exactly what you do.','sbb');finish()}
+skp.addEventListener('click',jump);rp.addEventListener('click',function(){fin=false;skp.hidden=false;rp.hidden=true;go(0)});
+bars.forEach(function(b,k){b.addEventListener('click',function(e){e.stopPropagation();fin=false;skp.hidden=false;rp.hidden=true;go(k)})});
+sc.addEventListener('click',function(e){if(e.target.closest('button')||e.target.closest('.bars'))return;var q=sc.getBoundingClientRect(),n=e.clientX-q.left<q.width*.25?Math.max(0,cur-1):cur+1;if(n>7){jump();return}if(!fin){go(n)}});
+addEventListener('scroll',function(){if(!fin&&scrollY>140)jump()},{passive:true});
+var seenB=false;try{seenB=sessionStorage.getItem('bp_seen')==='1'}catch(e){}
+if(rm||seenB){jump()}else{setTimeout(function(){go(0)},350)}
+window.bpScene={go:go,jump:jump};
+/* ---- chat ---- */
+var chatRun=false;function typeTo(el,s,sp,cb){var i=0;(function t(){el.innerHTML=s.slice(0,i)+'<span class="cur"></span>';if(i++<s.length)setTimeout(t,sp+Math.random()*40);else{el.textContent=s;cb&&cb()}})()}
+function chat(){if(chatRun)return;chatRun=true;var b=$('#cb');function bub(c,h){var e=d.createElement('div');e.className='bb '+c;e.innerHTML=h;b.appendChild(e);void e.offsetWidth;e.classList.add('on');return e}
+ if(rm){bub('them','So, what do you sell?');bub('me','I do a bit of everything… branding, strategy, consulting… it really depends on the client.');$('#cft').classList.add('on');$('#csl').classList.add('on');return}
+ setTimeout(function(){bub('them','So, what do you sell?');setTimeout(function(){var t=bub('me ty','<i></i><i></i><i></i>');setTimeout(function(){t.className='bb me on';t.innerHTML='';typeTo(t,'I do a bit of everything… branding, strategy, consulting… it really depends on the client.',52,function(){setTimeout(function(){$('#cft').classList.add('on');setTimeout(function(){$('#csl').classList.add('on')},1800)},900)})},1500)},1300)},600)}
+seen.chat=chat;if(!('IntersectionObserver' in window)||rm)chat();
+/* ---- tower ---- */
+var tw=$('#tower'),twr=false;function tower(){if(twr)return;twr=true;if(rm){tw.classList.add('fix');$('#tlb').textContent='The Blueprint starts here';$('#ttag').textContent='Foundation first. Then it holds.';return}
+ tw.classList.add('wob');setTimeout(function(){tw.classList.remove('wob');tw.classList.add('fix');$('#tlb').textContent='The Blueprint starts here';$('#ttag').textContent='Foundation first. Then it holds.';var q=tw.getBoundingClientRect();burst(q.left+q.width/2,q.top+q.height*.7,30,180)},3000)}
+seen.tower=tower;if(!('IntersectionObserver' in window)||rm)tower();
+/* ---- tried strikethrough handled by CSS (#tried.on) ---- */
+/* ---- before / after ---- */
+var ba=$('#ba'),drag=false;function mv(x){var q=ba.getBoundingClientRect(),p=Math.max(4,Math.min(96,(x-q.left)/q.width*100));ba.style.setProperty('--p',p+'%')}
+ba.style.setProperty('--p','50%');ba.addEventListener('pointerdown',function(e){drag=true;ba.setPointerCapture(e.pointerId);mv(e.clientX)});ba.addEventListener('pointermove',function(e){if(drag)mv(e.clientX)});ba.addEventListener('pointerup',function(){drag=false});
+if(!rm&&'IntersectionObserver' in window)new IntersectionObserver(function(a,o){if(a[0].isIntersecting){o.disconnect();var t0=null;(function f(t){if(!t0)t0=t;var p=(t-t0)/1800,v=p<.5?50+p*2*45:95-(p-.5)*2*45;ba.style.setProperty('--p',Math.min(95,v)+'%');if(p<1&&!drag)requestAnimationFrame(f);else if(!drag)ba.style.setProperty('--p','50%')})(performance.now())}},{threshold:.6}).observe(ba);
+/* ---- apply wizard ---- */
+var CH={ch:["I do not know what service to sell","I have too many skills and do not know which to lead with","I do not know who would pay for my expertise","I struggle to explain what I do","I do not know how to package, scope, or price my service","I get interest but struggle to convert it into paid work","Something else"],cm:["Yes","Yes, with some flexibility needed","Not sure","No"],iv:["$347 upfront","2 payments of $187","I have questions before deciding"]};
+var S=[{t:"Let’s start with you.",s:"I personally review every application.",f:[{k:"name",l:"Full name",ty:"text",req:1,ac:"name"},{k:"email",l:"Email",ty:"email",req:1,ac:"email"}]},
+{t:"What work do you do?",s:"The kind of work, or the skills and experience you bring.",f:[{k:"work",l:"Your work, skills and experience",ty:"area",req:1}]},
+{t:"What’s your biggest challenge right now?",s:"Choose the closest option.",f:[{k:"challenge",l:"Biggest challenge",ty:"one",o:"ch",req:1}]},
+{t:"What have you tried, and what do you already have?",s:"All optional. Honest answers help me most.",f:[{k:"tried",l:"What have you already tried to solve this?",ty:"area"},{k:"evidence",l:"Any clients, past work, samples, enquiries, testimonials, or market response?",ty:"area"},{k:"who",l:"Any idea who might need your work, even broadly?",ty:"area"}]},
+{t:"Can you commit, and what works for you?",s:"The program takes roughly 2–4 hours per week between sessions.",f:[{k:"commit",l:"Can you commit 2–4 hours per week for 8 weeks?",ty:"one",o:"cm",req:1},{k:"invest",l:"Which investment option works best?",ty:"one",o:"iv",req:1}]},
+{t:"Last thing.",s:"Then your application is on its way.",f:[{k:"worth",l:"What would need to be true for this program to be worth it for you? (optional)",ty:"area"},{k:"extra",l:"Anything else I should know? (optional)",ty:"area"},{k:"consent",ty:"ck",req:1,l:"I understand my details will be added to Brenda’s Brevo list for application updates only."}]}];
+var A={},i=0,KEY="bp_apply_v1",er=$('#er');try{A=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){A={}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(A))}catch(e){}}function esc(v){return String(v==null?"":v).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;")}
+function words(t){return t.split(' ').map(function(w,k){return '<span class="w" style="--i:'+k+'">'+w+'</span>'}).join(' ')}
+function fld(k){var o;S.forEach(function(s){s.f.forEach(function(f){if(f.k===k)o=f})});return o}
+function draw(){var s=S[i];$('#sb').innerHTML=S.map(function(x,k){return '<i class="'+(k<i?'d':k===i?'c':'')+'"></i>'}).join('');$('#sl').textContent="Step "+(i+1)+" of "+S.length;$('#bk').hidden=i===0;$('#nx').textContent=i===S.length-1?"Submit application ✓":"Next →";er.className='er';
+ var h='<h3 class="qt">'+words(s.t)+'</h3><p class="qs">'+s.s+'</p><div class="fd">'+s.f.map(function(f){var v=A[f.k],id='f_'+f.k;
+  if(f.ty==="ck")return '<label class="ck2"><input type="checkbox" data-k="'+f.k+'"'+(v?' checked':'')+'><span>'+f.l+'</span></label>';
+  var lb=f.ty==="one"?'<span class="lb">'+f.l+'</span>':'<label for="'+id+'">'+f.l+'</label>',c;
+  if(f.ty==="area")c='<textarea id="'+id+'" data-k="'+f.k+'">'+esc(v)+'</textarea>';else if(f.ty==="one")c='<div class="chs">'+CH[f.o].map(function(o){return '<button type="button" class="ch" data-k="'+f.k+'" data-v="'+esc(o)+'" aria-pressed="'+(v===o)+'">'+o+'</button>'}).join('')+'</div>';else c='<input id="'+id+'" type="'+f.ty+'" data-k="'+f.k+'" value="'+esc(v)+'" autocomplete="'+(f.ac||"off")+'">';return '<div>'+lb+c+'</div>'}).join('')+'</div>';
+ $('#qb').innerHTML=h;$$('#qb [data-k]').forEach(function(e){var k=e.dataset.k;e.addEventListener('input',function(){er.className='er'});
+  if(e.classList.contains('ch'))e.addEventListener('click',function(){A[k]=e.dataset.v;$$('.ch[data-k="'+k+'"]').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.v===A[k])});save();er.className='er';var q=e.getBoundingClientRect();burst(q.left+q.width/2,q.top+q.height/2,8,50)});
+  else if(e.type==="checkbox")e.addEventListener('change',function(){A[k]=e.checked;save();er.className='er'});else e.addEventListener('input',function(){A[k]=e.value;save()})});
+ var fi=$('#qb input[type=text],#qb input[type=email],#qb textarea');if(fi&&matchMedia('(min-width:700px)').matches)setTimeout(function(){fi.focus({preventScroll:true})},400)}
+function check(){var s=S[i];for(var n=0;n<s.f.length;n++){var f=s.f[n],v=A[f.k];if(f.req){if(f.ty==="ck"){if(!v)return "Please tick the box to submit your application."}else if(!v||!String(v).trim())return "Please complete this one before continuing."}if(f.k==="email"&&!/^\S+@\S+\.\S+$/.test(String(v||"").trim()))return "Please enter a valid email address."}return ""}
+function post(p){return fetch(APPLY_ENDPOINT,{method:"POST",keepalive:true,headers:{"Content-Type":"application/json"},body:JSON.stringify(p)}).then(function(x){if(!x.ok)throw 0;try{localStorage.removeItem("bp_pending")}catch(e){}}).catch(function(){try{localStorage.setItem("bp_pending",JSON.stringify(p))}catch(e){}})}
+function submit(){var b=$('#nx');b.disabled=true;b.textContent="Sending…";var p={};Object.keys(A).forEach(function(k){p[k]=A[k]});p.email=String(A.email||"").trim().toLowerCase();p.source="blueprint-apply";p.offer="The Market Perception Blueprint";p.submitted_at=new Date().toISOString();p.page=location.href;try{post(p)}catch(e){}try{localStorage.setItem("bp_applied","1")}catch(e){}
+ setTimeout(function(){b.disabled=false;done();var q=$('#apd svg').getBoundingClientRect();setTimeout(function(){burst(q.left+q.width/2,q.top+q.height/2,60,280)},900)},500)}
+function done(){$('#apq').hidden=true;$('#apd').hidden=false;$('#ap').scrollTop=0}
+function next(){var m=check();if(m){er.textContent=m;er.className='er on';return}if(i<S.length-1){i++;draw();$('#ap').scrollTop=0}else submit()}
+$('#nx').addEventListener('click',next);$('#bk').addEventListener('click',function(){if(i>0){i--;draw()}});$('#ap').addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.tagName==='INPUT'&&e.target.type!=='checkbox'){e.preventDefault();next()}});
+function open(){$('#ap').classList.add('on');d.body.style.overflow='hidden';var ap=false;try{ap=localStorage.getItem("bp_applied")==="1"}catch(e){}if(ap){done()}else{$('#apq').hidden=false;$('#apd').hidden=true;draw()}}
+function close(){$('#ap').classList.remove('on');d.body.style.overflow=''}
+$$('[data-apply]').forEach(function(b){b.addEventListener('click',open)});$('#apx').addEventListener('click',close);$('#apc').addEventListener('click',close);addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+try{var pd=localStorage.getItem("bp_pending");if(pd)fetch(APPLY_ENDPOINT,{method:"POST",keepalive:true,headers:{"Content-Type":"application/json"},body:pd}).then(function(x){if(x.ok)localStorage.removeItem("bp_pending")}).catch(function(){})}catch(e){}
+/* ---- dust, glow, magnet, sparks ---- */
+if(!rm){
+d.addEventListener('pointerdown',function(e){burst(e.clientX,e.clientY,10,70)},{passive:true});
+function dust(h){var c=d.createElement('canvas');c.className='mg-dust';h.insertBefore(c,h.firstChild);var x=c.getContext('2d'),W,H,P=[],m={x:-999,y:-999},v=false,dp=Math.min(devicePixelRatio||1,2);function fit(){var q=h.getBoundingClientRect();W=q.width;H=q.height;c.width=W*dp;c.height=H*dp;x.setTransform(dp,0,0,dp,0,0)}fit();addEventListener('resize',fit);
+for(var k=0,n=innerWidth<700?22:44;k<n;k++)P.push({x:Math.random()*W,y:Math.random()*H,r:.8+Math.random()*2.2,s:.15+Math.random()*.4,p:Math.random()*6.28,f:Math.random()<.35});
+h.addEventListener('pointermove',function(e){var q=h.getBoundingClientRect();m.x=e.clientX-q.left;m.y=e.clientY-q.top},{passive:true});h.addEventListener('pointerleave',function(){m.x=m.y=-999});
+function t(){if(!v)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.p+=.015;p.y-=p.s;p.x+=Math.sin(p.p)*.35;var dx=p.x-m.x,dy=p.y-m.y,q=dx*dx+dy*dy;if(q<14400){var l=Math.sqrt(q)||1,f=(1-l/120)*3;p.x+=dx/l*f;p.y+=dy/l*f}if(p.y<-5){p.y=H+5;p.x=Math.random()*W}x.beginPath();x.fillStyle=p.f?'rgba(228,0,124,.55)':'rgba(245,237,228,.35)';x.arc(p.x,p.y,p.r,0,6.283);x.fill()});requestAnimationFrame(t)}
+new IntersectionObserver(function(a){v=a[0].isIntersecting;if(v)requestAnimationFrame(t)}).observe(h)}
+$$('section.dk').forEach(dust);
+if(hov){var gl=d.createElement('div');gl.className='mg-glow';d.body.appendChild(gl);var gx=0,gy=0,tx=0,ty=0,run=false;function tk(){gx+=(tx-gx)*.14;gy+=(ty-gy)*.14;gl.style.transform='translate('+gx+'px,'+gy+'px)';if(Math.abs(tx-gx)+Math.abs(ty-gy)>.5)requestAnimationFrame(tk);else run=false}
+addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;tx=e.clientX;ty=e.clientY;gl.classList.add('on');if(!run){run=true;requestAnimationFrame(tk)}},{passive:true});
+$$('.btn').forEach(function(b){b.addEventListener('mousemove',function(e){var q=b.getBoundingClientRect();b.style.translate=((e.clientX-q.left-q.width/2)*.2).toFixed(1)+'px '+((e.clientY-q.top-q.height/2)*.3).toFixed(1)+'px'});b.addEventListener('mouseleave',function(){b.style.translate=''})})}
+}
+onS();
 })();
-
-/* ===== Form submission =====
-   Sends the answers to /api/apply (the Cloudflare function), which saves them in Brevo. */
-(function(){
-  var form=document.getElementById('applyForm'),btn=document.getElementById('submitBtn'),err=document.getElementById('formError');
-  var WHATSAPP='wa.me/237672411155';
-  function fail(msg){err.textContent=msg;err.style.display='block';btn.disabled=false;btn.textContent='Submit Application'}
-  form.addEventListener('submit',function(e){
-    e.preventDefault();err.style.display='none';
-    btn.disabled=true;btn.textContent='Sending...';
-    var payload={};new FormData(form).forEach(function(v,k){payload[k]=v});
-    fetch('/api/apply',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
-      .then(function(r){return r.json().catch(function(){return {}}).then(function(d){return {ok:r.ok&&d.ok,error:d.error}})})
-      .then(function(res){
-        if(!res.ok){fail((res.error||'Something went wrong.')+' Please try again, or message me on WhatsApp: '+WHATSAPP);return}
-        document.getElementById('formView').style.display='none';
-        document.getElementById('successView').style.display='block';
-        form.reset();
-      })
-      .catch(function(){fail('We could not send your application. Check your connection and try again, or message me on WhatsApp: '+WHATSAPP)});
-  });
-})();
-</script>
-</body>
-</html>
+</script></body></html>
