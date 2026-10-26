@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>You’re in | Welcome to the Market Perception Build</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#14100F">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,900;1,9..144,300;1,9..144,900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>:root{--ink:#14100F;--bone:#F5EDE4;--fu:#E4007C;--stone:#E7DCD3;--pad:clamp(1.2rem,4.5vw,3.5rem);--r:10px;--ln:rgba(245,237,228,.18);--lk:rgba(20,16,15,.2)}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bone);color:var(--ink);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:900;letter-spacing:-.03em;line-height:.98;text-wrap:balance}
+h2{font-size:clamp(2rem,5vw,3.6rem);margin-bottom:1.1rem}h3{font-size:1.3rem;line-height:1.1;letter-spacing:-.02em}
+.it{font-style:italic;font-weight:300;letter-spacing:-.035em}p,li{text-wrap:pretty}a{color:inherit}::selection{background:var(--fu);color:#fff}:focus-visible{outline:3px solid var(--fu);outline-offset:3px}
+.g{max-width:1100px;margin:0 auto;padding:0 var(--pad);position:relative;z-index:1}section{padding:clamp(3.5rem,8vw,6.5rem) 0;position:relative;overflow:hidden;overflow:clip}
+.dk{background:var(--ink);color:var(--bone)}.sn{background:var(--stone)}.m{color:rgba(20,16,15,.72)}.dk .m{color:rgba(245,237,228,.8)}.lede{font-size:1.15rem;max-width:40rem}
+.mono{font:700 .74rem/1.3 'Space Grotesk',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--fu);margin-bottom:1rem}
+.btn{display:inline-block;background:var(--fu);color:#fff;font:700 1.02rem 'Space Grotesk',sans-serif;text-decoration:none;padding:1rem 1.7rem;border-radius:var(--r);border:0;cursor:pointer;transition:transform .15s,box-shadow .15s,background .2s}
+.btn.go{box-shadow:0 7px 0 #9d0055,0 16px 36px rgba(228,0,124,.32)}.btn.go:hover{background:#f0188a;transform:translateY(2px);box-shadow:0 5px 0 #9d0055,0 12px 30px rgba(228,0,124,.4)}.btn.go:active{transform:translateY(7px);box-shadow:0 0 0 #9d0055}.btn[disabled]{opacity:.65;cursor:wait}
+.pg{position:fixed;top:0;left:0;height:4px;width:100%;z-index:20;background:var(--fu);transform:scaleX(0);transform-origin:0 50%;pointer-events:none}
+nav{position:sticky;top:0;z-index:9;background:rgba(20,16,15,.9);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:var(--bone)}
+nav .g{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:62px}.logo{font:900 1.2rem Fraunces,serif;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
+.chip{font:700 .72rem 'Space Grotesk';letter-spacing:.12em;text-transform:uppercase;padding:.45rem .8rem;border-radius:99px;background:rgba(245,237,228,.1);box-shadow:inset 0 0 0 1px var(--ln);display:flex;align-items:center;gap:.5rem}.chip i{width:8px;height:8px;border-radius:50%;background:var(--fu);animation:cp 2s infinite}
+@keyframes cp{0%{box-shadow:0 0 0 0 rgba(228,0,124,.7)}100%{box-shadow:0 0 0 12px rgba(228,0,124,0)}}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}.js .rv.on{opacity:1;transform:none}
+.hero{background:var(--ink);color:var(--bone);padding:clamp(1.2rem,3.5vw,2.5rem) 0;min-height:calc(100svh - 62px);display:flex;align-items:center}.hero>.g{width:100%}.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 85% 0%,rgba(228,0,124,.28),transparent 70%),radial-gradient(50% 50% at 0% 100%,rgba(228,0,124,.12),transparent 70%);pointer-events:none}
+.hc{max-width:46rem}.brow{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem}.brow .mono{margin:0}.badge{width:clamp(3.6rem,10vw,5rem);height:auto;display:block;flex:none;overflow:visible}
+.badge .bf{fill:rgba(228,0,124,.18);opacity:0;animation:fi .6s .9s forwards}.badge .bc{fill:none;stroke:var(--fu);stroke-width:5;stroke-linecap:round;stroke-dasharray:328;stroke-dashoffset:328;animation:dr 1s .2s cubic-bezier(.6,0,.2,1) forwards}.badge .bt{fill:none;stroke:#fff;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:90;stroke-dashoffset:90;animation:dr .6s 1.05s cubic-bezier(.6,0,.2,1) forwards}
+@keyframes dr{to{stroke-dashoffset:0}}@keyframes fi{to{opacity:1}}
+h1{font-size:clamp(2.3rem,8.4vw,4.8rem);line-height:.93;letter-spacing:-.045em}h1 .it{color:var(--fu)}.sub{margin-top:1.1rem;max-width:36rem;font-size:1.05rem}.cta{margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:1rem 1.4rem;align-items:center}.note{font-size:.9rem;opacity:.8}
+.js .hc>*{opacity:0;transform:translateY(18px);animation:up .8s cubic-bezier(.2,.8,.2,1) forwards}.js .hc>:nth-child(1){animation-delay:.05s}.js .hc>:nth-child(2){animation-delay:.25s}.js .hc>:nth-child(3){animation-delay:.4s}.js .hc>:nth-child(4){animation-delay:.55s}@keyframes up{to{opacity:1;transform:none}}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin-top:2.4rem;position:relative}@media(max-width:860px){.steps{grid-template-columns:1fr}}
+.stp{background:#fff;border-radius:var(--r);padding:1.4rem;position:relative;overflow:hidden}.stp .nm{width:2.8rem;height:2.8rem;border-radius:50%;display:grid;place-items:center;font:900 1.2rem Fraunces,serif;background:var(--stone);color:var(--ink);margin-bottom:.9rem}
+.stp h3{margin-bottom:.4rem}.stp p{font-size:.95rem}.stp .tag{display:inline-block;margin-top:.9rem;font:700 .7rem 'Space Grotesk';letter-spacing:.14em;text-transform:uppercase;padding:.35rem .7rem;border-radius:99px;background:var(--stone)}
+.stp.done .nm{background:var(--fu);color:#fff}.stp.done .tag{background:var(--ink);color:var(--bone)}.stp.now{box-shadow:0 0 0 3px var(--fu),0 20px 50px rgba(228,0,124,.2)}.stp.now .nm{background:var(--ink);color:#fff}.stp.now .tag{background:var(--fu);color:#fff;animation:cp 2s infinite}.stp.next{opacity:.8}
+.stp::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:4px;background:var(--fu);transform:scaleX(0);transform-origin:left;transition:transform .9s .4s}.stp.done.on::after{transform:none}
+.form{margin-top:2.2rem;background:#fff;border-radius:22px;padding:clamp(1.3rem,4vw,2.6rem);box-shadow:0 30px 70px rgba(20,16,15,.1);max-width:52rem}
+fieldset{border:0;padding:0;margin:0 0 2.2rem;min-width:0}legend{font:900 1.5rem/1.1 Fraunces,serif;letter-spacing:-.02em;margin-bottom:1.1rem;padding:0;display:flex;align-items:center;gap:.7rem}legend span{font:700 .7rem 'Space Grotesk';letter-spacing:.16em;text-transform:uppercase;color:var(--fu)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 1.1rem}@media(max-width:640px){.row2{grid-template-columns:1fr}}
+.f{margin-bottom:1.15rem;display:block}.f>b{display:block;font-weight:600;margin-bottom:.25rem;line-height:1.35}.f>b em{color:var(--fu);font-style:normal}.f>small{display:block;font-size:.86rem;color:rgba(20,16,15,.62);margin-bottom:.45rem;line-height:1.4}
+input[type=text],input[type=email],input[type=url],select,textarea{width:100%;font:400 1rem/1.5 'Space Grotesk',sans-serif;color:var(--ink);background:var(--bone);border:1.5px solid var(--lk);border-radius:var(--r);padding:.85rem 1rem;transition:border-color .2s,box-shadow .2s,background .2s;-webkit-appearance:none;appearance:none}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23E4007C' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.6rem}
+textarea{min-height:7.5rem;resize:vertical}input:focus,select:focus,textarea:focus{outline:0;border-color:var(--fu);background:#fff;box-shadow:0 0 0 4px rgba(228,0,124,.16)}input:user-invalid,textarea:user-invalid,select:user-invalid{border-color:#c4003f}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+.ck{display:flex;gap:.8rem;align-items:flex-start;padding:1.1rem;border-radius:var(--r);background:var(--bone);cursor:pointer;line-height:1.45;font-size:.97rem}.ck input{flex:none;width:1.3rem;height:1.3rem;margin-top:.12rem;accent-color:var(--fu)}
+.err{display:none;margin-top:1rem;padding:1rem 1.1rem;border-radius:var(--r);background:#fde8ef;color:#7a0030;font-weight:600;font-size:.95rem}.err.on{display:block}
+.sendrow{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.9rem 1.4rem;align-items:center}.sendrow .note{max-width:22rem;opacity:.7}
+.ok{display:none;text-align:center;padding:clamp(1rem,4vw,2.4rem) 0}.ok.on{display:block;animation:up .8s cubic-bezier(.2,.8,.2,1) both}.ok .badge{margin:0 auto 1.4rem;width:6rem}.ok .badge .bc,.ok .badge .bt{animation-delay:.1s}.ok h3{font-size:clamp(1.9rem,5vw,2.8rem);margin-bottom:.8rem}.ok p{max-width:34rem;margin:0 auto .8rem}
+.ok .em{display:inline-block;padding:.5rem 1rem;border-radius:99px;background:var(--ink);color:var(--bone);font-weight:600;margin:.4rem 0 1rem;word-break:break-all}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin-top:2.2rem}@media(max-width:860px){.three{grid-template-columns:1fr}}
+.three>div{padding:1.4rem;border-radius:var(--r);background:rgba(245,237,228,.06);box-shadow:inset 0 0 0 1px var(--ln)}.three .d{font:700 .72rem 'Space Grotesk';letter-spacing:.16em;text-transform:uppercase;color:var(--fu);margin-bottom:.7rem}.three h3{margin-bottom:.5rem}.three p{font-size:.95rem;color:rgba(245,237,228,.8)}
+.need{margin-top:2.6rem;display:grid;grid-template-columns:1fr 1fr;gap:.2rem 2rem}@media(max-width:700px){.need{grid-template-columns:1fr}}.need div{display:flex;gap:.8rem;align-items:center;padding:.75rem 0;border-bottom:1px solid var(--ln);font-weight:600}.need div::before{content:"\2713";flex:none;display:grid;place-items:center;width:1.4rem;height:1.4rem;border-radius:6px;background:var(--fu);color:#fff;font-size:.8rem}
+.mg-sp{position:fixed;width:var(--s,7px);height:var(--s,7px);border-radius:50%;background:var(--c);pointer-events:none;z-index:70;animation:spk 1.1s cubic-bezier(.1,.7,.3,1) forwards}@keyframes spk{to{transform:translate(var(--dx),var(--dy)) scale(.2);opacity:0}}
+footer{background:var(--ink);color:rgba(245,237,228,.7);padding:2.4rem 0;font-size:.9rem;border-top:1px solid var(--ln)}footer .g{text-align:center;max-width:46rem}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.js .hc>*{opacity:1;transform:none;animation:none}.badge .bc,.badge .bt{animation:none;stroke-dashoffset:0}.badge .bf{animation:none;opacity:1}.chip i,.stp.now .tag{animation:none}.stp::after{transition:none}.ok.on{animation:none}html{scroll-behavior:auto}}
+</style></head>
+<body>
+<nav><div class="g"><a class="logo" href="#top">Brenda Blanche</a><span class="chip"><i></i>Payment received</span></div></nav>
+<main>
+<section class="hero" id="top"><div class="g"><div class="hc">
+<div class="brow"><svg class="badge" viewBox="0 0 120 120" aria-hidden="true"><circle class="bf" cx="60" cy="60" r="52"/><circle class="bc" cx="60" cy="60" r="52" transform="rotate(-90 60 60)"/><path class="bt" d="M36 62l16 16 32-36"/></svg><p class="mono">Payment received<br>Founding place secured</p></div>
+<h1>You’re in. <span class="it">Let’s make you easy to hire.</span></h1>
+<p class="sub m">Thank you for trusting me, and for being one of my founding clients. Selar has sent your receipt. One thing to do now so I can start: complete your intake.</p>
+<div class="cta"><a class="btn go" href="#intake">START MY INTAKE FORM &darr;</a><span class="note">10 to 15 minutes. Rough answers are fine.</span></div>
+</div></div></section>
+
+<section class="sn" id="next"><div class="g"><p class="mono rv">Where you are</p><h2 class="rv">Three steps. You’re on step two.</h2>
+<div class="steps">
+<div class="stp done rv"><div class="nm">&#10003;</div><h3>Payment confirmed</h3><p class="m">Your founding place is secured. There is nothing else to pay.</p><span class="tag">Done</span></div>
+<div class="stp now rv" style="--d:.1s"><div class="nm">2</div><h3>Complete your intake</h3><p class="m">Tell me about your work, your past clients and how you describe what you do today. It is the raw material I build from.</p><span class="tag">You are here</span></div>
+<div class="stp next rv" style="--d:.2s"><div class="nm">3</div><h3>Check your email</h3><p class="m">The moment you send your intake, your onboarding email arrives with your kickoff booking link and what to prepare.</p><span class="tag">Next</span></div>
+</div></div></section>
+
+<section id="intake"><div class="g"><p class="mono rv">Step 2 · Your intake</p><h2 class="rv">Tell me about your work.</h2>
+<p class="lede m rv">There are no right or wrong answers, and nothing needs polishing. Write the way you would explain it to a friend. I work with what you give me, and we sharpen it together in our sessions.</p>
+<div class="form rv" id="formwrap">
+<form id="f" novalidate autocomplete="on">
+<fieldset><legend><span>01</span>About you</legend>
+<div class="row2"><label class="f"><b>First name <em>*</em></b><input type="text" name="firstName" autocomplete="given-name" required maxlength="80"></label><label class="f"><b>Last name <em>*</em></b><input type="text" name="lastName" autocomplete="family-name" required maxlength="80"></label></div>
+<label class="f"><b>Email <em>*</em></b><small>Use the email you paid with, so everything lands in one place.</small><input type="email" name="email" autocomplete="email" required maxlength="200"></label>
+<div class="row2"><label class="f"><b>LinkedIn profile link <em>*</em></b><input type="url" name="linkedin" placeholder="https://www.linkedin.com/in/..." required maxlength="300"></label><label class="f"><b>Where are you based? <em>*</em></b><small>City and country, so we can book sessions.</small><input type="text" name="timezone" autocomplete="address-level2" required maxlength="120"></label></div>
+</fieldset>
+<fieldset><legend><span>02</span>Your work today</legend>
+<label class="f"><b>How do you describe what you do right now? <em>*</em></b><small>The sentence you would say if someone asked at an event. Write it exactly as you say it, even if you do not like it.</small><textarea name="currentDescription" required maxlength="1500"></textarea></label>
+<label class="f"><b>Who hires you most often? <em>*</em></b><small>Industry, company size, and the person who signs off.</small><textarea name="idealClient" required maxlength="1500"></textarea></label>
+<label class="f"><b>What problem are they usually trying to solve when they call you? <em>*</em></b><small>In their words, not yours, if you can.</small><textarea name="problemSolved" required maxlength="1500"></textarea></label>
+<label class="f"><b>Where does most of your work come from today? <em>*</em></b><select name="clientSource" required><option value="" selected disabled>Choose one</option><option>Referrals</option><option>Past employers or former colleagues</option><option>LinkedIn</option><option>Direct outreach</option><option>Partners or agencies</option><option>Other</option></select></label>
+</fieldset>
+<fieldset><legend><span>03</span>Proof and your market</legend>
+<label class="f"><b>2 or 3 projects or client stories you are allowed to share <em>*</em></b><small>Anonymised is fine. For each one: the problem, what you did, and what changed.</small><textarea name="proofProjects" required maxlength="1900" style="min-height:10rem"></textarea></label>
+<label class="f"><b>What have you already tried to explain your work better or win clients?</b><small>Headline rewrites, a course, posting more. What did you implement, and where did you get stuck?</small><textarea name="triedBefore" maxlength="1500"></textarea></label>
+<label class="f"><b>3 people from your market for the repeat-back test</b><small>Names and roles. They should be real buyers or people close to buyers, not close friends. You can add them later if you are not sure yet.</small><textarea name="testPeople" maxlength="1000"></textarea></label>
+<label class="f"><b>Links to past work, your website, decks or anything I should see</b><textarea name="links" maxlength="1000" style="min-height:5rem"></textarea></label>
+<label class="f"><b>Anything else I should know before we start?</b><textarea name="notes" maxlength="1500" style="min-height:5rem"></textarea></label>
+</fieldset>
+<fieldset style="margin-bottom:0"><legend><span>04</span>One last thing</legend>
+<label class="ck"><input type="checkbox" name="terms" required><span>I understand the founding terms: I give honest feedback, I allow a case study with my real results, I give a testimonial, and I take one reference call if a future client asks.</span></label>
+</fieldset>
+<div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="company_site" tabindex="-1" autocomplete="off"></label></div>
+<p class="err" id="err" role="alert"></p>
+<div class="sendrow"><button class="btn go" type="submit" id="send">SEND MY INTAKE</button><span class="note">Your answers are used only to run your Build.</span></div>
+</form>
+<div class="ok" id="ok" role="status" tabindex="-1"><svg class="badge" viewBox="0 0 120 120" aria-hidden="true"><circle class="bf" cx="60" cy="60" r="52"/><circle class="bc" cx="60" cy="60" r="52" transform="rotate(-90 60 60)"/><path class="bt" d="M36 62l16 16 32-36"/></svg><h3 id="okh">Intake received.</h3><p class="m">Your onboarding email is on its way to</p><span class="em" id="okem">your inbox</span><p class="m">It has your kickoff booking link and what to prepare. If you do not see it in 10 minutes, check your spam and promotions folders.</p><p class="m" id="okc"></p></div>
+</div></div></section>
+
+<section class="dk" id="after"><div class="g"><p class="mono rv">What happens next</p><h2 class="rv">Your 14 days, at a glance.</h2>
+<div class="three"><div class="rv"><p class="d">Days 1 to 3</p><h3>Diagnosis</h3><p>Readiness check, your Scorecard result and a short demand check, so we know what is really in the way.</p></div><div class="rv" style="--d:.1s"><p class="d">Days 4 to 7</p><h3>Your offer</h3><p>1 clear entry service, your buyers’ word bank, your proof inventory and your 1-sentence offer.</p></div><div class="rv" style="--d:.2s"><p class="d">Days 8 to 14</p><h3>Your assets</h3><p>LinkedIn headline, banner, About and Featured, plus your first 10 posts in your voice.</p></div></div>
+<p class="lede m rv" style="margin-top:2rem">Then 3 people in your market read your profile and say what they would hire you for. If they cannot, I rework it with you at no extra cost until they can.</p>
+<p class="mono rv" style="margin-top:3rem">What I need from you</p>
+<div class="need rv"><div>2 working sessions: 1 in week 1, 1 in week 2</div><div>Past work, on the agreed dates</div><div>Client stories you are allowed to share</div><div>How you currently describe what you do</div><div>3 real people from your market for the repeat-back test</div></div></div></section>
+</main>
+<footer><div class="g">© 2026 Brenda Blanche · Market Perception Strategist.<br>The Market Perception Build helps you build a clear, credible service. It does not guarantee clients, sales, revenue, followers or financial results.</div></footer>
+<script>
+(function(){
+/* ===== SET THESE TWO ===== */
+var CONFIG={
+ ENDPOINT:"",        /* your intake worker URL, e.g. https://build-intake.YOURNAME.workers.dev */
+ SUPPORT_EMAIL:""    /* optional: shown in the success message, e.g. hello@yourdomain.com */
+};
+/* ========================= */
+var d=document,r=d.documentElement;r.classList.add('js');
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,CL=['#E4007C','#F5EDE4','#ff7aa8','#fff'];
+function $(s){return d.querySelector(s)}function $$(s){return [].slice.call(d.querySelectorAll(s))}
+var pg=d.createElement('div');pg.className='pg';d.body.appendChild(pg);
+addEventListener('scroll',function(){var h=r.scrollHeight-innerHeight;pg.style.transform='scaleX('+(h>0?scrollY/h:0)+')'},{passive:true});
+function burst(x,y,n,sp){if(rm)return;for(var k=0;k<n;k++){var e=d.createElement('i'),a=Math.random()*6.283,q=sp*(.4+Math.random()*.6);e.className='mg-sp';e.style.cssText='left:'+x+'px;top:'+y+'px;--dx:'+(Math.cos(a)*q).toFixed(0)+'px;--dy:'+(Math.sin(a)*q).toFixed(0)+'px;--c:'+CL[k%4]+';--s:'+(4+Math.random()*7).toFixed(0)+'px';d.body.appendChild(e);setTimeout(function(z){z.remove()}.bind(null,e),1200)}}
+if('IntersectionObserver' in window&&!rm){var io=new IntersectionObserver(function(a){a.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.14,rootMargin:'0px 0px -6% 0px'});$$('.rv').forEach(function(e){io.observe(e)})}else{$$('.rv').forEach(function(e){e.classList.add('on')})}
+setTimeout(function(){var b=$('.hero .badge');if(!b)return;var q=b.getBoundingClientRect();burst(q.left+q.width/2,q.top+q.height/2,34,200)},1500);
+var f=$('#f'),btn=$('#send'),err=$('#err'),ok=$('#ok');
+function showErr(m){err.textContent=m;err.classList.add('on')}
+function done(data){f.style.display='none';ok.classList.add('on');if(data&&data.firstName)$('#okh').textContent='Intake received, '+data.firstName+'.';if(data&&data.email)$('#okem').textContent=data.email;
+ if(CONFIG.SUPPORT_EMAIL){var c=$('#okc');c.innerHTML='Questions? Write to <a href="mailto:'+CONFIG.SUPPORT_EMAIL+'" style="font-weight:700;color:var(--fu)">'+CONFIG.SUPPORT_EMAIL+'</a>.'}
+ ok.scrollIntoView({behavior:rm?'auto':'smooth',block:'center'});ok.focus({preventScroll:true});var q=ok.getBoundingClientRect();burst(q.left+q.width/2,Math.max(80,q.top+60),30,190)}
+f.addEventListener('submit',function(e){e.preventDefault();err.classList.remove('on');
+ if(!f.checkValidity()){f.reportValidity();return}
+ var fd=new FormData(f),data={};fd.forEach(function(v,k){data[k]=typeof v==='string'?v.trim():v});
+ if(data.company_site){done(data);return}
+ delete data.company_site;data.terms=f.terms.checked;
+ if(!CONFIG.ENDPOINT){showErr('This form is not connected yet. Please try again shortly, or reply to your Selar receipt email.');return}
+ btn.disabled=true;btn.textContent='SENDING…';
+ fetch(CONFIG.ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+ .then(function(res){if(!res.ok)throw new Error('http '+res.status);return res.json().catch(function(){return {}})})
+ .then(function(){done(data)})
+ .catch(function(){btn.disabled=false;btn.textContent='SEND MY INTAKE';showErr('Something went wrong sending your intake. Your answers are still on this page, so please try again in a moment.')})
+});
+})();
+</script></body></html>
