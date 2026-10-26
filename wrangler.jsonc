@@ -10,10 +10,10 @@
     "run_worker_first": ["/api/*"]
   },
   "vars": {
-    "BREVO_LIST_ID": "REPLACE_WITH_LIST_ID",
-    "NOTIFY_EMAIL": "REPLACE_WITH_YOUR_EMAIL",
-    "SENDER_EMAIL": "hello@",
-    "SENDER_NAME": "brenda Blanche",
+    "BREVO_LIST_ID": "7",
+    "NOTIFY_EMAIL": "unapologeticquenn@gmail.com",
+    "SENDER_EMAIL": "hello@brendablanche.site",
+    "SENDER_NAME": "Brenda Blanche",
     "ALLOWED_ORIGIN": "https://blueprint.brendablanche.site"
   }
 }
