@@ -12,8 +12,8 @@
   "vars": {
     "BREVO_LIST_ID": "REPLACE_WITH_LIST_ID",
     "NOTIFY_EMAIL": "REPLACE_WITH_YOUR_EMAIL",
-    "SENDER_EMAIL": "REPLACE_WITH_BREVO_VERIFIED_SENDER",
-    "SENDER_NAME": "Brenda Blanche",
+    "SENDER_EMAIL": "hello@",
+    "SENDER_NAME": "brenda Blanche",
     "ALLOWED_ORIGIN": "https://blueprint.brendablanche.site"
   }
 }
