@@ -1,60 +1,50 @@
 /**
- * Market Perception Build: intake worker (Cloudflare Workers)
+ * Market Perception Build worker (Cloudflare Workers + static assets)
  *
- * Receives the intake form from welcome.html, then:
- *  1. Creates or updates the buyer as a Brevo contact (answers saved as attributes)
- *     and adds them to your "Build clients" list. A Brevo automation triggered by
- *     "contact added to list" sends the onboarding email.
- *  2. Emails you the full intake, so nothing is lost even if an attribute is missing.
- *  3. OPTIONAL: sends the onboarding email instantly from a Brevo template.
- *     Use this OR the list automation, not both, or the buyer gets two emails.
+ * - Serves your site from /public (index.html, welcome.html) via the ASSETS binding.
+ * - Handles POST /api/intake from the welcome page intake form, then:
+ *   1. Creates or updates the buyer as a Brevo contact (answers saved as attributes)
+ *      and adds them to your Build list. A Brevo automation triggered by
+ *      "contact added to list" sends the onboarding email.
+ *   2. Emails you the full intake, so nothing is lost.
+ *   3. OPTIONAL: sends the onboarding email instantly from a Brevo template
+ *      (set ONBOARDING_TEMPLATE_ID). Use this OR the list automation, not both.
  *
- * Variables (wrangler.json "vars") and secrets (npx wrangler secret put NAME):
- *   BREVO_API_KEY            secret
- *   BREVO_LIST_ID            e.g. "12"  (the list your onboarding automation watches)
- *   ALLOWED_ORIGIN           "https://blueprint.brendablanche.site" (no trailing slash)
- *   NOTIFY_EMAIL             where you want the copy of each intake
- *   SENDER_EMAIL             a sender already verified in Brevo
- *   SENDER_NAME              e.g. "Brenda Blanche"
- *   ONBOARDING_TEMPLATE_ID   optional, see point 3
+ * Settings (non-secret ones live in wrangler.jsonc "vars"):
+ *   BREVO_API_KEY            SECRET: npx wrangler secret put BREVO_API_KEY
+ *   BREVO_LIST_ID, NOTIFY_EMAIL, SENDER_EMAIL, SENDER_NAME, ALLOWED_ORIGIN
+ *   ONBOARDING_TEMPLATE_ID   optional
  *
  * Brevo text attributes to create first (Contacts > Settings > Contact attributes):
  *   LINKEDIN, LOCATION_TZ, CURRENT_DESCRIPTION, IDEAL_CLIENT, PROBLEM_SOLVED,
  *   CLIENT_SOURCE, PROOF_PROJECTS, TRIED_BEFORE, TEST_PEOPLE, LINKS, NOTES
- * (FIRSTNAME and LASTNAME already exist.)
  */
 
-const json = (obj, status, cors) =>
-  new Response(JSON.stringify(obj), {
-    status,
-    headers: { 'Content-Type': 'application/json', ...cors },
-  });
+const json = (obj, status) =>
+  new Response(JSON.stringify(obj), { status, headers: { 'Content-Type': 'application/json' } });
 
 const esc = (s) =>
   String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 export default {
   async fetch(request, env) {
-    const cors = {
-      'Access-Control-Allow-Origin': env.ALLOWED_ORIGIN || '*',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-      Vary: 'Origin',
-    };
+    const url = new URL(request.url);
 
-    if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors });
-    if (request.method !== 'POST') return json({ ok: false, error: 'method' }, 405, cors);
+    // Everything except the form endpoint is your static site
+    if (url.pathname !== '/api/intake') return env.ASSETS.fetch(request);
 
-    if (env.ALLOWED_ORIGIN) {
-      const origin = request.headers.get('Origin') || '';
-      if (origin !== env.ALLOWED_ORIGIN) return json({ ok: false, error: 'origin' }, 403, cors);
+    if (request.method !== 'POST') return json({ ok: false, error: 'method' }, 405);
+
+    const origin = request.headers.get('Origin') || '';
+    if (origin && origin !== url.origin && origin !== env.ALLOWED_ORIGIN) {
+      return json({ ok: false, error: 'origin' }, 403);
     }
 
     let b;
     try {
       b = await request.json();
     } catch {
-      return json({ ok: false, error: 'bad_json' }, 400, cors);
+      return json({ ok: false, error: 'bad_json' }, 400);
     }
 
     const clean = (v, max = 2000) => String(v ?? '').trim().slice(0, max);
@@ -76,7 +66,7 @@ export default {
     };
 
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email) || !d.firstName || b.terms !== true) {
-      return json({ ok: false, error: 'invalid' }, 400, cors);
+      return json({ ok: false, error: 'invalid' }, 400);
     }
 
     const headers = {
@@ -179,7 +169,7 @@ export default {
       }
     }
 
-    if (!contactOk && !mailOk) return json({ ok: false, error: 'upstream' }, 502, cors);
-    return json({ ok: true }, 200, cors);
+    if (!contactOk && !mailOk) return json({ ok: false, error: 'upstream' }, 502);
+    return json({ ok: true }, 200);
   },
 };
