@@ -5,12 +5,14 @@
 // 3) Emails the applicant the matching branded email, addressed to their name, from you.
 // 4) Emails you a notice with the full answers and the decision.
 //
-// VARIABLES (Cloudflare dashboard > your Worker > Settings > Variables and Secrets):
+// VARIABLES: plain values live in wrangler.json ("vars"). BREVO_API_KEY is a Secret set in the
+// Cloudflare dashboard (your Worker > Settings > Variables and Secrets).
 //   BREVO_API_KEY      Secret   your Brevo v3 API key
 //   BREVO_LIST_ID      Text     numeric ID of the Brevo list that receives applicants
 //   SENDER_EMAIL       Text     the "from" address, must be a verified sender in Brevo
 //   NOTIFY_EMAIL       Text     your inbox, receives a notice for every application
 //   SENDER_NAME        Text     optional (default "Brenda Blanche")
+//   ALLOWED_ORIGIN     Text     optional, only if the page is on a different domain than this Worker
 //   REPLY_TO_EMAIL     Text     optional (default = SENDER_EMAIL)
 //   SELAR_URL          Text     optional (default https://selar.com/10sg102013)
 //   CLARITY_CALL_URL   Text     optional (default https://cal.com/brenda-blanche/clarity-call)
@@ -82,7 +84,7 @@ async function handleApply(request, env) {
   const urls = {
     selar: env.SELAR_URL || 'https://selar.com/10sg102013',
     clarity: env.CLARITY_CALL_URL || 'https://cal.com/brenda-blanche/clarity-call',
-    scorecard: env.SCORECARD_URL || '',
+    scorecard: env.SCORECARD_URL || 'scorecard.brendablanche.site',
   };
 
   // 1) Save the contact in Brevo
@@ -152,12 +154,33 @@ async function handleApply(request, env) {
   return json({ error: 'Could not save application' }, 502);
 }
 
+// Optional CORS: only needed if the page is hosted on a different domain than this Worker.
+// Set ALLOWED_ORIGIN to that domain (comma-separated for several). Same-origin needs nothing.
+function corsHeaders(request, env) {
+  const origin = request.headers.get('Origin');
+  const allowed = String(env.ALLOWED_ORIGIN || '').split(',').map((x) => x.trim()).filter(Boolean);
+  if (origin && allowed.includes(origin)) {
+    return {
+      'Access-Control-Allow-Origin': origin,
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      Vary: 'Origin',
+    };
+  }
+  return {};
+}
+
 export default {
   async fetch(request, env) {
     const { pathname } = new URL(request.url);
     if (pathname === '/api/apply') {
+      const cors = corsHeaders(request, env);
+      if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors });
       if (request.method !== 'POST') return json({ error: 'Method not allowed' }, 405);
-      return handleApply(request, env);
+      const res = await handleApply(request, env);
+      const out = new Response(res.body, res);
+      Object.entries(cors).forEach(([k, v]) => out.headers.set(k, v));
+      return out;
     }
     // Everything else is the static site in /public
     return env.ASSETS.fetch(request);
