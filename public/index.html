@@ -112,6 +112,9 @@ section.strip::before{display:none}
 footer{background:var(--ink);color:rgba(245,237,228,.7);padding:2.4rem 0 5.4rem;font-size:.9rem;border-top:1px solid var(--ln)}footer .g{text-align:center;max-width:46rem}
 
 /* application form */
+.fd .pfx{display:flex;align-items:stretch;background:rgba(245,237,228,.09);border-radius:10px;overflow:hidden;box-shadow:inset 0 0 0 1.5px transparent;transition:box-shadow .25s,background .25s}.fd .pfx:focus-within{background:rgba(245,237,228,.13);box-shadow:inset 0 0 0 1.5px var(--fu),0 0 0 4px rgba(228,0,124,.25)}
+.pfx .pf{display:flex;align-items:center;padding:0 .2rem 0 1.05rem;color:rgba(245,237,228,.6);font-size:1rem;white-space:nowrap}
+.fd .pfx input[type=text],.fd .pfx input[type=text]:focus{flex:1;min-width:0;background:transparent;box-shadow:none;border-radius:0;padding-left:.2rem}
 #ap{position:fixed;inset:0;z-index:60;background:rgba(20,16,15,.97);display:none;overflow-y:auto;color:var(--bone)}#ap.on{display:block}#ap::before{content:"";position:fixed;inset:0;background:radial-gradient(80% 60% at 100% 110%,rgba(228,0,124,.45),transparent 70%);pointer-events:none}
 .apw{position:relative;max-width:40rem;margin:0 auto;padding:clamp(1.2rem,4vw,2.2rem) var(--pad) 4rem}
 .apx{position:absolute;top:1rem;right:var(--pad);background:rgba(245,237,228,.14);color:#fff;border:0;border-radius:99px;padding:.5rem 1rem;font:700 .74rem 'Space Grotesk';letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
@@ -373,7 +376,7 @@ var PRIVACY_URL='privacy.html';
 var Q=[
  {k:'fullName',t:'What is your full name?',type:'text',ph:'Your full name',ac:'name',hint:'Short answer',intro:'Answer a few short questions so I can understand your situation and assess whether the Build is a fit. If needed, I’ll invite you to a clarity call.'},
  {k:'email',t:'What is your email address?',type:'email',ph:'you@example.com',ac:'email',hint:'Email'},
- {k:'linkedin',t:'What is your LinkedIn profile URL?',type:'url',ph:'https://www.linkedin.com/in/your-name',ac:'url',hint:'Link'},
+ {k:'linkedin',t:'What is your LinkedIn profile URL?',type:'linkedin',ph:'your-username',hint:'Just add your username at the end of the link'},
  {k:'serviceWork',t:'What kind of consulting or B2B service work do you do?',type:'text',ph:'For example: operations consulting for manufacturers',hint:'Short answer'},
  {k:'years',t:'How many years of relevant professional experience do you have?',type:'single',hint:'Select 1',o:['Less than 5 years','5 to 9 years','10 to 15 years','More than 15 years']},
  {k:'situation',t:'Which best describes your current situation?',type:'single',hint:'Select 1',o:['I’m an independent consultant working with clients.','I’m moving from employment into independent consulting.','I combine employment with consulting.','I run another type of B2B service business.']},
@@ -399,6 +402,7 @@ function render(){
  if(q.hint)body.appendChild(el('p','hint',q.hint));
  var fd=el('div','fd');var inp=null;
  if(q.type==='text'||q.type==='email'||q.type==='url'){inp=el('input');inp.type=q.type==='url'?'url':q.type==='email'?'email':'text';inp.placeholder=q.ph||'';if(q.ac)inp.autocomplete=q.ac;inp.value=A[q.k]||'';inp.oninput=function(){A[q.k]=inp.value};inp.onkeydown=function(e){if(e.key==='Enter'){e.preventDefault();next()}};fd.appendChild(inp)}
+ else if(q.type==='linkedin'){var w=el('div','pfx');w.appendChild(el('span','pf','linkedin.com/in/'));inp=el('input');inp.type='text';inp.placeholder=q.ph;inp.autocomplete='off';inp.setAttribute('autocapitalize','none');inp.spellcheck=false;inp.value=A[q.k]||'';inp.oninput=function(){var c=cleanIn(inp.value);if(c!==inp.value)inp.value=c;A[q.k]=c};inp.onkeydown=function(e){if(e.key==='Enter'){e.preventDefault();next()}};w.appendChild(inp);fd.appendChild(w)}
  else if(q.type==='textarea'){inp=el('textarea');inp.placeholder=q.ph||'';inp.value=A[q.k]||'';inp.oninput=function(){A[q.k]=inp.value};fd.appendChild(inp)}
  else if(q.type==='single'||q.type==='multi'){var multi=q.type==='multi';if(multi&&!A[q.k])A[q.k]=[];
   q.o.forEach(function(o){var b=el('button','ch');b.type='button';var m=el('span','mk'+(multi?' sq':''));b.appendChild(m);b.appendChild(el('span',null,o));
@@ -416,12 +420,14 @@ function render(){
  if(isLast)body.appendChild(el('p','fp',NOTE));
  if(inp&&step>0)setTimeout(function(){inp.focus()},350);
 }
+function cleanIn(v){v=String(v||'').trim();var m=v.match(/linkedin\.com\/in\/([^\/?#\s]+)/i);if(m)v=m[1];return v.replace(/^[\/@\s]+/,'').replace(/[\/\s?#].*$/,'')}
 function $all(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))}
 function err(m){var e=document.getElementById('aper');if(!e)return;e.textContent=m;e.classList.remove('on');if(m){void e.offsetWidth;e.classList.add('on')}}
 function valid(){var q=Q[step],v=A[q.k];
- if(q.opt)return true;
+ if(q.opt)return '';
  if(q.type==='text'){if(!v||!v.trim())return 'Please answer this question to continue.'}
  else if(q.type==='email'){if(!v||!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()))return 'Please enter a valid email address.'}
+ else if(q.type==='linkedin'){if(!v||!/^[^\s\/?#]{2,100}$/.test(cleanIn(v)))return 'Please add your LinkedIn username, the part after linkedin.com/in/'}
  else if(q.type==='url'){if(!v||!/^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/\S*)?$/i.test(v.trim()))return 'Please enter a valid link, for example https://www.linkedin.com/in/your-name.'}
  else if(q.type==='single'){if(!v)return 'Please choose 1 option to continue.'}
  else if(q.type==='multi'){if(!v||!v.length)return 'Please choose at least 1 option.'}
@@ -429,7 +435,7 @@ function valid(){var q=Q[step],v=A[q.k];
  return '';}
 function next(){var m=valid();if(m){err(m);return}err('');if(step<Q.length-1){step++;render();ap.scrollTop=0}else submit()}
 function submit(){var b=document.getElementById('apnext');b.disabled=true;b.textContent='Sending…';
- var l=(A.linkedin||'').trim();if(!/^https?:\/\//i.test(l))l='https://'+l;
+ var l='https://www.linkedin.com/in/'+cleanIn(A.linkedin);
  var data={fullName:(A.fullName||'').trim(),email:(A.email||'').trim(),linkedin:l,serviceWork:(A.serviceWork||'').trim(),years:A.years,situation:A.situation,wantsHelp:A.wantsHelp||[],clientSources:A.clientSources||[],sessionsReady:A.sessionsReady,investReady:A.investReady,notes:(A.notes||'').trim(),ackNoGuarantee:!!A.ack1,ackPrivacy:!!A.ack2,website:(document.getElementById('hp')||{}).value||'',page:location.href};
  fetch(APPLY_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}).then(function(r){if(!r.ok)throw new Error('x');return r.json().catch(function(){return {}})}).then(done).catch(function(){b.disabled=false;b.textContent='Submit my application';err('Something went wrong sending your application. Please try again, or message me on WhatsApp: wa.me/237672411155')})}
 function done(){bars();sb.innerHTML='';for(var i=0;i<Q.length;i++)sb.appendChild(el('i','d'));body.innerHTML='';
