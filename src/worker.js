@@ -1,175 +1,165 @@
-/**
- * Market Perception Build worker (Cloudflare Workers + static assets)
- *
- * - Serves your site from /public (index.html, welcome.html) via the ASSETS binding.
- * - Handles POST /api/intake from the welcome page intake form, then:
- *   1. Creates or updates the buyer as a Brevo contact (answers saved as attributes)
- *      and adds them to your Build list. A Brevo automation triggered by
- *      "contact added to list" sends the onboarding email.
- *   2. Emails you the full intake, so nothing is lost.
- *   3. OPTIONAL: sends the onboarding email instantly from a Brevo template
- *      (set ONBOARDING_TEMPLATE_ID). Use this OR the list automation, not both.
- *
- * Settings (non-secret ones live in wrangler.jsonc "vars"):
- *   BREVO_API_KEY            SECRET: npx wrangler secret put BREVO_API_KEY
- *   BREVO_LIST_ID, NOTIFY_EMAIL, SENDER_EMAIL, SENDER_NAME, ALLOWED_ORIGIN
- *   ONBOARDING_TEMPLATE_ID   optional
- *
- * Brevo text attributes to create first (Contacts > Settings > Contact attributes):
- *   LINKEDIN, LOCATION_TZ, CURRENT_DESCRIPTION, IDEAL_CLIENT, PROBLEM_SOLVED,
- *   CLIENT_SOURCE, PROOF_PROJECTS, TRIED_BEFORE, TEST_PEOPLE, LINKS, NOTES
- */
+// Cloudflare Worker entry: src/worker.js
+// Serves the site from /public (static assets) and handles POST /api/apply:
+// 1) Saves the application as a contact in Brevo (with the decision stored as an attribute).
+// 2) Decides: ACCEPT / CLARITY CALL / NOT A FIT (rules live in src/decide.js).
+// 3) Emails the applicant the matching branded email, addressed to their name, from you.
+// 4) Emails you a notice with the full answers and the decision.
+//
+// VARIABLES (Cloudflare dashboard > your Worker > Settings > Variables and Secrets):
+//   BREVO_API_KEY      Secret   your Brevo v3 API key
+//   BREVO_LIST_ID      Text     numeric ID of the Brevo list that receives applicants
+//   SENDER_EMAIL       Text     the "from" address, must be a verified sender in Brevo
+//   NOTIFY_EMAIL       Text     your inbox, receives a notice for every application
+//   SENDER_NAME        Text     optional (default "Brenda Blanche")
+//   REPLY_TO_EMAIL     Text     optional (default = SENDER_EMAIL)
+//   SELAR_URL          Text     optional (default https://selar.com/10sg102013)
+//   CLARITY_CALL_URL   Text     optional (default https://cal.com/brenda-blanche/clarity-call)
+//   SCORECARD_URL      Text     optional, adds a Scorecard button to the "not a fit" email
+//
+// BREVO CONTACT ATTRIBUTES (type Text): LINKEDIN, SERVICE_WORK, YEARS_EXPERIENCE, SITUATION,
+//   WANTS_HELP_WITH, CLIENT_SOURCES, SESSIONS_READY, INVEST_READY, NOTES, ACK_NO_GUARANTEE,
+//   ACK_PRIVACY, APPLIED_AT, APPLICATION_SOURCE, APPLICATION_DECISION, DECISION_REASON
 
-const json = (obj, status) =>
+import { decide, REASON_LABEL } from './decide.js';
+import { applicantEmail, ownerNotice } from './emails.js';
+
+const json = (obj, status = 200) =>
   new Response(JSON.stringify(obj), { status, headers: { 'Content-Type': 'application/json' } });
 
-const esc = (s) =>
-  String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const clip = (v, n = 1000) => String(v == null ? '' : v).slice(0, n);
+const clipList = (a) => (Array.isArray(a) ? a.map((x) => clip(x, 200)).slice(0, 10) : []);
+const join = (a) => (Array.isArray(a) ? a.map((x) => clip(x, 200)).join(' | ') : clip(a, 400));
+
+async function sendEmail(env, { to, toName, subject, html, text, replyTo, tag }) {
+  try {
+    const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: { 'api-key': env.BREVO_API_KEY, 'Content-Type': 'application/json', accept: 'application/json' },
+      body: JSON.stringify({
+        sender: { email: env.SENDER_EMAIL, name: env.SENDER_NAME || 'Brenda Blanche' },
+        to: [toName ? { email: to, name: toName } : { email: to }],
+        replyTo: { email: replyTo || env.REPLY_TO_EMAIL || env.SENDER_EMAIL },
+        subject,
+        htmlContent: html,
+        textContent: text,
+        tags: [tag],
+      }),
+    });
+    if (!res.ok) console.log('Brevo email error', tag, res.status, await res.text());
+    return res.ok;
+  } catch (e) {
+    console.log('Brevo email exception', tag, String(e));
+    return false;
+  }
+}
+
+async function handleApply(request, env) {
+  let raw;
+  try { raw = await request.json(); } catch { return json({ error: 'Invalid request' }, 400); }
+
+  // Honeypot: bots fill the hidden field. Pretend success, store and send nothing.
+  if (raw.website) return json({ ok: true });
+
+  const d = {
+    fullName: clip(raw.fullName, 200).trim(),
+    email: clip(raw.email, 200).trim().toLowerCase(),
+    linkedin: clip(raw.linkedin, 500).trim(),
+    serviceWork: clip(raw.serviceWork, 500).trim(),
+    years: clip(raw.years, 100),
+    situation: clip(raw.situation, 300),
+    wantsHelp: clipList(raw.wantsHelp),
+    clientSources: clipList(raw.clientSources),
+    sessionsReady: clip(raw.sessionsReady, 200),
+    investReady: clip(raw.investReady, 200),
+    notes: clip(raw.notes, 2000).trim(),
+  };
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)) return json({ error: 'Invalid email' }, 400);
+  if (!raw.ackNoGuarantee || !raw.ackPrivacy) return json({ error: 'Acknowledgements required' }, 400);
+  if (!env.BREVO_API_KEY || !env.SENDER_EMAIL) return json({ error: 'Server not configured' }, 500);
+
+  const { decision, reasons } = decide(d);
+  const urls = {
+    selar: env.SELAR_URL || 'https://selar.com/10sg102013',
+    clarity: env.CLARITY_CALL_URL || 'https://cal.com/brenda-blanche/clarity-call',
+    scorecard: env.SCORECARD_URL || '',
+  };
+
+  // 1) Save the contact in Brevo
+  const contact = {
+    email: d.email,
+    updateEnabled: true,
+    attributes: {
+      FIRSTNAME: d.fullName,
+      LINKEDIN: d.linkedin,
+      SERVICE_WORK: d.serviceWork,
+      YEARS_EXPERIENCE: d.years,
+      SITUATION: d.situation,
+      WANTS_HELP_WITH: join(d.wantsHelp),
+      CLIENT_SOURCES: join(d.clientSources),
+      SESSIONS_READY: d.sessionsReady,
+      INVEST_READY: d.investReady,
+      NOTES: d.notes,
+      ACK_NO_GUARANTEE: 'Yes',
+      ACK_PRIVACY: 'Yes',
+      APPLIED_AT: new Date().toISOString(),
+      APPLICATION_SOURCE: 'Market Perception Build page',
+      APPLICATION_DECISION: decision,
+      DECISION_REASON: reasons.map((r) => REASON_LABEL[r] || r).join('; '),
+    },
+  };
+  if (env.BREVO_LIST_ID) contact.listIds = [Number(env.BREVO_LIST_ID)];
+
+  let saved = false;
+  try {
+    const res = await fetch('https://api.brevo.com/v3/contacts', {
+      method: 'POST',
+      headers: { 'api-key': env.BREVO_API_KEY, 'Content-Type': 'application/json', accept: 'application/json' },
+      body: JSON.stringify(contact),
+    });
+    saved = res.status === 201 || res.status === 204; // 201 created, 204 updated
+    if (!saved) console.log('Brevo contact error', res.status, await res.text());
+  } catch (e) {
+    console.log('Brevo contact exception', String(e));
+  }
+
+  // 2) Email the applicant, 3) email you. Both are always attempted.
+  const mail = applicantEmail(decision, d, reasons, urls);
+  const sent = await sendEmail(env, {
+    to: d.email,
+    toName: d.fullName,
+    subject: mail.subject,
+    html: mail.html,
+    text: mail.text,
+    tag: 'build-application-' + decision,
+  });
+
+  let notified = false;
+  if (env.NOTIFY_EMAIL) {
+    const note = ownerNotice(decision, d, reasons, sent);
+    notified = await sendEmail(env, {
+      to: env.NOTIFY_EMAIL,
+      subject: note.subject,
+      html: note.html,
+      text: note.text,
+      replyTo: d.email, // hitting Reply answers the applicant
+      tag: 'build-application-notice',
+    });
+  }
+
+  // The application counts as received if it was saved OR you were notified (nothing is lost).
+  if (saved || notified || sent) return json({ ok: true, decision });
+  return json({ error: 'Could not save application' }, 502);
+}
 
 export default {
   async fetch(request, env) {
-    const url = new URL(request.url);
-
-    // Everything except the form endpoint is your static site
-    if (url.pathname !== '/api/intake') return env.ASSETS.fetch(request);
-
-    if (request.method !== 'POST') return json({ ok: false, error: 'method' }, 405);
-
-    const origin = request.headers.get('Origin') || '';
-    if (origin && origin !== url.origin && origin !== env.ALLOWED_ORIGIN) {
-      return json({ ok: false, error: 'origin' }, 403);
+    const { pathname } = new URL(request.url);
+    if (pathname === '/api/apply') {
+      if (request.method !== 'POST') return json({ error: 'Method not allowed' }, 405);
+      return handleApply(request, env);
     }
-
-    let b;
-    try {
-      b = await request.json();
-    } catch {
-      return json({ ok: false, error: 'bad_json' }, 400);
-    }
-
-    const clean = (v, max = 2000) => String(v ?? '').trim().slice(0, max);
-    const d = {
-      firstName: clean(b.firstName, 80),
-      lastName: clean(b.lastName, 80),
-      email: clean(b.email, 200).toLowerCase(),
-      linkedin: clean(b.linkedin, 300),
-      timezone: clean(b.timezone, 120),
-      currentDescription: clean(b.currentDescription),
-      idealClient: clean(b.idealClient),
-      problemSolved: clean(b.problemSolved),
-      clientSource: clean(b.clientSource, 120),
-      proofProjects: clean(b.proofProjects),
-      triedBefore: clean(b.triedBefore),
-      testPeople: clean(b.testPeople),
-      links: clean(b.links),
-      notes: clean(b.notes),
-    };
-
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email) || !d.firstName || b.terms !== true) {
-      return json({ ok: false, error: 'invalid' }, 400);
-    }
-
-    const headers = {
-      'api-key': env.BREVO_API_KEY,
-      'content-type': 'application/json',
-      accept: 'application/json',
-    };
-    const brevo = (path, body) =>
-      fetch('https://api.brevo.com/v3' + path, { method: 'POST', headers, body: JSON.stringify(body) });
-    const attr = (v) => v.slice(0, 1900);
-    const fullName = `${d.firstName} ${d.lastName}`.trim();
-
-    // 1. Contact + list (this is what triggers the onboarding automation)
-    const listIds = env.BREVO_LIST_ID ? [Number(env.BREVO_LIST_ID)] : [];
-    let contactOk = false;
-    try {
-      let r = await brevo('/contacts', {
-        email: d.email,
-        updateEnabled: true,
-        listIds,
-        attributes: {
-          FIRSTNAME: d.firstName,
-          LASTNAME: d.lastName,
-          LINKEDIN: attr(d.linkedin),
-          LOCATION_TZ: attr(d.timezone),
-          CURRENT_DESCRIPTION: attr(d.currentDescription),
-          IDEAL_CLIENT: attr(d.idealClient),
-          PROBLEM_SOLVED: attr(d.problemSolved),
-          CLIENT_SOURCE: attr(d.clientSource),
-          PROOF_PROJECTS: attr(d.proofProjects),
-          TRIED_BEFORE: attr(d.triedBefore),
-          TEST_PEOPLE: attr(d.testPeople),
-          LINKS: attr(d.links),
-          NOTES: attr(d.notes),
-        },
-      });
-      if (!r.ok) {
-        // Most likely a custom attribute does not exist yet. Still add them to the list.
-        r = await brevo('/contacts', {
-          email: d.email,
-          updateEnabled: true,
-          listIds,
-          attributes: { FIRSTNAME: d.firstName, LASTNAME: d.lastName },
-        });
-      }
-      contactOk = r.ok;
-    } catch {
-      contactOk = false;
-    }
-
-    // 2. Full copy of the intake to you
-    let mailOk = false;
-    if (env.NOTIFY_EMAIL && env.SENDER_EMAIL) {
-      const rows = [
-        ['Name', fullName],
-        ['Email', d.email],
-        ['LinkedIn', d.linkedin],
-        ['Based in', d.timezone],
-        ['How they describe what they do', d.currentDescription],
-        ['Who hires them', d.idealClient],
-        ['Problem they solve', d.problemSolved],
-        ['Where work comes from', d.clientSource],
-        ['Projects and client stories', d.proofProjects],
-        ['Tried before', d.triedBefore],
-        ['People for repeat-back test', d.testPeople],
-        ['Links', d.links],
-        ['Anything else', d.notes],
-        ['Accepted founding terms', 'Yes'],
-      ]
-        .filter(([, v]) => v)
-        .map(
-          ([k, v]) =>
-            `<p style="margin:0 0 14px"><b>${esc(k)}</b><br>${esc(v).replace(/\n/g, '<br>')}</p>`
-        )
-        .join('');
-      try {
-        const m = await brevo('/smtp/email', {
-          sender: { email: env.SENDER_EMAIL, name: env.SENDER_NAME || 'Market Perception Build' },
-          to: [{ email: env.NOTIFY_EMAIL }],
-          replyTo: { email: d.email, name: fullName },
-          subject: `New Build intake: ${fullName}`,
-          htmlContent: `<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5;color:#14100F">${rows}</div>`,
-        });
-        mailOk = m.ok;
-      } catch {
-        mailOk = false;
-      }
-    }
-
-    // 3. Optional instant onboarding email from a Brevo template
-    if (env.ONBOARDING_TEMPLATE_ID) {
-      try {
-        await brevo('/smtp/email', {
-          to: [{ email: d.email, name: fullName }],
-          templateId: Number(env.ONBOARDING_TEMPLATE_ID),
-          params: { FIRSTNAME: d.firstName },
-        });
-      } catch {
-        /* the list automation or your copy still covers it */
-      }
-    }
-
-    if (!contactOk && !mailOk) return json({ ok: false, error: 'upstream' }, 502);
-    return json({ ok: true }, 200);
+    // Everything else is the static site in /public
+    return env.ASSETS.fetch(request);
   },
 };
